@@ -12,19 +12,11 @@ import SnapKit
 open class LoginViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .black
         
-        let entryView = UIView()
-        entryView.backgroundColor = UIColor(red: 0.06, green: 0.06, blue: 0.06, alpha: 1)
-        view.addSubview(entryView)
-        
-        entryView.snp.makeConstraints { make in
-            make.left.right.bottom.equalToSuperview()
-            make.height.equalTo(442)
-        }
         let logoView = UIView()
-//        logoView.backgroundColor = .white
+        //        logoView.backgroundColor = .white
         view.addSubview(logoView)
         
         logoView.snp.makeConstraints { make in
@@ -37,7 +29,6 @@ open class LoginViewController: UIViewController {
         logoImage.image = UIImage(named: "Subtract")
         logoImage.contentMode = .scaleAspectFit
         logoView.addSubview(logoImage)
-        
         
         logoImage.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 70, height: 70))
@@ -77,6 +68,156 @@ open class LoginViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(223)
         }
-    
+        
+        let entryView = UIView()
+        entryView.backgroundColor = UIColor(red: 0.06, green: 0.06, blue: 0.06, alpha: 1)
+        view.addSubview(entryView)
+        entryView.layer.cornerRadius = 24
+        
+        entryView.snp.makeConstraints { make in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(442)
+        }
+        
+        let entryLabel = UILabel()
+        entryLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
+        entryLabel.font = UIFont(name: "Poppins-Bold", size: 22)
+        entryLabel.text = "Вход"
+        entryView.addSubview(entryLabel)
+        
+        entryLabel.snp.makeConstraints {make in
+            make.left.equalToSuperview().offset(35)
+            make.top.equalToSuperview().offset(21)
+        }
+        
+        let aImage = UIImageView()
+        aImage.image = UIImage(named: "a")
+        entryView.addSubview(aImage)
+        
+        aImage.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 17, height: 17))
+            make.top.equalToSuperview().offset(84)
+            make.left.equalToSuperview().offset(38)
+        }
+        
+        let emailField = UITextField()
+        emailField.placeholder = "Введите E-Mail"
+        emailField.font = UIFont(name: "Poppins-Bold", size: 16)
+        emailField.textColor = .white
+        entryView.addSubview(emailField)
+        
+        emailField.snp.makeConstraints { make in
+            make.leading.equalTo(aImage.snp.trailing).offset(10)
+            make.top.equalToSuperview().offset(81)
+        }
+        
+        let emailStrip = UIImageView()
+        emailStrip.image = UIImage(named: "Strip")
+        entryView.addSubview(emailStrip)
+        
+        emailStrip.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(111)
+            make.left.equalToSuperview().offset(57)
+        }
+        
+        let lockImage = UIImageView()
+        lockImage.image = UIImage(named: "Lock")
+        entryView.addSubview(lockImage)
+        
+        lockImage.snp.makeConstraints {make in
+            make.size.equalTo(CGSize(width: 17, height: 17))
+            make.top.equalToSuperview().offset(135)
+            make.left.equalToSuperview().offset(36)
+        }
+        
+        let passwordField = UITextField()
+        passwordField.placeholder = "Введите пароль"
+        passwordField.font = UIFont(name: "Poppins-Bold", size: 16)
+        passwordField.textColor = .white
+        entryView.addSubview(passwordField)
+        
+        passwordField.snp.makeConstraints { make in
+            make.leading.equalTo(lockImage.snp.trailing).offset(12)
+            make.top.equalToSuperview().offset(128)
+        }
+        
+        let passwordStrip = UIImageView()
+        passwordStrip.image = UIImage(named: "Strip")
+        entryView.addSubview(passwordStrip)
+        
+        passwordStrip.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(158)
+            make.left.equalToSuperview().offset(57)
+        }
+        
+        let showHideButton = UIButton()
+        showHideButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        showHideButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .selected)
+        //        showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
+        entryView.addSubview(showHideButton)
+        
+        showHideButton.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 28, height: 28))
+            make.top.equalToSuperview().offset(130)
+            make.right.equalToSuperview().inset(26)
+        }
+        
+        let checkBox = UIImageView()
+        checkBox.image = UIImage(named: "Check")
+        entryView.addSubview(checkBox)
+        
+        checkBox.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 15, height: 15))
+            make.top.equalToSuperview().offset(176)
+            make.left.equalToSuperview().offset(38)
+        }
+        
+        let rememberLabel = UILabel()
+        rememberLabel.textColor = .white
+        rememberLabel.font = UIFont(name: "Poppins-Regular", size: 12)
+        rememberLabel.text = "Запомнить меня"
+        entryView.addSubview(rememberLabel)
+        
+        rememberLabel.snp.makeConstraints {make in
+            make.leading.equalTo(checkBox.snp.trailing).offset(10)
+            make.top.equalToSuperview().offset(175)
+        }
+        
+        let forgetLabel = UILabel()
+        forgetLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
+        forgetLabel.font = UIFont(name: "Poppins-Bold", size: 12)
+        forgetLabel.text = "Забыли пароль?"
+        entryView.addSubview(forgetLabel)
+        
+        forgetLabel.snp.makeConstraints { make in
+            make.right.equalToSuperview().inset(36)
+            make.top.equalToSuperview().offset(175)
+        }
+        
+        let loginButton = UIButton()
+        loginButton.backgroundColor = UIColor(red: 0.56, green: 0.58, blue: 0.6, alpha: 1)
+        loginButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 14)
+        loginButton.setTitle("Войти", for: .normal)
+        loginButton.layer.cornerRadius = 7
+        entryView.addSubview(loginButton)
+        
+        loginButton.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 327, height: 50))
+            make.top.equalToSuperview().offset(208)
+            make.centerX.equalToSuperview()
+        }
+        
+        let privacyLabel = UILabel()
+        privacyLabel.textColor = UIColor(red: 0.68, green: 0.68, blue: 0.68, alpha: 1)
+        privacyLabel.font = UIFont(name: "Roboto-Regular", size: 12)
+        privacyLabel.text = "Нажимая, вы соглашаетесь с политикой\nконфидециальности"
+        privacyLabel.textAlignment = .center
+        privacyLabel.numberOfLines = 0
+        entryView.addSubview(privacyLabel)
+        
+        privacyLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(357)
+            make.centerX.equalToSuperview()
+        }
     }
 }
