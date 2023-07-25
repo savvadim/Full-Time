@@ -113,11 +113,11 @@
 				867582012943AC6F0037266C /* Login.xcodeproj */,
 				867581DB2943A8D00037266C /* Networking.xcodeproj */,
 				867581842943A5820037266C /* AppDelegate.swift */,
-				CE0959732A70217D00003F21 /* Fonts */,
 				867581882943A5820037266C /* ViewController.swift */,
 				8675818D2943A5830037266C /* Assets.xcassets */,
 				8675818F2943A5830037266C /* LaunchScreen.storyboard */,
 				867581922943A5830037266C /* Info.plist */,
+				CE0959732A70217D00003F21 /* Fonts */,
 			);
 			path = "Full Time";
 			sourceTree = "<group>";

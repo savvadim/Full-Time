@@ -17,6 +17,7 @@
 		8675821F2943B1F30037266C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8675821E2943B1F30037266C /* SnapKit */; };
 		867582212943B2420037266C /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582202943B2420037266C /* LoginNetwork.swift */; };
 		867582232943B2D40037266C /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582222943B2D40037266C /* LoginModels.swift */; };
+		CE0959862A7025D000003F21 /* Subtract.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0959852A7025D000003F21 /* Subtract.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		867582162943B11F0037266C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		867582202943B2420037266C /* LoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetwork.swift; sourceTree = "<group>"; };
 		867582222943B2D40037266C /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		CE0959852A7025D000003F21 /* Subtract.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Subtract.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				867582202943B2420037266C /* LoginNetwork.swift */,
 				867582222943B2D40037266C /* LoginModels.swift */,
 				867582082943AC8D0037266C /* LoginViewController.swift */,
+				CE0959842A7025C600003F21 /* Assets */,
 				867581F82943AC6F0037266C /* Login.h */,
 				867581F92943AC6F0037266C /* Login.docc */,
 			);
@@ -95,6 +98,14 @@
 				867582162943B11F0037266C /* Networking.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE0959842A7025C600003F21 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CE0959852A7025D000003F21 /* Subtract.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0959862A7025D000003F21 /* Subtract.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

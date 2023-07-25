@@ -23,6 +23,46 @@ open class LoginViewController: UIViewController {
             make.left.right.bottom.equalToSuperview()
             make.height.equalTo(442)
         }
+        let logoView = UIView()
+//        logoView.backgroundColor = .white
+        view.addSubview(logoView)
+        
+        logoView.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 70, height: 70))
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(139)
+        }
+        
+        let logoImage = UIImageView()
+        logoImage.image = UIImage(named: "Subtract")
+        logoView.addSubview(logoImage)
+        
+        logoImage.snp.makeConstraints { make in
+            make.bottom.equalToSuperview()
+            make.right.equalToSuperview()
+        }
+        
+        let fullLabel = UILabel()
+        fullLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
+        fullLabel.text = "Full"
+        fullLabel.font = UIFont(name: "Poppins-Regular", size: 14)
+        logoView.addSubview(fullLabel)
+        
+        fullLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(logoImage)
+            make.centerY.equalTo(logoImage)
+        }
+        
+        let timeLabel = UILabel()
+        timeLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
+        timeLabel.text = "Time"
+        timeLabel.font = UIFont(name: "Poppins-Regular", size: 14)
+        logoView.addSubview(timeLabel)
+        
+        timeLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(52)
+            make.left.equalToSuperview().offset(30)
+        }
         
         let logoLabel = UILabel()
         logoLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
