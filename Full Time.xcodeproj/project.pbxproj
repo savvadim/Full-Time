@@ -13,6 +13,8 @@
 		867581912943A5830037266C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8675818F2943A5830037266C /* LaunchScreen.storyboard */; };
 		CE0959782A7021A000003F21 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0959772A7021A000003F21 /* Poppins-Bold.ttf */; };
 		CE09597A2A7021AA00003F21 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0959792A7021AA00003F21 /* Poppins-Regular.ttf */; };
+		CE0959A12A70585E00003F21 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867581E02943A8D00037266C /* Networking.framework */; };
+		CE0959A22A70585E00003F21 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 867581E02943A8D00037266C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEAD3DF22A7016B100DFB8E3 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867582062943AC700037266C /* Login.framework */; };
 		CEAD3DF32A7016B100DFB8E3 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 867582062943AC700037266C /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -48,6 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CE0959A22A70585E00003F21 /* Networking.framework in Embed Frameworks */,
 				CEAD3DF32A7016B100DFB8E3 /* Login.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0959A12A70585E00003F21 /* Networking.framework in Frameworks */,
 				CEAD3DF22A7016B100DFB8E3 /* Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PM73BF3HNB;
+				DEVELOPMENT_TEAM = 3SD575YYYY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Full Time/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -440,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PM73BF3HNB;
+				DEVELOPMENT_TEAM = 3SD575YYYY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Full Time/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

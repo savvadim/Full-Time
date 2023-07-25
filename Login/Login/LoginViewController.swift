@@ -35,9 +35,12 @@ open class LoginViewController: UIViewController {
         
         let logoImage = UIImageView()
         logoImage.image = UIImage(named: "Subtract")
+        logoImage.contentMode = .scaleAspectFit
         logoView.addSubview(logoImage)
         
+        
         logoImage.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 70, height: 70))
             make.bottom.equalToSuperview()
             make.right.equalToSuperview()
         }
@@ -60,8 +63,8 @@ open class LoginViewController: UIViewController {
         logoView.addSubview(timeLabel)
         
         timeLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(52)
-            make.left.equalToSuperview().offset(30)
+            make.top.equalToSuperview().offset(56)
+            make.left.equalToSuperview().offset(33)
         }
         
         let logoLabel = UILabel()
