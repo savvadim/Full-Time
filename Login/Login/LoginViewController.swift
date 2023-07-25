@@ -9,10 +9,11 @@ import Foundation
 import UIKit
 import SnapKit
 
-final class LoginViewController: UIViewController {
-    override func viewDidLoad() {
+open class LoginViewController: UIViewController {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .red
         
     }
 }
