@@ -10,6 +10,11 @@ import UIKit
 import SnapKit
 
 open class LoginViewController: UIViewController {
+    
+    let checkButton = UIButton()
+    let showHideButton = UIButton()
+    let passwordField = UITextField()
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
         
@@ -109,6 +114,7 @@ open class LoginViewController: UIViewController {
         emailField.snp.makeConstraints { make in
             make.leading.equalTo(aImage.snp.trailing).offset(10)
             make.top.equalToSuperview().offset(81)
+            make.width.equalTo(300)
         }
         
         let emailStrip = UIImageView()
@@ -130,17 +136,6 @@ open class LoginViewController: UIViewController {
             make.left.equalToSuperview().offset(36)
         }
         
-        let passwordField = UITextField()
-        passwordField.placeholder = "Введите пароль"
-        passwordField.font = UIFont(name: "Poppins-Bold", size: 16)
-        passwordField.textColor = .white
-        entryView.addSubview(passwordField)
-        
-        passwordField.snp.makeConstraints { make in
-            make.leading.equalTo(lockImage.snp.trailing).offset(12)
-            make.top.equalToSuperview().offset(128)
-        }
-        
         let passwordStrip = UIImageView()
         passwordStrip.image = UIImage(named: "Strip")
         entryView.addSubview(passwordStrip)
@@ -150,23 +145,36 @@ open class LoginViewController: UIViewController {
             make.left.equalToSuperview().offset(57)
         }
         
-        let showHideButton = UIButton()
+        showHideButton.tintColor = UIColor(red: 0.69, green: 0.69, blue: 0.69, alpha: 1)
         showHideButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
         showHideButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .selected)
-        //        showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
+        showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
         entryView.addSubview(showHideButton)
         
         showHideButton.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 28, height: 28))
-            make.top.equalToSuperview().offset(130)
+            make.top.equalToSuperview().offset(125)
             make.right.equalToSuperview().inset(26)
         }
         
-        let checkBox = UIImageView()
-        checkBox.image = UIImage(named: "Check")
-        entryView.addSubview(checkBox)
+        passwordField.isSecureTextEntry = true
+        passwordField.placeholder = "Введите пароль"
+        passwordField.font = UIFont(name: "Poppins-Bold", size: 16)
+        passwordField.textColor = .white
+        entryView.addSubview(passwordField)
         
-        checkBox.snp.makeConstraints { make in
+        passwordField.snp.makeConstraints { make in
+            make.leading.equalTo(lockImage.snp.trailing).offset(12)
+            make.trailing.equalTo(showHideButton.snp.leading).offset(-5)
+            make.top.equalToSuperview().offset(128)
+        }
+        
+        checkButton.setImage(UIImage (named: "Check"), for: .normal)
+        checkButton.setImage(UIImage (named: "Check2"), for: .selected)
+        checkButton.addTarget(self, action: #selector(checkBoxTapped), for: .touchUpInside)
+        entryView.addSubview(checkButton)
+        
+        checkButton.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 15, height: 15))
             make.top.equalToSuperview().offset(176)
             make.left.equalToSuperview().offset(38)
@@ -179,7 +187,7 @@ open class LoginViewController: UIViewController {
         entryView.addSubview(rememberLabel)
         
         rememberLabel.snp.makeConstraints {make in
-            make.leading.equalTo(checkBox.snp.trailing).offset(10)
+            make.leading.equalTo(checkButton.snp.trailing).offset(10)
             make.top.equalToSuperview().offset(175)
         }
         
@@ -207,6 +215,28 @@ open class LoginViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         
+        let noAccountLabel = UILabel()
+        noAccountLabel.text = "Еще нет аккаунта?"
+        noAccountLabel.textColor  = UIColor(red: 1, green: 1, blue: 1, alpha: 0.6)
+        noAccountLabel.font = UIFont(name: "Poppins-Regular", size: 12)
+        entryView.addSubview(noAccountLabel)
+        
+        noAccountLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(26)
+            make.bottom.equalToSuperview().inset(145)
+        }
+        
+        let regLabel = UILabel()
+        regLabel.text = "Зарегистрируйтесь"
+        regLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
+        regLabel.font = UIFont(name: "Poppins-Regular", size: 12)
+        entryView.addSubview(regLabel)
+        
+        regLabel.snp.makeConstraints { make in
+            make.leading.equalTo(noAccountLabel.snp.trailing).offset(3)
+            make.bottom.equalToSuperview().inset(145)
+        }
+        
         let privacyLabel = UILabel()
         privacyLabel.textColor = UIColor(red: 0.68, green: 0.68, blue: 0.68, alpha: 1)
         privacyLabel.font = UIFont(name: "Roboto-Regular", size: 12)
@@ -219,5 +249,15 @@ open class LoginViewController: UIViewController {
             make.top.equalToSuperview().offset(357)
             make.centerX.equalToSuperview()
         }
+    
+    }
+    
+    @objc func showHideButtonTapped() {
+            showHideButton.isSelected.toggle()
+            passwordField.isSecureTextEntry = !showHideButton.isSelected
+        }
+    
+    @objc func checkBoxTapped() {
+        checkButton.isSelected.toggle()
     }
 }
