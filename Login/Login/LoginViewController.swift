@@ -16,7 +16,6 @@ open class LoginViewController: UIViewController {
     let loginButton = UIButton()
     let regButton = UIButton()
     let showHideButton = UIButton()
-//    let checkButton = UIButton()
     
     let emailStrip = UIImageView()
     let passwordStrip = UIImageView()
@@ -48,53 +47,10 @@ open class LoginViewController: UIViewController {
         safeView.addSubview(logoImage)
         
         logoImage.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(324)
+            make.top.equalToSuperview().offset(236)
             make.centerX.equalToSuperview()
             
         }
-        
-//        let logoView = UIView()
-//        //        logoView.backgroundColor = .white
-//        view.addSubview(logoView)
-//
-//        logoView.snp.makeConstraints { make in
-//            make.size.equalTo(CGSize(width: 70, height: 70))
-//            make.centerX.equalToSuperview()
-//            make.top.equalToSuperview().offset(139)
-//        }
-//
-//        let logoImage = UIImageView()
-//        logoImage.image = UIImage(named: "Subtract")
-//        logoImage.contentMode = .scaleAspectFit
-//        logoView.addSubview(logoImage)
-//
-//        logoImage.snp.makeConstraints { make in
-//            make.size.equalTo(CGSize(width: 70, height: 70))
-//            make.bottom.equalToSuperview()
-//            make.right.equalToSuperview()
-//        }
-//
-//        let fullLabel = UILabel()
-//        fullLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
-//        fullLabel.text = "Full"
-//        fullLabel.font = UIFont(name: "Poppins-Regular", size: 14)
-//        logoView.addSubview(fullLabel)
-//
-//        fullLabel.snp.makeConstraints { make in
-//            make.centerX.equalTo(logoImage)
-//            make.centerY.equalTo(logoImage)
-//        }
-//
-//        let timeLabel = UILabel()
-//        timeLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
-//        timeLabel.text = "Time"
-//        timeLabel.font = UIFont(name: "Poppins-Regular", size: 14)
-//        logoView.addSubview(timeLabel)
-//
-//        timeLabel.snp.makeConstraints { make in
-//            make.top.equalToSuperview().offset(56)
-//            make.left.equalToSuperview().offset(33)
-//        }
         
         let authLabel = UILabel()
         authLabel.textColor = .white
@@ -102,39 +58,8 @@ open class LoginViewController: UIViewController {
         authLabel.font = UIFont(name: "Poppins-SemiBold", size: 22)
         navigationItem.titleView = authLabel
         
-//        let entryView = UIView()
-//        entryView.backgroundColor = UIColor(red: 0.06, green: 0.06, blue: 0.06, alpha: 1)
-//        view.addSubview(entryView)
-//        entryView.layer.cornerRadius = 24
-//
-//        entryView.snp.makeConstraints { make in
-//            make.left.right.bottom.equalToSuperview()
-//            make.height.equalTo(442)
-//        }
-        
-//        let entryLabel = UILabel()
-//        entryLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
-//        entryLabel.font = UIFont(name: "Poppins-Bold", size: 22)
-//        entryLabel.text = "Вход"
-//        entryView.addSubview(entryLabel)
-//
-//        entryLabel.snp.makeConstraints {make in
-//            make.left.equalToSuperview().offset(35)
-//            make.top.equalToSuperview().offset(21)
-//        }
-        
-//        let aImage = UIImageView()
-//        aImage.image = UIImage(named: "a")
-//        entryView.addSubview(aImage)
-//
-//        aImage.snp.makeConstraints { make in
-//            make.size.equalTo(CGSize(width: 17, height: 17))
-//            make.top.equalToSuperview().offset(84)
-//            make.left.equalToSuperview().offset(38)
-//        }
-        
 //        let emailStrip = UIImageView()
-        emailStrip.image = UIImage(named: "Strip")
+        emailStrip.image = UIImage(named: "strip")
         safeView.addSubview(emailStrip)
         
         emailStrip.snp.makeConstraints { make in
@@ -143,7 +68,10 @@ open class LoginViewController: UIViewController {
         }
         
 //        let emailField = UITextField()
-        emailField.placeholder = "Введите E-Mail"
+        emailField.attributedPlaceholder = NSAttributedString(
+            string: "Введите E-mail",
+            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+        )
         emailField.font = UIFont(name: "Poppins-Regular", size: 16)
         emailField.textColor = .white
         emailField.delegate = self
@@ -155,18 +83,8 @@ open class LoginViewController: UIViewController {
             make.width.equalTo(310)
         }
         
-//        let lockImage = UIImageView()
-//        lockImage.image = UIImage(named: "Lock")
-//        safeView.addSubview(lockImage)
-//
-//        lockImage.snp.makeConstraints {make in
-//            make.size.equalTo(CGSize(width: 17, height: 17))
-//            make.top.equalToSuperview().offset(135)
-//            make.left.equalToSuperview().offset(36)
-//        }
-        
 //        let passwordStrip = UIImageView()
-        passwordStrip.image = UIImage(named: "Strip")
+        passwordStrip.image = UIImage(named: "strip")
         safeView.addSubview(passwordStrip)
         
         passwordStrip.snp.makeConstraints { make in
@@ -176,7 +94,11 @@ open class LoginViewController: UIViewController {
         
 //        let passwordField = UITextField()
         passwordField.isSecureTextEntry = true
-        passwordField.placeholder = "Введите пароль"
+        passwordField.attributedPlaceholder = NSAttributedString(
+            string: "Введите пароль",
+            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+        )
+        
         passwordField.font = UIFont(name: "Poppins-Regular", size: 16)
         passwordField.textColor = .white
         passwordField.delegate = self
@@ -199,28 +121,6 @@ open class LoginViewController: UIViewController {
             make.centerY.equalTo(passwordField)
             make.right.equalTo(passwordStrip)
         }
-        
-//        checkButton.setImage(UIImage (named: "Check"), for: .normal)
-//        checkButton.setImage(UIImage (named: "Check2"), for: .selected)
-//        checkButton.addTarget(self, action: #selector(checkBoxTapped), for: .touchUpInside)
-//        safeView.addSubview(checkButton)
-//
-//        checkButton.snp.makeConstraints { make in
-//            make.size.equalTo(CGSize(width: 15, height: 15))
-//            make.top.equalToSuperview().offset(176)
-//            make.left.equalToSuperview().offset(38)
-//        }
-//
-//        let rememberLabel = UILabel()
-//        rememberLabel.textColor = .white
-//        rememberLabel.font = UIFont(name: "Poppins-Regular", size: 12)
-//        rememberLabel.text = "Запомнить меня"
-//        safeView.addSubview(rememberLabel)
-//
-//        rememberLabel.snp.makeConstraints {make in
-//            make.leading.equalTo(checkButton.snp.trailing).offset(10)
-//            make.top.equalToSuperview().offset(175)
-//        }
         
         let forgetLabel = UILabel()
         forgetLabel.textColor = .white
@@ -250,17 +150,6 @@ open class LoginViewController: UIViewController {
             
             loginButtonY = make.bottom.equalToSuperview().inset(232).constraint
         }
-        
-//        let noAccountLabel = UILabel()
-//        noAccountLabel.text = "Еще нет аккаунта?"
-//        noAccountLabel.textColor  = UIColor(red: 1, green: 1, blue: 1, alpha: 0.6)
-//        noAccountLabel.font = UIFont(name: "Poppins-Regular", size: 12)
-//        safeView.addSubview(noAccountLabel)
-//
-//        noAccountLabel.snp.makeConstraints { make in
-//            make.left.equalToSuperview().offset(26)
-//            make.bottom.equalToSuperview().inset(145)
-//        }
 
 //        let regButton = UIButton()
         regButton.backgroundColor = .white
@@ -278,17 +167,6 @@ open class LoginViewController: UIViewController {
             
             regButtonY = make.bottom.equalToSuperview().inset(153).constraint
         }
-        
-//        let regLabel = UILabel()
-//        regLabel.text = "Зарегистрируйтесь"
-//        regLabel.textColor = UIColor(red: 0.44, green: 0.67, blue: 0.92, alpha: 1)
-//        regLabel.font = UIFont(name: "Poppins-Regular", size: 12)
-//        safeView.addSubview(regLabel)
-//
-//        regLabel.snp.makeConstraints { make in
-//            make.leading.equalTo(noAccountLabel.snp.trailing).offset(3)
-//            make.bottom.equalToSuperview().inset(145)
-//        }
         
         let privacyLabel = UILabel()
         privacyLabel.textColor = UIColor(red: 0.68, green: 0.68, blue: 0.68, alpha: 1)
@@ -334,10 +212,6 @@ open class LoginViewController: UIViewController {
         passwordField.isSecureTextEntry = !showHideButton.isSelected
     }
     
-//    @objc func checkBoxTapped() {
-//        checkButton.isSelected.toggle()
-//    }
-    
     @objc func loginTapped() {
         print("login")
     }
@@ -349,7 +223,6 @@ open class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
     // Метод делегата UITextFieldDelegate, вызывается при начале редактирования
     public func textFieldDidBeginEditing(_ textField: UITextField) {
-        // Изменяем внешний вид поля ввода при активации
         if textField == emailField {
             emailStrip.image = UIImage(named: "glow")
         } else if textField == passwordField {
@@ -359,11 +232,10 @@ extension LoginViewController: UITextFieldDelegate {
     
     // Метод делегата UITextFieldDelegate, вызывается при завершении редактирования
     public func textFieldDidEndEditing(_ textField: UITextField) {
-        // Возвращаем внешний вид поля ввода к исходному состоянию
         if textField == emailField {
-            emailStrip.image = UIImage(named: "Strip")
+            emailStrip.image = UIImage(named: "strip")
         } else if textField == passwordField {
-            passwordStrip.image = UIImage(named: "Strip")
+            passwordStrip.image = UIImage(named: "strip")
         }
     }
 }
