@@ -27,6 +27,9 @@ open class ProfileViewController: UIViewController {
     let checkButton = UIButton()
     let exitButton = UIButton()
     let saveButton = UIButton()
+    
+    let profileLabel = UILabel()
+    let pushLabel = UILabel()
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +53,7 @@ open class ProfileViewController: UIViewController {
 
         }
         
-        let profileLabel = UILabel()
+//        let profileLabel = UILabel()
         profileLabel.textColor = .white
         profileLabel.text = "Мой профиль"
         profileLabel.font = UIFont(name: "Poppins-SemiBold", size: 22)
@@ -229,7 +232,7 @@ open class ProfileViewController: UIViewController {
             make.left.equalToSuperview().offset(18)
         }
         
-        let pushLabel = UILabel()
+//        let pushLabel = UILabel()
         pushLabel.text = "Push-уведомления"
         pushLabel.font = UIFont(name: "Poppins-Regular", size: 14)
         pushLabel.textColor = .white
