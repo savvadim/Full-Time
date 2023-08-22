@@ -48,6 +48,13 @@
 			remoteGlobalIDString = 867581F52943AC6F0037266C;
 			remoteInfo = Login;
 		};
+		CE1571772A8F9007008413A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE1571642A8F9007008413A5;
+			remoteInfo = Tasks;
+		};
 		CE2857AF2A80F8A9006C8009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */;
@@ -92,6 +99,7 @@
 		8675823A2943B3480037266C /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
 		CE0959772A7021A000003F21 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		CE0959792A7021AA00003F21 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Tasks.xcodeproj; path = Tasks/Tasks.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Profile.xcodeproj; path = Profile/Profile.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE5B9C152A707F94009EAD12 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		CE8516F52A7BE0F100CA9300 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 		867581832943A5820037266C /* Full Time */ = {
 			isa = PBXGroup;
 			children = (
+				CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */,
 				CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */,
 				CEE45BFC2A78079E003A253C /* Boards.xcodeproj */,
 				8675823A2943B3480037266C /* Domain.xcodeproj */,
@@ -190,6 +199,14 @@
 				CE0959772A7021A000003F21 /* Poppins-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CE15716F2A8F9007008413A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE1571782A8F9007008413A5 /* Tasks.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CE2857AC2A80F8A9006C8009 /* Products */ = {
@@ -280,6 +297,10 @@
 					ProductGroup = CE2857AC2A80F8A9006C8009 /* Products */;
 					ProjectRef = CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */;
 				},
+				{
+					ProductGroup = CE15716F2A8F9007008413A5 /* Products */;
+					ProjectRef = CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -308,6 +329,13 @@
 			fileType = wrapper.framework;
 			path = Login.framework;
 			remoteRef = 867582052943AC700037266C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE1571782A8F9007008413A5 /* Tasks.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Tasks.framework;
+			remoteRef = CE1571772A8F9007008413A5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		CE2857B02A80F8A9006C8009 /* Profile.framework */ = {

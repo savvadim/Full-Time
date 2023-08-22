@@ -10,25 +10,42 @@ import Profile
 import Boards
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         generateTabBar()
         setTabBarAppearance()
-
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+
+            // Установите желаемую высоту для таббара
+            if let tabBarView = tabBar.subviews.first {
+                tabBarView.translatesAutoresizingMaskIntoConstraints = false
+                tabBarView.heightAnchor.constraint(equalToConstant: 500.0).isActive = true
+            }
+        }
     
     private func generateTabBar() {
         viewControllers = [
             generateVC(
-                viewController: ProfileViewController(),
-                image: UIImage(systemName: "person.fill")
+                viewController: BoardsViewController(),
+                image: UIImage(named: "boards")
             ),
             generateVC(
                 viewController: BoardsViewController(),
-                image: UIImage(systemName: "house.fill")
+                image: UIImage(named: "tasks")
             ),
+            generateVC(
+                viewController: ProfileViewController(),
+                image: UIImage(named: "noti")
+            ),
+            generateVC(
+                viewController: ProfileViewController(),
+                image: UIImage(named: "user")
+            )
         ]
     }
     
@@ -38,28 +55,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func setTabBarAppearance() {
-        // Set tab bar background color to black
-        
-        let positionOnX: CGFloat = 10
-        let positionOnY: CGFloat = 14
-        let width = tabBar.bounds.width - positionOnX * 2
-        let height = tabBar.bounds.height + positionOnY * 2
-        
-        tabBar.isTranslucent = false
-        tabBar.backgroundColor = UIColor.black.withAlphaComponent(1.0)
-        tabBar.itemWidth = width / 3
-        tabBar.itemPositioning = .centered
-            
-//            // Center-align tab bar item images
-//            if let items = tabBar.items {
-//                for item in items {
-//                    item.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
-//                }
-//            }
+
+        tabBar.tintColor = .white
+        tabBar.unselectedItemTintColor = UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1)
     }
-
-
-    
     
     
 }

@@ -15,6 +15,12 @@ open class BoardsViewController: UIViewController {
         
         view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.28, alpha: 1)
         
+        let boardsLabel = UILabel()
+        boardsLabel.text = "Все доски"
+        boardsLabel.textColor = .white
+        boardsLabel.font = UIFont(name: "Poppins-Bold", size: 22)
+        navigationItem.titleView = boardsLabel
+        
         let safeView = UIView()
         view.addSubview(safeView)
         
@@ -32,24 +38,6 @@ open class BoardsViewController: UIViewController {
 
         }
         
-        let boardsLabel = UILabel()
-        boardsLabel.text = "Все доски"
-        boardsLabel.textColor = .white
-        boardsLabel.font = UIFont(name: "Poppins-Bold", size: 22)
-        navigationItem.titleView = boardsLabel
-        
-//        let burgerButton = UIButton()
-//        burgerButton.setImage(UIImage(named: "Burger"), for: .normal)
-//        burgerButton.addTarget(self, action: #selector(burgerButtonTapped), for: .touchUpInside)
-//
-//        let customBarButtonItem = UIBarButtonItem(customView: burgerButton)
-//        navigationItem.rightBarButtonItem = customBarButtonItem
-//
-//        burgerButton.snp.makeConstraints { make in
-//            make.width.equalTo(22) // Ширина кнопки
-//            make.height.equalTo(18) // Высота кнопки
-//        }
-        
         let createButton = UIButton()
         createButton.layer.cornerRadius = 7
         createButton.setTitle("Создать доску", for: .normal)
@@ -61,7 +49,7 @@ open class BoardsViewController: UIViewController {
         createButton.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 325, height: 50))
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().inset(20)
         }
         
         let tableView = UITableView()
@@ -70,10 +58,37 @@ open class BoardsViewController: UIViewController {
         tableView.register(BoardsTableViewCell.self, forCellReuseIdentifier: "YourTableViewCell")
         view.addSubview(tableView)
         
+        let tasksButton = UIButton()
+        tasksButton.layer.cornerRadius = 15
+        tasksButton.setTitle("Мои задачи", for: .normal)
+        tasksButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
+        tasksButton.backgroundColor = UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1)
+//        tasksButton.setImage(UIImage(named: "full"), for: .normal)
+        safeView.addSubview(tasksButton)
+        
+        tasksButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(30)
+            make.size.equalTo(CGSize(width: 345, height: 100))
+        }
+        
+        let notifyButton = UIButton()
+        notifyButton.layer.cornerRadius = 15
+        notifyButton.setTitle("Уведомления", for: .normal)
+        notifyButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
+        notifyButton.setTitleColor(UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1), for: .normal)
+        notifyButton.backgroundColor = .white
+//        tasksButton.setImage(UIImage(named: "full"), for: .normal)
+        safeView.addSubview(notifyButton)
+        
+        notifyButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(tasksButton.snp.bottom).offset(20)
+            make.size.equalTo(CGSize(width: 345, height: 75))
+        }
+        
+        
     }
-//    @objc func burgerButtonTapped() {
-//            print("burger")
-//        }
 }
 
 extension BoardsViewController : UITableViewDelegate, UITableViewDataSource {
