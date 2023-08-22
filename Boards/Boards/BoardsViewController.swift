@@ -28,16 +28,6 @@ open class BoardsViewController: UIViewController {
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
-        let logoImage = UIImageView()
-        logoImage.image = UIImage(named: "full")
-        safeView.addSubview(logoImage)
-
-        logoImage.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(236)
-            make.centerX.equalToSuperview()
-
-        }
-        
         let createButton = UIButton()
         createButton.layer.cornerRadius = 7
         createButton.setTitle("Создать доску", for: .normal)

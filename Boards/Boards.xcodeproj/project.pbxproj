@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE5882BF2A94A95100D9A5DA /* CreateBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5882BE2A94A95100D9A5DA /* CreateBoardViewController.swift */; };
 		CE8516F42A7BDCD600CA9300 /* BoardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */; };
 		CEE45BF62A78079E003A253C /* Boards.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE45BF52A78079E003A253C /* Boards.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEE45C032A7807CB003A253C /* BoardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE45C022A7807CB003A253C /* BoardsViewController.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE5882BE2A94A95100D9A5DA /* CreateBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBoardViewController.swift; sourceTree = "<group>"; };
 		CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsTableViewCell.swift; sourceTree = "<group>"; };
 		CEE45BF22A78079E003A253C /* Boards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE45BF52A78079E003A253C /* Boards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boards.h; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */,
 				CEE45C022A7807CB003A253C /* BoardsViewController.swift */,
+				CE5882BE2A94A95100D9A5DA /* CreateBoardViewController.swift */,
 				CEE45BF52A78079E003A253C /* Boards.h */,
 			);
 			path = Boards;
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8516F42A7BDCD600CA9300 /* BoardsTableViewCell.swift in Sources */,
+				CE5882BF2A94A95100D9A5DA /* CreateBoardViewController.swift in Sources */,
 				CEE45C032A7807CB003A253C /* BoardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

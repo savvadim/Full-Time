@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         logoImageView.image = UIImage(named: "logo")
         launchScreenView.addSubview(logoImageView)
         
-        let viewController = TabBarController()
+        let viewController = CreateBoardViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = UINavigationController(rootViewController: viewController)
         self.window?.makeKeyAndVisible()

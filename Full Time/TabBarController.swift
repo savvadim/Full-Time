@@ -35,7 +35,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
                 image: UIImage(named: "boards")
             ),
             generateVC(
-                viewController: BoardsViewController(),
+                viewController: CreateBoardViewController(),
                 image: UIImage(named: "tasks")
             ),
             generateVC(
