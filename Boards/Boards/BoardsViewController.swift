@@ -1,38 +1,43 @@
-//
-//  BoardsViewController.swift
-//  Boards
-//
-//  Created by Вадим Савосько on 31.07.2023.
-//
-
 import Foundation
 import UIKit
 import SnapKit
+import Color
+import Font
 
 open class BoardsViewController: UIViewController {
+    
+    private let safeView = UIView()
+    private let tableView = UITableView()
+    
+    private let boardsLabel = UILabel()
+    
+    private let createButton = UIButton()
+    private let tasksButton = UIButton()
+    private let notifyButton = UIButton()
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.28, alpha: 1)
+        view.backgroundColor = UIColor.backColor
         
-        let boardsLabel = UILabel()
+//        let boardsLabel = UILabel()
         boardsLabel.text = "Все доски"
         boardsLabel.textColor = .white
-        boardsLabel.font = UIFont(name: "Poppins-Bold", size: 22)
+        boardsLabel.font = CustomFont.BoldLarge
         navigationItem.titleView = boardsLabel
         
-        let safeView = UIView()
+//        let safeView = UIView()
         view.addSubview(safeView)
         
         safeView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
-        let createButton = UIButton()
+//        let createButton = UIButton()
         createButton.layer.cornerRadius = 7
         createButton.setTitle("Создать доску", for: .normal)
-        createButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
-        createButton.backgroundColor = UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1)
+        createButton.titleLabel?.font = CustomFont.RegularLarge
+        createButton.backgroundColor = UIColor.customBlue
         createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
         safeView.addSubview(createButton)
         
@@ -42,17 +47,17 @@ open class BoardsViewController: UIViewController {
             make.bottom.equalToSuperview().inset(20)
         }
         
-        let tableView = UITableView()
+//        let tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(BoardsTableViewCell.self, forCellReuseIdentifier: "YourTableViewCell")
         view.addSubview(tableView)
         
-        let tasksButton = UIButton()
+//        let tasksButton = UIButton()
         tasksButton.layer.cornerRadius = 15
         tasksButton.setTitle("Мои задачи", for: .normal)
-        tasksButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
-        tasksButton.backgroundColor = UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1)
+        tasksButton.titleLabel?.font = CustomFont.RegularLarge
+        tasksButton.backgroundColor = UIColor.customBlue
 //        tasksButton.setImage(UIImage(named: "full"), for: .normal)
         safeView.addSubview(tasksButton)
         
@@ -62,11 +67,11 @@ open class BoardsViewController: UIViewController {
             make.size.equalTo(CGSize(width: 345, height: 100))
         }
         
-        let notifyButton = UIButton()
+//        let notifyButton = UIButton()
         notifyButton.layer.cornerRadius = 15
         notifyButton.setTitle("Уведомления", for: .normal)
-        notifyButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
-        notifyButton.setTitleColor(UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1), for: .normal)
+        notifyButton.titleLabel?.font = CustomFont.RegularLarge
+        notifyButton.setTitleColor(UIColor.customBlue, for: .normal)
         notifyButton.backgroundColor = .white
 //        tasksButton.setImage(UIImage(named: "full"), for: .normal)
         safeView.addSubview(notifyButton)
@@ -76,8 +81,6 @@ open class BoardsViewController: UIViewController {
             make.top.equalTo(tasksButton.snp.bottom).offset(20)
             make.size.equalTo(CGSize(width: 345, height: 75))
         }
-        
-        
     }
 }
 

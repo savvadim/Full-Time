@@ -1,48 +1,76 @@
-//
-//  CreateBoardViewController.swift
-//  Boards
-//
-//  Created by Вадим Савосько on 22.08.2023.
-//
-
 import UIKit
+import Foundation
 import SnapKit
+import Color
+import Font
 
 open class CreateBoardViewController: UIViewController {
     
-    let checkButton = UIButton()
-
+    private let safeView = UIView()
+    
+    private let boardsLabel = UILabel()
+    private let addLabel = UILabel()
+    
+    private let nameField = UITextField()
+    private let column1Field = UITextField()
+    private let column2Field = UITextField()
+    
+    private let checkButton = UIButton()
+    private let uploadButton = UIButton()
+    private let backButton = UIButton()
+    private let addColumnButton = UIButton()
+    private let createButton = UIButton()
+    
+    private let nameStrip = UIImageView()
+    private let column1Strip = UIImageView()
+    private let column2Strip = UIImageView()
+    
+    private var stackView: UIStackView!
+    
+    private var barButtonItem: UIBarButtonItem!
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.28, alpha: 1)
+        view.backgroundColor = UIColor.backColor
         
-        let boardsLabel = UILabel()
+        stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 10
+        view.addSubview(stackView)
+        
+        stackView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+        
+//        let boardsLabel = UILabel()
         boardsLabel.text = "Создать доску"
         boardsLabel.textColor = .white
-        boardsLabel.font = UIFont(name: "Poppins-Bold", size: 22)
+        boardsLabel.font = CustomFont.BoldLarge
         navigationItem.titleView = boardsLabel
         
-        let backButton = UIButton()
+//        let backButton = UIButton()
         backButton.setImage(UIImage(named: "back"), for: .normal)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         
-        let barButtonItem = UIBarButtonItem(customView: backButton)
+//        let barButtonItem = UIBarButtonItem(customView: backButton)
+        barButtonItem = UIBarButtonItem(customView: backButton)
         navigationItem.leftBarButtonItem = barButtonItem
         
-        let safeView = UIView()
+//        let safeView = UIView()
         view.addSubview(safeView)
         
         safeView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
-        let nameField = UITextField()
+//        let nameField = UITextField()
         nameField.attributedPlaceholder = NSAttributedString(
             string: "Название доски",
-            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+            attributes: [.foregroundColor: UIColor.customGrey]
         )
-        nameField.font = UIFont(name: "Poppins-Regular", size: 16)
+        nameField.font = CustomFont.RegularMedium
         nameField.textColor = .white
 //        nameField.delegate = self
         safeView.addSubview(nameField)
@@ -52,7 +80,7 @@ open class CreateBoardViewController: UIViewController {
             make.left.equalToSuperview().offset(50)
         }
         
-        let nameStrip = UIImageView()
+//        let nameStrip = UIImageView()
         nameStrip.image = UIImage(named: "strip")
         safeView.addSubview(nameStrip)
        
@@ -73,24 +101,38 @@ open class CreateBoardViewController: UIViewController {
             make.left.equalToSuperview().offset(42)
         }
         
-        let addLabel = UILabel()
+//        let addLabel = UILabel()
         addLabel.text = "Добавить аватар доски"
-        addLabel.font = UIFont(name: "Poppins-Regular", size: 16)
+        addLabel.font = CustomFont.RegularMedium
         addLabel.textColor = .white
-        safeView.addSubview(addLabel)
+        stackView.addSubview(addLabel)
         
         addLabel.snp.makeConstraints { make in
             make.centerY.equalTo(checkButton)
             make.left.equalTo(checkButton.snp.right).offset(7)
         }
         
+//        let uploadButton = UIButton()
+        let attributes: [NSAttributedString.Key: Any] = [
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            .foregroundColor: UIColor.white,
+            .font: CustomFont.RegularSmall as Any
+        ]
+        uploadButton.setAttributedTitle(NSAttributedString(string: "Загрузить изображение", attributes: attributes), for: .normal)
+        uploadButton.addTarget(self, action: #selector(uploadButtonTapped), for: .touchUpInside)
+        stackView.addArrangedSubview(uploadButton)
         
-        let column1Field = UITextField()
+        uploadButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(145)
+        }
+        
+//        let column1Field = UITextField()
         column1Field.attributedPlaceholder = NSAttributedString(
             string: "Столбец 1",
-            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+            attributes: [.foregroundColor: UIColor.customGrey]
         )
-        column1Field.font = UIFont(name: "Poppins-Regular", size: 16)
+        column1Field.font = CustomFont.RegularMedium
         column1Field.textColor = .white
 //        column1Field.delegate = self
         safeView.addSubview(column1Field)
@@ -100,7 +142,7 @@ open class CreateBoardViewController: UIViewController {
             make.left.equalToSuperview().offset(50)
         }
         
-        let column1Strip = UIImageView()
+//        let column1Strip = UIImageView()
         column1Strip.image = UIImage(named: "strip")
         safeView.addSubview(column1Strip)
        
@@ -109,12 +151,12 @@ open class CreateBoardViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         
-        let column2Field = UITextField()
+//        let column2Field = UITextField()
         column2Field.attributedPlaceholder = NSAttributedString(
             string: "Столбец 2",
-            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+            attributes: [.foregroundColor: UIColor.customGrey]
         )
-        column2Field.font = UIFont(name: "Poppins-Regular", size: 16)
+        column2Field.font = CustomFont.RegularMedium
         column2Field.textColor = .white
 //        column2Field.delegate = self
         safeView.addSubview(column2Field)
@@ -124,7 +166,7 @@ open class CreateBoardViewController: UIViewController {
             make.left.equalToSuperview().offset(50)
         }
         
-        let column2Strip = UIImageView()
+//        let column2Strip = UIImageView()
         column2Strip.image = UIImage(named: "strip")
         safeView.addSubview(column2Strip)
        
@@ -133,11 +175,11 @@ open class CreateBoardViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         
-        let addColumnButton = UIButton()
+//        let addColumnButton = UIButton()
         addColumnButton.backgroundColor = .white
         addColumnButton.setTitle("Добавить столбец", for: .normal)
-        addColumnButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
-        addColumnButton.setTitleColor(UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1), for: .normal)
+        addColumnButton.titleLabel?.font = CustomFont.RegularLarge
+        addColumnButton.setTitleColor(UIColor.customBlue, for: .normal)
         addColumnButton.addTarget(self, action: #selector(addColumnButtonTapped), for: .touchUpInside)
         addColumnButton.layer.cornerRadius = 8
         safeView.addSubview(addColumnButton)
@@ -148,10 +190,10 @@ open class CreateBoardViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         
-        let createButton = UIButton()
-        createButton.backgroundColor = UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1)
+//        let createButton = UIButton()
+        createButton.backgroundColor = UIColor.customBlue
         createButton.setTitle("Создать доску", for: .normal)
-        createButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
+        createButton.titleLabel?.font = CustomFont.RegularLarge
         createButton.setTitleColor(UIColor.white, for: .normal)
         createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
         createButton.layer.cornerRadius = 8
@@ -179,6 +221,10 @@ open class CreateBoardViewController: UIViewController {
     
     @objc func backButtonTapped(sender: UIButton) {
         print("back")
+    }
+    
+    @objc func uploadButtonTapped(sender: UIButton) {
+        print("upload")
     }
 
 }

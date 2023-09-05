@@ -62,6 +62,20 @@
 			remoteGlobalIDString = CE2857A12A80F8A9006C8009;
 			remoteInfo = Profile;
 		};
+		CED4CE9E2AA7151800F19EDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CED4CE902AA7151800F19EDC;
+			remoteInfo = Color;
+		};
+		CED4CEC52AA7182200F19EDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CED4CEC12AA7182200F19EDC /* Font.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CED4CEB72AA7182200F19EDC;
+			remoteInfo = Font;
+		};
 		CEE45C002A78079E003A253C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEE45BFC2A78079E003A253C /* Boards.xcodeproj */;
@@ -104,6 +118,8 @@
 		CE5B9C152A707F94009EAD12 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		CE8516F52A7BE0F100CA9300 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Color.xcodeproj; path = Color/Color.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CED4CEC12AA7182200F19EDC /* Font.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Font.xcodeproj; path = Font/Font.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CEE45BFC2A78079E003A253C /* Boards.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Boards.xcodeproj; path = Boards/Boards.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -151,6 +167,8 @@
 		867581832943A5820037266C /* Full Time */ = {
 			isa = PBXGroup;
 			children = (
+				CED4CEC12AA7182200F19EDC /* Font.xcodeproj */,
+				CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */,
 				CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */,
 				CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */,
 				CEE45BFC2A78079E003A253C /* Boards.xcodeproj */,
@@ -213,6 +231,22 @@
 			isa = PBXGroup;
 			children = (
 				CE2857B02A80F8A9006C8009 /* Profile.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CED4CE9B2AA7151800F19EDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CED4CE9F2AA7151800F19EDC /* Color.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CED4CEC22AA7182200F19EDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CED4CEC62AA7182200F19EDC /* Font.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,8 +316,16 @@
 					ProjectRef = CEE45BFC2A78079E003A253C /* Boards.xcodeproj */;
 				},
 				{
+					ProductGroup = CED4CE9B2AA7151800F19EDC /* Products */;
+					ProjectRef = CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */;
+				},
+				{
 					ProductGroup = 86416F032943BF4200958825 /* Products */;
 					ProjectRef = 8675823A2943B3480037266C /* Domain.xcodeproj */;
+				},
+				{
+					ProductGroup = CED4CEC22AA7182200F19EDC /* Products */;
+					ProjectRef = CED4CEC12AA7182200F19EDC /* Font.xcodeproj */;
 				},
 				{
 					ProductGroup = 867582022943AC6F0037266C /* Products */;
@@ -343,6 +385,20 @@
 			fileType = wrapper.framework;
 			path = Profile.framework;
 			remoteRef = CE2857AF2A80F8A9006C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CED4CE9F2AA7151800F19EDC /* Color.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Color.framework;
+			remoteRef = CED4CE9E2AA7151800F19EDC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CED4CEC62AA7182200F19EDC /* Font.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Font.framework;
+			remoteRef = CED4CEC52AA7182200F19EDC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		CEE45C012A78079E003A253C /* Boards.framework */ = {

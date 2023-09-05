@@ -1,27 +1,29 @@
-//
-//  LoginViewController.swift
-//  Login
-//
-//  Created by Vladislav Skuratov on 09.12.2022.
-//
-
 import Foundation
 import UIKit
 import SnapKit
+import Color
+import Font
+
 
 open class LoginViewController: UIViewController {
     
-    let scrollView = UIScrollView()
+    private let safeView = UIView()
+    private let scrollView = UIScrollView()
     
-    let loginButton = UIButton()
-    let regButton = UIButton()
-    let showHideButton = UIButton()
+    private let loginButton = UIButton()
+    private let regButton = UIButton()
+    private let showHideButton = UIButton()
     
-    let emailStrip = UIImageView()
-    let passwordStrip = UIImageView()
+    private let logoImage = UIImageView()
+    private let emailStrip = UIImageView()
+    private let passwordStrip = UIImageView()
    
-    let emailField = UITextField()
-    let passwordField = UITextField()
+    private let emailField = UITextField()
+    private let passwordField = UITextField()
+    
+    private let authLabel = UILabel()
+    private let forgetLabel = UILabel()
+    private let privacyLabel = UILabel()
     
     var regButtonY: Constraint?
     var loginButtonY: Constraint?
@@ -29,9 +31,9 @@ open class LoginViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.28, alpha: 1)
+        view.backgroundColor = UIColor.backColor
         
-        let safeView = UIView()
+//        let safeView = UIView()
         view.addSubview(safeView)
         
         safeView.snp.makeConstraints { make in
@@ -42,7 +44,7 @@ open class LoginViewController: UIViewController {
         safeView.addSubview(scrollView)
         scrollView.frame = view.bounds
         
-        let logoImage = UIImageView()
+//        let logoImage = UIImageView()
         logoImage.image = UIImage(named: "full")
         safeView.addSubview(logoImage)
         
@@ -52,10 +54,10 @@ open class LoginViewController: UIViewController {
             
         }
         
-        let authLabel = UILabel()
+//        let authLabel = UILabel()
         authLabel.textColor = .white
         authLabel.text = "Авторизация"
-        authLabel.font = UIFont(name: "Poppins-SemiBold", size: 22)
+        authLabel.font = CustomFont.SemiBold
         navigationItem.titleView = authLabel
         
 //        let emailStrip = UIImageView()
@@ -70,9 +72,9 @@ open class LoginViewController: UIViewController {
 //        let emailField = UITextField()
         emailField.attributedPlaceholder = NSAttributedString(
             string: "Введите E-mail",
-            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+            attributes: [.foregroundColor: UIColor.customGrey]
         )
-        emailField.font = UIFont(name: "Poppins-Regular", size: 16)
+        emailField.font = CustomFont.RegularMedium
         emailField.textColor = .white
         emailField.delegate = self
         safeView.addSubview(emailField)
@@ -96,10 +98,10 @@ open class LoginViewController: UIViewController {
         passwordField.isSecureTextEntry = true
         passwordField.attributedPlaceholder = NSAttributedString(
             string: "Введите пароль",
-            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+            attributes: [.foregroundColor: UIColor.customGrey]
         )
         
-        passwordField.font = UIFont(name: "Poppins-Regular", size: 16)
+        passwordField.font = CustomFont.RegularMedium
         passwordField.textColor = .white
         passwordField.delegate = self
         safeView.addSubview(passwordField)
@@ -111,7 +113,7 @@ open class LoginViewController: UIViewController {
         }
         
 //        let showHideButton = UIButton()
-        showHideButton.tintColor = UIColor(red: 0.69, green: 0.69, blue: 0.69, alpha: 1)
+        showHideButton.tintColor = UIColor.customGrey
         showHideButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
         showHideButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .selected)
         showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
@@ -122,9 +124,9 @@ open class LoginViewController: UIViewController {
             make.right.equalTo(passwordStrip)
         }
         
-        let forgetLabel = UILabel()
+//        let forgetLabel = UILabel()
         forgetLabel.textColor = .white
-        forgetLabel.font = UIFont(name: "Poppins-Bold", size: 14)
+        forgetLabel.font = CustomFont.RegularSmall
         // Создаем атрибутированную строку с нижним подчеркиванием
         let attributedText = NSAttributedString(string: "Забыли пароль?", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         forgetLabel.attributedText = attributedText
@@ -136,8 +138,8 @@ open class LoginViewController: UIViewController {
         }
         
         //let loginButton = UIButton()
-        loginButton.backgroundColor = UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1)
-        loginButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
+        loginButton.backgroundColor = UIColor.customBlue
+        loginButton.titleLabel?.font = CustomFont.RegularLarge
         loginButton.setTitle("Продолжить", for: .normal)
         loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         loginButton.layer.cornerRadius = 8
@@ -154,8 +156,8 @@ open class LoginViewController: UIViewController {
 //        let regButton = UIButton()
         regButton.backgroundColor = .white
         regButton.setTitle("Регистрация", for: .normal)
-        regButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
-        regButton.setTitleColor(UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1), for: .normal)
+        regButton.titleLabel?.font = CustomFont.RegularLarge
+        regButton.setTitleColor(UIColor.customBlue, for: .normal)
         regButton.addTarget(self, action: #selector(regTapped), for: .touchUpInside)
         regButton.layer.cornerRadius = 8
         safeView.addSubview(regButton)
@@ -168,9 +170,9 @@ open class LoginViewController: UIViewController {
             regButtonY = make.bottom.equalToSuperview().inset(153).constraint
         }
         
-        let privacyLabel = UILabel()
-        privacyLabel.textColor = UIColor(red: 0.68, green: 0.68, blue: 0.68, alpha: 1)
-        privacyLabel.font = UIFont(name: "Roboto-Regular", size: 12)
+//        let privacyLabel = UILabel()
+        privacyLabel.textColor = UIColor.privacyGrey
+        privacyLabel.font = CustomFont.Roboto
         privacyLabel.text = "Нажимая, вы соглашаетесь с политикой\nконфидециальности"
         privacyLabel.textAlignment = .center
         privacyLabel.numberOfLines = 0

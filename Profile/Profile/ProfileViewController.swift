@@ -1,65 +1,66 @@
-//
-//  ProfileViewController.swift
-//  Profile
-//
-//  Created by Вадим Савосько on 07.08.2023.
-//
-
 import Foundation
 import UIKit
 import SnapKit
+import Alamofire
+import Color
+import Font
 
 open class ProfileViewController: UIViewController {
     
-    let nameField = UITextField()
-    let surNameField = UITextField()
-    let emailField = UITextField()
-    let jobField = UITextField()
-    let passwordField = UITextField()
+    private let safeView = UIView()
+    private let inputContentView = UIView()
     
-    let nameStrip = UIImageView()
-    let surNameStrip = UIImageView()
-    let emailStrip = UIImageView()
-    let jobStrip = UIImageView()
-    let passwordStrip = UIImageView()
+    private let nameField = UITextField()
+    private let surNameField = UITextField()
+    private let emailField = UITextField()
+    private let jobField = UITextField()
+    private let passwordField = UITextField()
     
-    let showHideButton = UIButton()
-    let checkButton = UIButton()
-    let exitButton = UIButton()
-    let saveButton = UIButton()
+    private let nameStrip = UIImageView()
+    private let surNameStrip = UIImageView()
+    private let emailStrip = UIImageView()
+    private let jobStrip = UIImageView()
+    private let passwordStrip = UIImageView()
     
-    let profileLabel = UILabel()
-    let pushLabel = UILabel()
+    private let showHideButton = UIButton()
+    private let checkButton = UIButton()
+    private let exitButton = UIButton()
+    private let saveButton = UIButton()
+    
+    private let profileLabel = UILabel()
+    private let pushLabel = UILabel()
+    
+    private let logoImage = UIImageView()
+    private let imageView = UIImageView()
 
     override open func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.28, alpha: 1)
+        view.backgroundColor = UIColor.backColor
         
-        let safeView = UIView()
+//        let safeView = UIView()
         view.addSubview(safeView)
         
         safeView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
-        let logoImage = UIImageView()
+//        let logoImage = UIImageView()
         logoImage.image = UIImage(named: "full")
         safeView.addSubview(logoImage)
 
         logoImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(236)
             make.centerX.equalToSuperview()
-
         }
         
 //        let profileLabel = UILabel()
         profileLabel.textColor = .white
         profileLabel.text = "Мой профиль"
-        profileLabel.font = UIFont(name: "Poppins-SemiBold", size: 22)
+        profileLabel.font = CustomFont.SemiBold
         navigationItem.titleView = profileLabel
         
-        let imageView = UIImageView()
+//        let imageView = UIImageView()
         imageView.image = UIImage(named: "default")
         safeView.addSubview(imageView)
 
@@ -72,11 +73,10 @@ open class ProfileViewController: UIViewController {
         imageView.layer.cornerRadius = 60
         imageView.clipsToBounds = true
         
-        let inputView = UIView()
-//        inputView.backgroundColor = .white
-        safeView.addSubview(inputView)
+//        let inputView = UIView()
+        safeView.addSubview(inputContentView)
         
-        inputView.snp.makeConstraints { make in
+        inputContentView.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 310, height: 306))
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(200)
@@ -84,13 +84,13 @@ open class ProfileViewController: UIViewController {
         
 //        let nameField = UITextField()
         nameField.textColor = .white
-        nameField.font = UIFont(name: "Poppins-Regular", size: 16)
+        nameField.font = CustomFont.RegularMedium
         nameField.attributedPlaceholder = NSAttributedString(
             string: "Ivan",
-            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+            attributes: [.foregroundColor: UIColor.customGrey]
         )
         nameField.delegate = self
-        inputView.addSubview(nameField)
+        inputContentView.addSubview(nameField)
         
         nameField.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 284, height: 24))
@@ -100,7 +100,7 @@ open class ProfileViewController: UIViewController {
         
 //        let nameStrip = UIImageView()
         nameStrip.image = UIImage(named: "strip")
-        inputView.addSubview(nameStrip)
+        inputContentView.addSubview(nameStrip)
         
         nameStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -109,13 +109,13 @@ open class ProfileViewController: UIViewController {
         
 //        let surNameField = UITextField()
         surNameField.textColor = .white
-        surNameField.font = UIFont(name: "Poppins-Regular", size: 16)
+        surNameField.font = CustomFont.RegularMedium
         surNameField.attributedPlaceholder = NSAttributedString(
             string: "Ivanov",
-            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+            attributes: [.foregroundColor: UIColor.customGrey]
         )
         surNameField.delegate = self
-        inputView.addSubview(surNameField)
+        inputContentView.addSubview(surNameField)
         
         surNameField.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 284, height: 24))
@@ -125,7 +125,7 @@ open class ProfileViewController: UIViewController {
         
 //        let surNameStrip = UIImageView()
         surNameStrip.image = UIImage(named: "strip")
-        inputView.addSubview(surNameStrip)
+        inputContentView.addSubview(surNameStrip)
         
         surNameStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -134,13 +134,13 @@ open class ProfileViewController: UIViewController {
         
 //        let emailField = UITextField()
         emailField.textColor = .white
-        emailField.font = UIFont(name: "Poppins-Regular", size: 16)
+        emailField.font = CustomFont.RegularMedium
         emailField.attributedPlaceholder = NSAttributedString(
             string: "E-mail",
-            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+            attributes: [.foregroundColor: UIColor.customGrey]
         )
         emailField.delegate = self
-        inputView.addSubview(emailField)
+        inputContentView.addSubview(emailField)
         
         emailField.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 284, height: 24))
@@ -150,7 +150,7 @@ open class ProfileViewController: UIViewController {
         
 //        let emailStrip = UIImageView()
         emailStrip.image = UIImage(named: "strip")
-        inputView.addSubview(emailStrip)
+        inputContentView.addSubview(emailStrip)
         
         emailStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -159,13 +159,13 @@ open class ProfileViewController: UIViewController {
         
 //        let jobField = UITextField()
         jobField.textColor = .white
-        jobField.font = UIFont(name: "Poppins-Regular", size: 16)
+        jobField.font = CustomFont.RegularMedium
         jobField.attributedPlaceholder = NSAttributedString(
             string: "Должность",
-            attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+            attributes: [.foregroundColor: UIColor.customGrey]
         )
         jobField.delegate = self
-        inputView.addSubview(jobField)
+        inputContentView.addSubview(jobField)
         
         jobField.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 284, height: 24))
@@ -175,7 +175,7 @@ open class ProfileViewController: UIViewController {
         
 //        let jobStrip = UIImageView()
         jobStrip.image = UIImage(named: "strip")
-        inputView.addSubview(jobStrip)
+        inputContentView.addSubview(jobStrip)
         
         jobStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -185,13 +185,13 @@ open class ProfileViewController: UIViewController {
 //        let passwordField = UITextField()
         passwordField.isSecureTextEntry = true
         passwordField.textColor = .white
-        passwordField.font = UIFont(name: "Poppins-Regular", size: 16)
+        passwordField.font = CustomFont.RegularMedium
         passwordField.attributedPlaceholder = NSAttributedString(
                     string: "Изменить пароль",
-                    attributes: [.foregroundColor: UIColor(red: 0.69, green: 0.76, blue: 0.81, alpha: 0.5)]
+                    attributes: [.foregroundColor: UIColor.customGrey]
                 )
         passwordField.delegate = self
-        inputView.addSubview(passwordField)
+        inputContentView.addSubview(passwordField)
         
         passwordField.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 270, height: 24))
@@ -201,7 +201,7 @@ open class ProfileViewController: UIViewController {
         
 //        let passwordStrip = UIImageView()
         passwordStrip.image = UIImage(named: "strip")
-        inputView.addSubview(passwordStrip)
+        inputContentView.addSubview(passwordStrip)
         
         passwordStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -209,7 +209,7 @@ open class ProfileViewController: UIViewController {
         }
         
 //        let showHideButton = UIButton()
-        showHideButton.tintColor = UIColor(red: 0.69, green: 0.69, blue: 0.69, alpha: 1)
+        showHideButton.tintColor = UIColor.eyeGrey
         showHideButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
         showHideButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .selected)
         showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
@@ -224,7 +224,7 @@ open class ProfileViewController: UIViewController {
         checkButton.setImage(UIImage (named: "hover"), for: .normal)
         checkButton.setImage(UIImage (named: "active"), for: .selected)
         checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
-        inputView.addSubview(checkButton)
+        inputContentView.addSubview(checkButton)
 
         checkButton.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 15, height: 15))
@@ -234,9 +234,9 @@ open class ProfileViewController: UIViewController {
         
 //        let pushLabel = UILabel()
         pushLabel.text = "Push-уведомления"
-        pushLabel.font = UIFont(name: "Poppins-Regular", size: 14)
+        pushLabel.font = CustomFont.RegularSmall
         pushLabel.textColor = .white
-        inputView.addSubview(pushLabel)
+        inputContentView.addSubview(pushLabel)
         
         pushLabel.snp.makeConstraints { make in
             make.centerY.equalTo(checkButton)
@@ -244,9 +244,9 @@ open class ProfileViewController: UIViewController {
         }
         
 //        let exitButton = UIButton()
-        exitButton.backgroundColor = UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1)
+        exitButton.backgroundColor = UIColor.customBlue
         exitButton.setTitle("Выйти", for: .normal)
-        exitButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
+        exitButton.titleLabel?.font = CustomFont.RegularLarge
         exitButton.addTarget(self, action: #selector(exitButtonTapped), for: .touchUpInside)
         exitButton.layer.cornerRadius = 8
         safeView.addSubview(exitButton)
@@ -260,8 +260,8 @@ open class ProfileViewController: UIViewController {
 //        let saveButton = UIButton()
         saveButton.backgroundColor = .white
         saveButton.setTitle("Сохранить", for: .normal)
-        saveButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
-        saveButton.setTitleColor(UIColor(red: 0.12, green: 0.15, blue: 0.53, alpha: 1), for: .normal)
+        saveButton.titleLabel?.font = CustomFont.RegularLarge
+        saveButton.setTitleColor(UIColor.customBlue, for: .normal)
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         saveButton.layer.cornerRadius = 8
         saveButton.isHidden = true

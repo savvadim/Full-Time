@@ -7,152 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0A4BF22AA5D51E00181E3D /* ProfileNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A4BF12AA5D51E00181E3D /* ProfileNetwork.swift */; };
-		CE0A4BF52AA5D6A300181E3D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE0A4BF42AA5D6A300181E3D /* Alamofire */; };
-		CE0A4BF72AA5D96600181E3D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A4BF62AA5D96600181E3D /* ProfileModel.swift */; };
-		CE2857A52A80F8A9006C8009 /* Profile.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2857A42A80F8A9006C8009 /* Profile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE2857B42A80F969006C8009 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2857B32A80F969006C8009 /* ProfileViewController.swift */; };
-		CE2857B72A80F9C9006C8009 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE2857B62A80F9C9006C8009 /* SnapKit */; };
-		CED4CEA72AA7157B00F19EDC /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEA62AA7157B00F19EDC /* Color.framework */; };
-		CED4CEA82AA7157B00F19EDC /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEA62AA7157B00F19EDC /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CED4CECD2AA7235900F19EDC /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CECC2AA7235900F19EDC /* Font.framework */; };
-		CED4CECE2AA7235900F19EDC /* Font.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CECC2AA7235900F19EDC /* Font.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CED4CEC82AA7183A00F19EDC /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4CEC72AA7183A00F19EDC /* CustomFont.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		CED4CEA92AA7157B00F19EDC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CED4CEA82AA7157B00F19EDC /* Color.framework in Embed Frameworks */,
-				CED4CECE2AA7235900F19EDC /* Font.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		CE0A4BF12AA5D51E00181E3D /* ProfileNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetwork.swift; sourceTree = "<group>"; };
-		CE0A4BF62AA5D96600181E3D /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
-		CE2857A12A80F8A9006C8009 /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE2857A42A80F8A9006C8009 /* Profile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
-		CE2857B32A80F969006C8009 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		CED4CE202AA7133600F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED4CE402AA713CE00F19EDC /* UIColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED4CEA62AA7157B00F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED4CECC2AA7235900F19EDC /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED4CEB72AA7182200F19EDC /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED4CEC72AA7183A00F19EDC /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE28579E2A80F8A9006C8009 /* Frameworks */ = {
+		CED4CEB42AA7182200F19EDC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2857B72A80F9C9006C8009 /* SnapKit in Frameworks */,
-				CED4CECD2AA7235900F19EDC /* Font.framework in Frameworks */,
-				CED4CEA72AA7157B00F19EDC /* Color.framework in Frameworks */,
-				CE0A4BF52AA5D6A300181E3D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE2857972A80F8A9006C8009 = {
+		CED4CEAD2AA7182200F19EDC = {
 			isa = PBXGroup;
 			children = (
-				CE2857A32A80F8A9006C8009 /* Profile */,
-				CE2857A22A80F8A9006C8009 /* Products */,
-				CED4CE1F2AA7133600F19EDC /* Frameworks */,
+				CED4CEC72AA7183A00F19EDC /* CustomFont.swift */,
+				CED4CEB82AA7182200F19EDC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CE2857A22A80F8A9006C8009 /* Products */ = {
+		CED4CEB82AA7182200F19EDC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE2857A12A80F8A9006C8009 /* Profile.framework */,
+				CED4CEB72AA7182200F19EDC /* Font.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CE2857A32A80F8A9006C8009 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				CE2857A42A80F8A9006C8009 /* Profile.h */,
-				CE2857B32A80F969006C8009 /* ProfileViewController.swift */,
-				CE0A4BF12AA5D51E00181E3D /* ProfileNetwork.swift */,
-				CE0A4BF62AA5D96600181E3D /* ProfileModel.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		CED4CE1F2AA7133600F19EDC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CED4CECC2AA7235900F19EDC /* Font.framework */,
-				CED4CEA62AA7157B00F19EDC /* Color.framework */,
-				CED4CE402AA713CE00F19EDC /* UIColor.framework */,
-				CED4CE202AA7133600F19EDC /* Color.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CE28579C2A80F8A9006C8009 /* Headers */ = {
+		CED4CEB22AA7182200F19EDC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2857A52A80F8A9006C8009 /* Profile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CE2857A02A80F8A9006C8009 /* Profile */ = {
+		CED4CEB62AA7182200F19EDC /* Font */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE2857A82A80F8A9006C8009 /* Build configuration list for PBXNativeTarget "Profile" */;
+			buildConfigurationList = CED4CEBE2AA7182200F19EDC /* Build configuration list for PBXNativeTarget "Font" */;
 			buildPhases = (
-				CE28579C2A80F8A9006C8009 /* Headers */,
-				CE28579D2A80F8A9006C8009 /* Sources */,
-				CE28579E2A80F8A9006C8009 /* Frameworks */,
-				CE28579F2A80F8A9006C8009 /* Resources */,
-				CED4CEA92AA7157B00F19EDC /* Embed Frameworks */,
+				CED4CEB22AA7182200F19EDC /* Headers */,
+				CED4CEB32AA7182200F19EDC /* Sources */,
+				CED4CEB42AA7182200F19EDC /* Frameworks */,
+				CED4CEB52AA7182200F19EDC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Profile;
-			packageProductDependencies = (
-				CE2857B62A80F9C9006C8009 /* SnapKit */,
-				CE0A4BF42AA5D6A300181E3D /* Alamofire */,
-			);
-			productName = Profile;
-			productReference = CE2857A12A80F8A9006C8009 /* Profile.framework */;
+			name = Font;
+			productName = Font;
+			productReference = CED4CEB72AA7182200F19EDC /* Font.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE2857982A80F8A9006C8009 /* Project object */ = {
+		CED4CEAE2AA7182200F19EDC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					CE2857A02A80F8A9006C8009 = {
+					CED4CEB62AA7182200F19EDC = {
 						CreatedOnToolsVersion = 14.3.1;
 						LastSwiftMigration = 1430;
 					};
 				};
 			};
-			buildConfigurationList = CE28579B2A80F8A9006C8009 /* Build configuration list for PBXProject "Profile" */;
+			buildConfigurationList = CED4CEB12AA7182200F19EDC /* Build configuration list for PBXProject "Font" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -160,22 +96,18 @@
 				en,
 				Base,
 			);
-			mainGroup = CE2857972A80F8A9006C8009;
-			packageReferences = (
-				CE2857B52A80F9C9006C8009 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				CE0A4BF32AA5D6A300181E3D /* XCRemoteSwiftPackageReference "Alamofire" */,
-			);
-			productRefGroup = CE2857A22A80F8A9006C8009 /* Products */;
+			mainGroup = CED4CEAD2AA7182200F19EDC;
+			productRefGroup = CED4CEB82AA7182200F19EDC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE2857A02A80F8A9006C8009 /* Profile */,
+				CED4CEB62AA7182200F19EDC /* Font */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE28579F2A80F8A9006C8009 /* Resources */ = {
+		CED4CEB52AA7182200F19EDC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,20 +117,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE28579D2A80F8A9006C8009 /* Sources */ = {
+		CED4CEB32AA7182200F19EDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0A4BF22AA5D51E00181E3D /* ProfileNetwork.swift in Sources */,
-				CE2857B42A80F969006C8009 /* ProfileViewController.swift in Sources */,
-				CE0A4BF72AA5D96600181E3D /* ProfileModel.swift in Sources */,
+				CED4CEC82AA7183A00F19EDC /* CustomFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CE2857A62A80F8A9006C8009 /* Debug */ = {
+		CED4CEBC2AA7182200F19EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -261,7 +191,7 @@
 			};
 			name = Debug;
 		};
-		CE2857A72A80F8A9006C8009 /* Release */ = {
+		CED4CEBD2AA7182200F19EDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -318,7 +248,7 @@
 			};
 			name = Release;
 		};
-		CE2857A92A80F8A9006C8009 /* Debug */ = {
+		CED4CEBF2AA7182200F19EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -342,7 +272,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = VineLab.Profile;
+				PRODUCT_BUNDLE_IDENTIFIER = VineLab.Font;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -352,7 +282,7 @@
 			};
 			name = Debug;
 		};
-		CE2857AA2A80F8A9006C8009 /* Release */ = {
+		CED4CEC02AA7182200F19EDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -376,7 +306,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = VineLab.Profile;
+				PRODUCT_BUNDLE_IDENTIFIER = VineLab.Font;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -388,57 +318,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE28579B2A80F8A9006C8009 /* Build configuration list for PBXProject "Profile" */ = {
+		CED4CEB12AA7182200F19EDC /* Build configuration list for PBXProject "Font" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE2857A62A80F8A9006C8009 /* Debug */,
-				CE2857A72A80F8A9006C8009 /* Release */,
+				CED4CEBC2AA7182200F19EDC /* Debug */,
+				CED4CEBD2AA7182200F19EDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE2857A82A80F8A9006C8009 /* Build configuration list for PBXNativeTarget "Profile" */ = {
+		CED4CEBE2AA7182200F19EDC /* Build configuration list for PBXNativeTarget "Font" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE2857A92A80F8A9006C8009 /* Debug */,
-				CE2857AA2A80F8A9006C8009 /* Release */,
+				CED4CEBF2AA7182200F19EDC /* Debug */,
+				CED4CEC02AA7182200F19EDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CE0A4BF32AA5D6A300181E3D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		CE2857B52A80F9C9006C8009 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 5.6.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CE0A4BF42AA5D6A300181E3D /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE0A4BF32AA5D6A300181E3D /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		CE2857B62A80F9C9006C8009 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE2857B52A80F9C9006C8009 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = CE2857982A80F8A9006C8009 /* Project object */;
+	rootObject = CED4CEAE2AA7182200F19EDC /* Project object */;
 }

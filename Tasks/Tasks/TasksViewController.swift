@@ -1,10 +1,3 @@
-//
-//  TasksViewController.swift
-//  Tasks
-//
-//  Created by Вадим Савосько on 18.08.2023.
-//
-
 import UIKit
 import SnapKit
 import Foundation
