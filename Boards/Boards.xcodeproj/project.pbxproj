@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE5882BF2A94A95100D9A5DA /* CreateBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5882BE2A94A95100D9A5DA /* CreateBoardViewController.swift */; };
 		CE8516F42A7BDCD600CA9300 /* BoardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */; };
+		CE8B79092AA8AB9A009D43C5 /* TaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B79082AA8AB99009D43C5 /* TaskButton.swift */; };
+		CE8B790B2AA8CF14009D43C5 /* NoticeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B790A2AA8CF14009D43C5 /* NoticeButton.swift */; };
 		CED4CEA32AA7154700F19EDC /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEA22AA7154700F19EDC /* Color.framework */; };
 		CED4CEA42AA7154700F19EDC /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEA22AA7154700F19EDC /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CED4CED02AA723E500F19EDC /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CECF2AA723E500F19EDC /* Font.framework */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		CE5882BE2A94A95100D9A5DA /* CreateBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBoardViewController.swift; sourceTree = "<group>"; };
 		CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsTableViewCell.swift; sourceTree = "<group>"; };
+		CE8B79082AA8AB99009D43C5 /* TaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskButton.swift; sourceTree = "<group>"; };
+		CE8B790A2AA8CF14009D43C5 /* NoticeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeButton.swift; sourceTree = "<group>"; };
 		CED4CE622AA7146900F19EDC /* CustomColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CustomColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CE822AA714DF00F19EDC /* MyColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CEA22AA7154700F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,9 +83,11 @@
 		CEE45BF42A78079E003A253C /* Boards */ = {
 			isa = PBXGroup;
 			children = (
-				CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */,
 				CEE45C022A7807CB003A253C /* BoardsViewController.swift */,
 				CE5882BE2A94A95100D9A5DA /* CreateBoardViewController.swift */,
+				CE8B79082AA8AB99009D43C5 /* TaskButton.swift */,
+				CE8B790A2AA8CF14009D43C5 /* NoticeButton.swift */,
+				CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */,
 				CEE45BF52A78079E003A253C /* Boards.h */,
 			);
 			path = Boards;
@@ -186,7 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8516F42A7BDCD600CA9300 /* BoardsTableViewCell.swift in Sources */,
+				CE8B790B2AA8CF14009D43C5 /* NoticeButton.swift in Sources */,
 				CE5882BF2A94A95100D9A5DA /* CreateBoardViewController.swift in Sources */,
+				CE8B79092AA8AB9A009D43C5 /* TaskButton.swift in Sources */,
 				CEE45C032A7807CB003A253C /* BoardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

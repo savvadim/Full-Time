@@ -1,13 +1,13 @@
 import UIKit
 import SnapKit
-import Foundation
+import Color
+import Font
 
-class TasksViewController: UIViewController {
+open class TasksViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        view.backgroundColor = UIColor.backColor
     }
-
 }

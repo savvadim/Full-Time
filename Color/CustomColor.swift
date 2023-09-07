@@ -21,4 +21,12 @@ extension UIColor {
     public static var privacyGrey: UIColor {
             return UIColor(red: 0.68, green: 0.68, blue: 0.68, alpha: 1)
         }
+    
+    public static var tabBlue: UIColor {
+            return UIColor(red: 0.07, green: 0.07, blue: 0.16, alpha: 1)
+        }
+    
+    public static var tabGrey: UIColor {
+            return UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1)
+        }
 }

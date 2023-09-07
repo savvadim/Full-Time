@@ -4,7 +4,6 @@ import SnapKit
 import Color
 import Font
 
-
 open class LoginViewController: UIViewController {
     
     private let safeView = UIView()
@@ -25,11 +24,12 @@ open class LoginViewController: UIViewController {
     private let forgetLabel = UILabel()
     private let privacyLabel = UILabel()
     
-    var regButtonY: Constraint?
-    var loginButtonY: Constraint?
-    
     override open func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Создаем распознаватель жестов
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
         
         view.backgroundColor = UIColor.backColor
         
@@ -45,13 +45,13 @@ open class LoginViewController: UIViewController {
         scrollView.frame = view.bounds
         
 //        let logoImage = UIImageView()
-        logoImage.image = UIImage(named: "full")
+        logoImage.image = UIImage(named: "fullBack")
+        logoImage.contentMode = .scaleAspectFill
         safeView.addSubview(logoImage)
         
         logoImage.snp.makeConstraints { make in
+            make.width.equalToSuperview()
             make.top.equalToSuperview().offset(236)
-            make.centerX.equalToSuperview()
-            
         }
         
 //        let authLabel = UILabel()
@@ -82,7 +82,7 @@ open class LoginViewController: UIViewController {
         emailField.snp.makeConstraints { make in
             make.left.equalTo(emailStrip).offset(8)
             make.top.equalToSuperview().offset(60)
-            make.width.equalTo(310)
+            make.width.equalTo(302)
         }
         
 //        let passwordStrip = UIImageView()
@@ -109,11 +109,11 @@ open class LoginViewController: UIViewController {
         passwordField.snp.makeConstraints { make in
             make.left.equalTo(passwordStrip).offset(8)
             make.top.equalToSuperview().offset(117)
-            make.width.equalTo(280)
+            make.width.equalTo(275)
         }
         
 //        let showHideButton = UIButton()
-        showHideButton.tintColor = UIColor.customGrey
+        showHideButton.tintColor = UIColor.eyeGrey
         showHideButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
         showHideButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .selected)
         showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
@@ -124,17 +124,19 @@ open class LoginViewController: UIViewController {
             make.right.equalTo(passwordStrip)
         }
         
-//        let forgetLabel = UILabel()
-        forgetLabel.textColor = .white
-        forgetLabel.font = CustomFont.RegularSmall
-        // Создаем атрибутированную строку с нижним подчеркиванием
-        let attributedText = NSAttributedString(string: "Забыли пароль?", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        forgetLabel.attributedText = attributedText
-        safeView.addSubview(forgetLabel)
+        let forgetButton = UIButton()
+        let attributes: [NSAttributedString.Key: Any] = [
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            .foregroundColor: UIColor.white,
+            .font: CustomFont.RegularSmall as Any
+        ]
+        forgetButton.setAttributedTitle(NSAttributedString(string: "Забыли пароль?", attributes: attributes), for: .normal)
+        forgetButton.addTarget(self, action: #selector(forgetTapped), for: .touchUpInside)
+        safeView.addSubview(forgetButton)
         
-        forgetLabel.snp.makeConstraints { make in
+        forgetButton.snp.makeConstraints { make in
             make.right.equalToSuperview().inset(33)
-            make.top.equalToSuperview().offset(172)
+            make.top.equalToSuperview().offset(170)
         }
         
         //let loginButton = UIButton()
@@ -149,8 +151,6 @@ open class LoginViewController: UIViewController {
             make.size.equalTo(CGSize(width: 365, height: 60))
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().inset(232)
-            
-            loginButtonY = make.bottom.equalToSuperview().inset(232).constraint
         }
 
 //        let regButton = UIButton()
@@ -166,8 +166,6 @@ open class LoginViewController: UIViewController {
             make.size.equalTo(CGSize(width: 365, height: 60))
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().inset(153)
-            
-            regButtonY = make.bottom.equalToSuperview().inset(153).constraint
         }
         
 //        let privacyLabel = UILabel()
@@ -183,35 +181,11 @@ open class LoginViewController: UIViewController {
             make.bottom.equalToSuperview().inset(60)
             make.centerX.equalToSuperview()
         }
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
-    
-    @objc func keyboardWillShow(_ notification: Notification) {
-            guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
-                return
-            }
-            
-            let keyboardHeight = keyboardFrame.size.height
-            let buttonBottomInset: CGFloat = 20
-            
-            regButtonY?.update(offset: -(keyboardHeight - buttonBottomInset))
-        loginButtonY?.update(offset: -(keyboardHeight + regButton.frame.size.height))
-            view.layoutIfNeeded()
-        }
-        
-    @objc func keyboardWillHide(_ notification: Notification) {
-        regButtonY?.update(offset: 100)
-        loginButtonY?.update(offset: 100)
-        view.layoutIfNeeded()
-    }
-
     
     @objc func showHideButtonTapped() {
         showHideButton.isSelected.toggle()
-        passwordField.isSecureTextEntry = !showHideButton.isSelected
+        passwordField.isSecureTextEntry.toggle()
     }
     
     @objc func loginTapped() {
@@ -221,9 +195,18 @@ open class LoginViewController: UIViewController {
     @objc func regTapped() {
         print("reg")
     }
+    
+    @objc func forgetTapped() {
+        print("forget")
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
 }
+
 extension LoginViewController: UITextFieldDelegate {
-    // Метод делегата UITextFieldDelegate, вызывается при начале редактирования
+    
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == emailField {
             emailStrip.image = UIImage(named: "glow")
@@ -232,7 +215,6 @@ extension LoginViewController: UITextFieldDelegate {
         }
     }
     
-    // Метод делегата UITextFieldDelegate, вызывается при завершении редактирования
     public func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == emailField {
             emailStrip.image = UIImage(named: "strip")

@@ -10,12 +10,33 @@
 		CE1571682A8F9007008413A5 /* Tasks.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1571672A8F9007008413A5 /* Tasks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE15717B2A8F9024008413A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE15717A2A8F9024008413A5 /* SnapKit */; };
 		CE15717D2A8F9056008413A5 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15717C2A8F9056008413A5 /* TasksViewController.swift */; };
+		CEC00C382AAA1E4D0088867F /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC00C372AAA1E4D0088867F /* Color.framework */; };
+		CEC00C392AAA1E4D0088867F /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC00C372AAA1E4D0088867F /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEC00C3C2AAA1E530088867F /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC00C3B2AAA1E530088867F /* Font.framework */; };
+		CEC00C3D2AAA1E530088867F /* Font.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC00C3B2AAA1E530088867F /* Font.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEC00C3A2AAA1E4D0088867F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CEC00C392AAA1E4D0088867F /* Color.framework in Embed Frameworks */,
+				CEC00C3D2AAA1E530088867F /* Font.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE1571642A8F9007008413A5 /* Tasks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tasks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1571672A8F9007008413A5 /* Tasks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
 		CE15717C2A8F9056008413A5 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		CEC00C372AAA1E4D0088867F /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC00C3B2AAA1E530088867F /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC00C382AAA1E4D0088867F /* Color.framework in Frameworks */,
+				CEC00C3C2AAA1E530088867F /* Font.framework in Frameworks */,
 				CE15717B2A8F9024008413A5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +58,7 @@
 			children = (
 				CE1571662A8F9007008413A5 /* Tasks */,
 				CE1571652A8F9007008413A5 /* Products */,
+				CEC00C362AAA1E4D0088867F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +77,15 @@
 				CE15717C2A8F9056008413A5 /* TasksViewController.swift */,
 			);
 			path = Tasks;
+			sourceTree = "<group>";
+		};
+		CEC00C362AAA1E4D0088867F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEC00C3B2AAA1E530088867F /* Font.framework */,
+				CEC00C372AAA1E4D0088867F /* Color.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +110,7 @@
 				CE1571602A8F9007008413A5 /* Sources */,
 				CE1571612A8F9007008413A5 /* Frameworks */,
 				CE1571622A8F9007008413A5 /* Resources */,
+				CEC00C3A2AAA1E4D0088867F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

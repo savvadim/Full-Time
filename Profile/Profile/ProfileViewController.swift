@@ -8,7 +8,7 @@ import Font
 open class ProfileViewController: UIViewController {
     
     private let safeView = UIView()
-    private let inputContentView = UIView()
+    private let scrollView = UIView()
     
     private let nameField = UITextField()
     private let surNameField = UITextField()
@@ -38,6 +38,10 @@ open class ProfileViewController: UIViewController {
 
         view.backgroundColor = UIColor.backColor
         
+        // Создаем распознаватель жестов
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
+        
 //        let safeView = UIView()
         view.addSubview(safeView)
         
@@ -46,11 +50,13 @@ open class ProfileViewController: UIViewController {
         }
         
 //        let logoImage = UIImageView()
-        logoImage.image = UIImage(named: "full")
+        logoImage.image = UIImage(named: "fullBack")
+        logoImage.contentMode = .scaleAspectFill
         safeView.addSubview(logoImage)
 
         logoImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(236)
+            make.width.equalToSuperview()
             make.centerX.equalToSuperview()
         }
         
@@ -73,10 +79,10 @@ open class ProfileViewController: UIViewController {
         imageView.layer.cornerRadius = 60
         imageView.clipsToBounds = true
         
-//        let inputView = UIView()
-        safeView.addSubview(inputContentView)
+//        let scrollView = UIScrollView()
+        safeView.addSubview(scrollView)
         
-        inputContentView.snp.makeConstraints { make in
+        scrollView.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 310, height: 306))
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(200)
@@ -90,17 +96,17 @@ open class ProfileViewController: UIViewController {
             attributes: [.foregroundColor: UIColor.customGrey]
         )
         nameField.delegate = self
-        inputContentView.addSubview(nameField)
+        scrollView.addSubview(nameField)
         
         nameField.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: 284, height: 24))
+            make.size.equalTo(CGSize(width: 302, height: 24))
             make.top.equalToSuperview()
             make.left.equalToSuperview().offset(8)
         }
         
 //        let nameStrip = UIImageView()
         nameStrip.image = UIImage(named: "strip")
-        inputContentView.addSubview(nameStrip)
+        scrollView.addSubview(nameStrip)
         
         nameStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -115,17 +121,17 @@ open class ProfileViewController: UIViewController {
             attributes: [.foregroundColor: UIColor.customGrey]
         )
         surNameField.delegate = self
-        inputContentView.addSubview(surNameField)
+        scrollView.addSubview(surNameField)
         
         surNameField.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: 284, height: 24))
+            make.size.equalTo(CGSize(width: 302, height: 24))
             make.top.equalTo(nameStrip).offset(25)
             make.left.equalToSuperview().offset(8)
         }
         
 //        let surNameStrip = UIImageView()
         surNameStrip.image = UIImage(named: "strip")
-        inputContentView.addSubview(surNameStrip)
+        scrollView.addSubview(surNameStrip)
         
         surNameStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -140,17 +146,17 @@ open class ProfileViewController: UIViewController {
             attributes: [.foregroundColor: UIColor.customGrey]
         )
         emailField.delegate = self
-        inputContentView.addSubview(emailField)
+        scrollView.addSubview(emailField)
         
         emailField.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: 284, height: 24))
+            make.size.equalTo(CGSize(width: 302, height: 24))
             make.top.equalTo(surNameStrip).offset(25)
             make.left.equalToSuperview().offset(8)
         }
         
 //        let emailStrip = UIImageView()
         emailStrip.image = UIImage(named: "strip")
-        inputContentView.addSubview(emailStrip)
+        scrollView.addSubview(emailStrip)
         
         emailStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -165,17 +171,17 @@ open class ProfileViewController: UIViewController {
             attributes: [.foregroundColor: UIColor.customGrey]
         )
         jobField.delegate = self
-        inputContentView.addSubview(jobField)
+        scrollView.addSubview(jobField)
         
         jobField.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: 284, height: 24))
+            make.size.equalTo(CGSize(width: 302, height: 24))
             make.top.equalTo(emailStrip).offset(25)
             make.left.equalToSuperview().offset(8)
         }
         
 //        let jobStrip = UIImageView()
         jobStrip.image = UIImage(named: "strip")
-        inputContentView.addSubview(jobStrip)
+        scrollView.addSubview(jobStrip)
         
         jobStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -191,17 +197,17 @@ open class ProfileViewController: UIViewController {
                     attributes: [.foregroundColor: UIColor.customGrey]
                 )
         passwordField.delegate = self
-        inputContentView.addSubview(passwordField)
+        scrollView.addSubview(passwordField)
         
         passwordField.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: 270, height: 24))
+            make.size.equalTo(CGSize(width: 302, height: 24))
             make.top.equalTo(jobStrip).offset(25)
             make.left.equalToSuperview().offset(8)
         }
         
 //        let passwordStrip = UIImageView()
         passwordStrip.image = UIImage(named: "strip")
-        inputContentView.addSubview(passwordStrip)
+        scrollView.addSubview(passwordStrip)
         
         passwordStrip.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -213,7 +219,7 @@ open class ProfileViewController: UIViewController {
         showHideButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
         showHideButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .selected)
         showHideButton.addTarget(self, action: #selector(showHideButtonTapped), for: .touchUpInside)
-        safeView.addSubview(showHideButton)
+        scrollView.addSubview(showHideButton)
         
         showHideButton.snp.makeConstraints { make in
             make.centerY.equalTo(passwordField)
@@ -224,7 +230,7 @@ open class ProfileViewController: UIViewController {
         checkButton.setImage(UIImage (named: "hover"), for: .normal)
         checkButton.setImage(UIImage (named: "active"), for: .selected)
         checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
-        inputContentView.addSubview(checkButton)
+        scrollView.addSubview(checkButton)
 
         checkButton.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 15, height: 15))
@@ -236,7 +242,7 @@ open class ProfileViewController: UIViewController {
         pushLabel.text = "Push-уведомления"
         pushLabel.font = CustomFont.RegularSmall
         pushLabel.textColor = .white
-        inputContentView.addSubview(pushLabel)
+        scrollView.addSubview(pushLabel)
         
         pushLabel.snp.makeConstraints { make in
             make.centerY.equalTo(checkButton)
@@ -272,7 +278,6 @@ open class ProfileViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().inset(34)
         }
-        
     }
     
     @objc func showHideButtonTapped() {
@@ -282,7 +287,7 @@ open class ProfileViewController: UIViewController {
     
     @objc func checkButtonTapped(sender: UIButton) {
         checkButton.isSelected.toggle()
-        saveButton.isHidden = !sender.isSelected
+        saveButton.isHidden.toggle()
     }
     
     @objc func exitButtonTapped() {
@@ -294,7 +299,10 @@ open class ProfileViewController: UIViewController {
         exitButton.isHidden = false
         saveButton.isHidden = true
     }
-
+    
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
 }
 
 extension ProfileViewController: UITextFieldDelegate {

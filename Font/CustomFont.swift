@@ -1,6 +1,7 @@
 import UIKit
 
 public struct CustomFont {
+    
     public static let RegularSmall = UIFont(name: "Poppins-Regular", size: 14)!
     public static let RegularMedium = UIFont(name: "Poppins-Regular", size: 16)!
     public static let RegularLarge = UIFont(name: "Poppins-Regular", size: 18)!
