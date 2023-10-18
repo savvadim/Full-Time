@@ -15,6 +15,7 @@
 		867582102943AF600037266C /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8675820F2943AF600037266C /* APIModel.swift */; };
 		867582122943B02F0037266C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582112943B02F0037266C /* AppError.swift */; };
 		867582142943B06C0037266C /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582132943B06C0037266C /* APIResult.swift */; };
+		CE090CAF2AAC6D0A00DC0087 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090CAE2AAC6D0A00DC0087 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8675820F2943AF600037266C /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		867582112943B02F0037266C /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		867582132943B06C0037266C /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		CE090CAE2AAC6D0A00DC0087 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				867581E12943A8F80037266C /* APIService.swift */,
+				CE090CAE2AAC6D0A00DC0087 /* Constants.swift */,
 				8675820D2943AF1B0037266C /* NetworkProvider.swift */,
 				8675820F2943AF600037266C /* APIModel.swift */,
 				867582112943B02F0037266C /* AppError.swift */,
@@ -159,6 +162,7 @@
 				867582122943B02F0037266C /* AppError.swift in Sources */,
 				867581E22943A8F80037266C /* APIService.swift in Sources */,
 				867581D42943A8D00037266C /* Networking.docc in Sources */,
+				CE090CAF2AAC6D0A00DC0087 /* Constants.swift in Sources */,
 				867582142943B06C0037266C /* APIResult.swift in Sources */,
 				867582102943AF600037266C /* APIModel.swift in Sources */,
 			);

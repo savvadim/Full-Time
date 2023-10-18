@@ -10,7 +10,6 @@
 		CE0A4BF22AA5D51E00181E3D /* ProfileNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A4BF12AA5D51E00181E3D /* ProfileNetwork.swift */; };
 		CE0A4BF52AA5D6A300181E3D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE0A4BF42AA5D6A300181E3D /* Alamofire */; };
 		CE0A4BF72AA5D96600181E3D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A4BF62AA5D96600181E3D /* ProfileModel.swift */; };
-		CE2857A52A80F8A9006C8009 /* Profile.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2857A42A80F8A9006C8009 /* Profile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE2857B42A80F969006C8009 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2857B32A80F969006C8009 /* ProfileViewController.swift */; };
 		CE2857B72A80F9C9006C8009 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE2857B62A80F9C9006C8009 /* SnapKit */; };
 		CED4CEA72AA7157B00F19EDC /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEA62AA7157B00F19EDC /* Color.framework */; };
@@ -38,7 +37,6 @@
 		CE0A4BF12AA5D51E00181E3D /* ProfileNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetwork.swift; sourceTree = "<group>"; };
 		CE0A4BF62AA5D96600181E3D /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CE2857A12A80F8A9006C8009 /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE2857A42A80F8A9006C8009 /* Profile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		CE2857B32A80F969006C8009 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CED4CE202AA7133600F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CE402AA713CE00F19EDC /* UIColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +79,6 @@
 		CE2857A32A80F8A9006C8009 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CE2857A42A80F8A9006C8009 /* Profile.h */,
 				CE2857B32A80F969006C8009 /* ProfileViewController.swift */,
 				CE0A4BF12AA5D51E00181E3D /* ProfileNetwork.swift */,
 				CE0A4BF62AA5D96600181E3D /* ProfileModel.swift */,
@@ -107,7 +104,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2857A52A80F8A9006C8009 /* Profile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +140,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					CE2857A02A80F8A9006C8009 = {
 						CreatedOnToolsVersion = 14.3.1;

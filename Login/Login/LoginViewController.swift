@@ -3,6 +3,7 @@ import UIKit
 import SnapKit
 import Color
 import Font
+import Domain
 
 open class LoginViewController: UIViewController {
     
@@ -24,8 +25,15 @@ open class LoginViewController: UIViewController {
     private let forgetLabel = UILabel()
     private let privacyLabel = UILabel()
     
+    public typealias Empty = () -> Void
+    public var viewModel: LoginModels!
+    
+    var onLogin: Empty?
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
+        
+        subscribe()
         
         // Создаем распознаватель жестов
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -190,6 +198,7 @@ open class LoginViewController: UIViewController {
     
     @objc func loginTapped() {
         print("login")
+        onLogin?()
     }
     
     @objc func regTapped() {
@@ -220,6 +229,15 @@ extension LoginViewController: UITextFieldDelegate {
             emailStrip.image = UIImage(named: "strip")
         } else if textField == passwordField {
             passwordStrip.image = UIImage(named: "strip")
+        }
+    }
+}
+
+private extension LoginViewController {
+    func subscribe() {
+        
+        onLogin = { [weak self] in
+            self?.viewModel.onLogin()
         }
     }
 }

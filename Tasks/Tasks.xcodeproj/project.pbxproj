@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE1571682A8F9007008413A5 /* Tasks.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1571672A8F9007008413A5 /* Tasks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE15717B2A8F9024008413A5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE15717A2A8F9024008413A5 /* SnapKit */; };
 		CE15717D2A8F9056008413A5 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15717C2A8F9056008413A5 /* TasksViewController.swift */; };
+		CE9D400F2AC31D7500C81E7C /* TaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D400E2AC31D7500C81E7C /* TaskButton.swift */; };
 		CEC00C382AAA1E4D0088867F /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC00C372AAA1E4D0088867F /* Color.framework */; };
 		CEC00C392AAA1E4D0088867F /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC00C372AAA1E4D0088867F /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEC00C3C2AAA1E530088867F /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC00C3B2AAA1E530088867F /* Font.framework */; };
@@ -33,8 +33,8 @@
 
 /* Begin PBXFileReference section */
 		CE1571642A8F9007008413A5 /* Tasks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tasks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE1571672A8F9007008413A5 /* Tasks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
 		CE15717C2A8F9056008413A5 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		CE9D400E2AC31D7500C81E7C /* TaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskButton.swift; sourceTree = "<group>"; };
 		CEC00C372AAA1E4D0088867F /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC00C3B2AAA1E530088867F /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,8 +73,8 @@
 		CE1571662A8F9007008413A5 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				CE1571672A8F9007008413A5 /* Tasks.h */,
 				CE15717C2A8F9056008413A5 /* TasksViewController.swift */,
+				CE9D400E2AC31D7500C81E7C /* TaskButton.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -95,7 +95,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1571682A8F9007008413A5 /* Tasks.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +130,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					CE1571632A8F9007008413A5 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -175,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9D400F2AC31D7500C81E7C /* TaskButton.swift in Sources */,
 				CE15717D2A8F9056008413A5 /* TasksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

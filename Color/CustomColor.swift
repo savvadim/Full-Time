@@ -29,4 +29,9 @@ extension UIColor {
     public static var tabGrey: UIColor {
             return UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1)
         }
+    
+    public static var buttonGrey: UIColor {
+            return UIColor(red: 0.2, green: 0.2, blue: 0.34, alpha: 1)
+        }
+    
 }

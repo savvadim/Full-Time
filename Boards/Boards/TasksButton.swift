@@ -2,7 +2,7 @@ import UIKit
 import Color
 import Font
 
-class TaskButton: UIView {
+class TasksButton: UIView {
     
     private let tasksView = UIImageView()
     private let logoView = UIImageView()

@@ -7,12 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CED2209A2AE003DF00579D64 /* Notify.h in Headers */ = {isa = PBXBuildFile; fileRef = CED220992AE003DF00579D64 /* Notify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CED220AF2AE004A000579D64 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED220AE2AE004A000579D64 /* NotificationViewController.swift */; };
+		CED220B22AE004B100579D64 /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED220B12AE004B100579D64 /* Color.framework */; };
+		CED220B32AE004B100579D64 /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED220B12AE004B100579D64 /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CED220B62AE004B400579D64 /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED220B52AE004B400579D64 /* Font.framework */; };
+		CED220B72AE004B400579D64 /* Font.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED220B52AE004B400579D64 /* Font.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CED220BA2AE004C200579D64 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CED220B92AE004C200579D64 /* SnapKit */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CED220B42AE004B100579D64 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CED220B32AE004B100579D64 /* Color.framework in Embed Frameworks */,
+				CED220B72AE004B400579D64 /* Font.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CED220962AE003DF00579D64 /* Notify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Notify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED220992AE003DF00579D64 /* Notify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notify.h; sourceTree = "<group>"; };
+		CED220AE2AE004A000579D64 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		CED220B12AE004B100579D64 /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED220B52AE004B400579D64 /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED220BA2AE004C200579D64 /* SnapKit in Frameworks */,
+				CED220B22AE004B100579D64 /* Color.framework in Frameworks */,
+				CED220B62AE004B400579D64 /* Font.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +56,7 @@
 			children = (
 				CED220982AE003DF00579D64 /* Notify */,
 				CED220972AE003DF00579D64 /* Products */,
+				CED220B02AE004B100579D64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +71,18 @@
 		CED220982AE003DF00579D64 /* Notify */ = {
 			isa = PBXGroup;
 			children = (
-				CED220992AE003DF00579D64 /* Notify.h */,
+				CED220AE2AE004A000579D64 /* NotificationViewController.swift */,
 			);
 			path = Notify;
+			sourceTree = "<group>";
+		};
+		CED220B02AE004B100579D64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CED220B52AE004B400579D64 /* Font.framework */,
+				CED220B12AE004B100579D64 /* Color.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -57,7 +92,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED2209A2AE003DF00579D64 /* Notify.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +106,16 @@
 				CED220922AE003DF00579D64 /* Sources */,
 				CED220932AE003DF00579D64 /* Frameworks */,
 				CED220942AE003DF00579D64 /* Resources */,
+				CED220B42AE004B100579D64 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Notify;
+			packageProductDependencies = (
+				CED220B92AE004C200579D64 /* SnapKit */,
+			);
 			productName = Notify;
 			productReference = CED220962AE003DF00579D64 /* Notify.framework */;
 			productType = "com.apple.product-type.framework";
@@ -93,6 +131,7 @@
 				TargetAttributes = {
 					CED220952AE003DF00579D64 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -105,6 +144,9 @@
 				Base,
 			);
 			mainGroup = CED2208C2AE003DF00579D64;
+			packageReferences = (
+				CED220B82AE004C200579D64 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = CED220972AE003DF00579D64 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED220AF2AE004A000579D64 /* NotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +306,7 @@
 		CED2209E2AE003DF00579D64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -274,6 +318,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,6 +331,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,6 +340,7 @@
 		CED2209F2AE003DF00579D64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -305,6 +352,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CED220B82AE004C200579D64 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CED220B92AE004C200579D64 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED220B82AE004C200579D64 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CED2208D2AE003DF00579D64 /* Project object */;
 }

@@ -3,6 +3,7 @@ import Profile
 import Boards
 import Tasks
 import Color
+import Notify
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
@@ -26,12 +27,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
                 topInset: 13
             ),
             generateVC(
-                viewController: UINavigationController(rootViewController: CreateBoardViewController()),
+                viewController: UINavigationController(rootViewController: TasksViewController()),
                 image: UIImage(named: "tasks"),
                 topInset: 11
             ),
             generateVC(
-                viewController: UINavigationController(rootViewController: TasksViewController()),
+                viewController: UINavigationController(rootViewController: NotificationViewController()),
                 image: UIImage(named: "noti"),
                 topInset: 13
             ),

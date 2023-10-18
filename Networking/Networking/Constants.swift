@@ -1,8 +1,14 @@
-//
-//  Constants.swift
-//  Networking
-//
-//  Created by Вадим Савосько on 09.09.2023.
-//
+public enum Constants {
+    public enum API {
+        public enum EndPoint: String {
+            case prod
 
-import Foundation
+            var baseURL: String {
+                switch self {
+                case .prod: return "https://http://194.85.169.95:9226/api/v1"
+                }
+            }
+        }
+        public static var baseURL: URL { URL(string: EndPoint.prod.baseURL)! }
+    }
+}

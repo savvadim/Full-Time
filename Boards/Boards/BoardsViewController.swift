@@ -13,7 +13,7 @@ open class BoardsViewController: UIViewController {
     
     private let createButton = UIButton()
     
-    private let taskButton = TaskButton()
+    private let taskButton = TasksButton()
     private let notiButton = NoticeButton()
     
     override open func viewDidLoad() {

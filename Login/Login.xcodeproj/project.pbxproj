@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		867581FA2943AC6F0037266C /* Login.docc in Sources */ = {isa = PBXBuildFile; fileRef = 867581F92943AC6F0037266C /* Login.docc */; };
-		867581FB2943AC6F0037266C /* Login.h in Headers */ = {isa = PBXBuildFile; fileRef = 867581F82943AC6F0037266C /* Login.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		867582092943AC8D0037266C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582082943AC8D0037266C /* LoginViewController.swift */; };
 		867582212943B2420037266C /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582202943B2420037266C /* LoginNetwork.swift */; };
 		867582232943B2D40037266C /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582222943B2D40037266C /* LoginModels.swift */; };
@@ -43,7 +42,6 @@
 /* Begin PBXFileReference section */
 		86416EFE2943B54400958825 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		867581F52943AC6F0037266C /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		867581F82943AC6F0037266C /* Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		867581F92943AC6F0037266C /* Login.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Login.docc; sourceTree = "<group>"; };
 		867582082943AC8D0037266C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		867582162943B11F0037266C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +91,6 @@
 				867582202943B2420037266C /* LoginNetwork.swift */,
 				867582222943B2D40037266C /* LoginModels.swift */,
 				867582082943AC8D0037266C /* LoginViewController.swift */,
-				867581F82943AC6F0037266C /* Login.h */,
 				867581F92943AC6F0037266C /* Login.docc */,
 			);
 			path = Login;
@@ -118,7 +115,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				867581FB2943AC6F0037266C /* Login.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +150,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					867581F42943AC6F0037266C = {
 						CreatedOnToolsVersion = 14.0;

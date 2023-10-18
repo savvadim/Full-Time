@@ -20,20 +20,20 @@ public enum APIService {
 extension APIService: TargetType {
     public typealias Parameters = [String: Any]
 
-    public var baseURL: URL { URL(fileReferenceLiteralResourceName: "") } // TODO: Ваш base url
+    public var baseURL: URL { Constants.API.baseURL }
 
-    var service: String {
-        switch self {
-        case .login:
-            return "api"
-        }
-    }
+//    var service: String {
+//        switch self {
+//        case .login:
+//            return "api"
+//        }
+//    }
 
     public var path: String {
-        service + {
+        {
             switch self {
             case .login:
-                return "/employees/login"
+                return "/auth/login"
             }
         }()
     }
@@ -58,5 +58,21 @@ extension APIService: TargetType {
         [
             "Content-Type": "application/json",
         ]
+    }
+    
+    public var fullURL: String {
+        do {
+            let request = try apiProvider.endpoint(self).urlRequest()
+
+            return request.url?.absoluteString ?? ""
+        } catch {
+            return ""
+        }
+    }
+}
+
+private extension String {
+    var utf8Encoded: Data {
+        return data(using: .utf8)!
     }
 }
