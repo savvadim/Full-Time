@@ -2,7 +2,7 @@ import UIKit
 import Color
 import Font
 
-class TaskButton: UIView {
+class NotifyButton: UIView {
     
     private let logoView = UIImageView()
     private let status = UIImageView()
@@ -10,6 +10,7 @@ class TaskButton: UIView {
     
     private let mainLabel = UILabel()
     private let commentLabel = UILabel()
+    
     
     init() {
         super.init(frame: .zero)
