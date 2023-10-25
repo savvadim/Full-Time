@@ -7,7 +7,7 @@ open class NotificationViewController: UIViewController {
     
     private let safeView = UIView()
     
-    private let notifyButton = NotifyButton()
+    private let notifyButton = NotifyButton(icon: UIImage(named: "mark"), mainLabel: "Доска успешно создана", dataLabel: "15.08.2023 13:58", linkLabel: "Перейти к доске")
     
     private let notificationLabel = UILabel()
 
