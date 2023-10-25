@@ -7,6 +7,8 @@ open class NotificationViewController: UIViewController {
     
     private let safeView = UIView()
     
+    private let notifyButton = NotifyButton()
+    
     private let notificationLabel = UILabel()
 
     override open func viewDidLoad() {
@@ -23,6 +25,14 @@ open class NotificationViewController: UIViewController {
         
         safeView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        safeView.addSubview(notifyButton)
+        
+        notifyButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(20)
+            make.size.equalTo(CGSize(width: 345, height: 120))
         }
     }
 }

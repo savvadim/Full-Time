@@ -2,14 +2,13 @@ import UIKit
 import Color
 import Font
 
-class NotifyButton: UIView {
+class NotifyButton: UIView, UITextViewDelegate {
     
     private let logoView = UIImageView()
-    private let status = UIImageView()
     private let icon = UIImageView()
     
+    private let linkLabel = UILabel()
     private let mainLabel = UILabel()
-    private let commentLabel = UILabel()
     
     
     init() {
@@ -32,47 +31,44 @@ class NotifyButton: UIView {
         logoView.contentMode = .scaleAspectFit
         addSubview(logoView)
         
-        mainLabel.text =  "Заголовок"
+        mainLabel.text = "Доска БлаБлаБла успешно создана!"
         mainLabel.textColor = .white
         mainLabel.font = CustomFont.RegularLarge
         addSubview(mainLabel)
         
-        commentLabel.text = "kjdfm,scnvlksnclz,mdafgnabklsrglkasnakl.fbnaklbnzlkfs,xbklsnvqvw r.knvslka.nsklv.anlksf.nvklas.fnkle.anrsk;bna;sr.,dnblaksfbnlkv.,snrlkfz.dvnklskdnklvas.dz"
-        commentLabel.textColor = .white
-        commentLabel.numberOfLines = 0
-        commentLabel.font = CustomFont.RegularMedium
-        addSubview(commentLabel)
+        linkLabel.text = "Перейти к доске"
+        linkLabel.textColor = .white
+        linkLabel.font = CustomFont.RegularSmall
+        let attributedText = NSAttributedString(string: linkLabel.text ?? "", attributes: [
+                    NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+                ])
+        linkLabel.attributedText = attributedText
+        addSubview(linkLabel)
         
-        icon.image = UIImage(named: "icon")
+        icon.image = UIImage(named: "mark")
         icon.contentMode = .scaleAspectFit
         addSubview(icon)
         
-        status.image = UIImage(named: "in progress")
-        status.contentMode = .scaleAspectFit
-        addSubview(status)
-        
-        mainLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(9)
-            make.left.equalToSuperview().offset(18)
+        icon.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(24)
+            make.left.equalToSuperview().inset(18)
         }
         
-        commentLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(50)
-            make.left.equalToSuperview().offset(18)
-            make.size.equalTo(CGSize(width: 315, height: 60))
+        mainLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(icon)
+            make.left.equalTo(icon).offset(51)
+            make.size.equalTo(CGSize(width: 250, height: 50))
+        }
+        
+        linkLabel.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(10)
+            make.right.equalToSuperview().inset(10)
+//            make.size.equalTo(CGSize(width: 315, height: 60))
         }
         
         logoView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(171)
         }
-        
-        icon.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(14)
-            make.right.equalToSuperview().inset(11)
-        }
-        
-        status.snp.makeConstraints { make in
-            make.center.equalTo(icon)
-        }
+
     }
 }
