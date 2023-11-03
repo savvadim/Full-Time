@@ -26,9 +26,20 @@ open class LoginViewController: UIViewController {
     private let privacyLabel = UILabel()
     
     public typealias Empty = () -> Void
-    public var viewModel: LoginModels!
+    public var viewModel: LoginModels
     
     var onLogin: Empty?
+    
+    public init(viewModel: LoginModels, onLogin: Empty? = nil) {
+        
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required public init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+
     
     override open func viewDidLoad() {
         super.viewDidLoad()

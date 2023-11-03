@@ -7,25 +7,15 @@ public class LoginModels {
     private var password: String?
     private var network: LoginServiceProtocol = LoginService()
     
+    public init() {}
+    
     open func onLogin() {
         network.login(with: .init(login: email ?? "",
-                                  password: password ?? "")) { [weak self] result in
+                                  password: password ?? "")) { result in
             if case let .success(response) = result {
-//                if let error = response.error {
-//                    if error.code == 1110 {
-//                        self?.onEmailConfirm?()
-//                    } else {
-//                        self?.render {
-//                            $0.error = error.message
-//                        }
-//                    }
-//                } else {
-//                    self?.render {
-//                        $0.alert = true
-//                    }
-//                    self?.props?.alert = false
-//                }
-                
+                if let error = response.error {
+                    print(response.error!)
+                }
                 print("succes")
             }
         }
