@@ -1,10 +1,3 @@
-//
-//  APIService.swift
-//  Networking
-//
-//  Created by Vladislav Skuratov on 09.12.2022.
-//
-
 import Foundation
 import Moya
 
@@ -21,13 +14,6 @@ extension APIService: TargetType {
     public typealias Parameters = [String: Any]
 
     public var baseURL: URL { Constants.API.baseURL }
-
-//    var service: String {
-//        switch self {
-//        case .login:
-//            return "api"
-//        }
-//    }
 
     public var path: String {
         {

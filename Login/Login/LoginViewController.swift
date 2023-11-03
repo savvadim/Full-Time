@@ -44,8 +44,6 @@ open class LoginViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        subscribe()
-        
         // Создаем распознаватель жестов
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tapGesture)
@@ -98,6 +96,8 @@ open class LoginViewController: UIViewController {
         emailField.delegate = self
         safeView.addSubview(emailField)
         
+        emailField.text = "test@test.com"
+        
         emailField.snp.makeConstraints { make in
             make.left.equalTo(emailStrip).offset(8)
             make.top.equalToSuperview().offset(60)
@@ -124,6 +124,8 @@ open class LoginViewController: UIViewController {
         passwordField.textColor = .white
         passwordField.delegate = self
         safeView.addSubview(passwordField)
+        
+        passwordField.text = "password"
         
         passwordField.snp.makeConstraints { make in
             make.left.equalTo(passwordStrip).offset(8)
@@ -208,8 +210,9 @@ open class LoginViewController: UIViewController {
     }
     
     @objc func loginTapped() {
-        print("login")
-        onLogin?()
+        let email = emailField.text ?? ""
+        let password = passwordField.text ?? ""
+        self.viewModel.onLogin(email: email, password: password)
     }
     
     @objc func regTapped() {
@@ -244,11 +247,15 @@ extension LoginViewController: UITextFieldDelegate {
     }
 }
 
-private extension LoginViewController {
-    func subscribe() {
-        
-        onLogin = { [weak self] in
-            self?.viewModel.onLogin()
-        }
-    }
-}
+//private extension LoginViewController {
+//    func subscribe() {
+//        
+//        onLogin = { [weak self] in
+//            guard let email = self?.emailField.text, let password = self?.passwordField.text else {
+//                // Обработка случая, когда логин или пароль отсутствуют
+//                return
+//            }
+//            self?.viewModel.onLogin(login: email, password: password)
+//        }
+//    }
+//}

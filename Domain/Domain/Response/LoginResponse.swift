@@ -2,7 +2,7 @@ import Foundation
 import Networking
 
 public struct LoginResponse: APIModelCodable {
-    public let token: String
+    public let token: String?
     public let error: Error?
 }
 

@@ -3,20 +3,22 @@ import Domain
 
 public class LoginModels {
     
-    private var email: String?
-    private var password: String?
     private var network: LoginServiceProtocol = LoginService()
     
     public init() {}
     
-    open func onLogin() {
-        network.login(with: .init(login: email ?? "",
-                                  password: password ?? "")) { result in
-            if case let .success(response) = result {
-                if let error = response.error {
-                    print(response.error!)
+    open func onLogin(email: String, password: String) {
+        network.login(with: .init(email: email, password: password)) { result in
+            switch result {
+            case .success(let response):
+                if let token = response.token {
+                    print("Успешный вход, токен: \(token)")
+                    // Здесь вы можете выполнить дополнительные действия с токеном
+                } else {
+                    print("Ошибка: Токен отсутствует в ответе")
                 }
-                print("succes")
+            case .error(let error):
+                print("Ошибка: \(error.localizedDescription)")
             }
         }
     }
