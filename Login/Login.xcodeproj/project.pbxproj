@@ -11,6 +11,7 @@
 		867582092943AC8D0037266C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582082943AC8D0037266C /* LoginViewController.swift */; };
 		867582212943B2420037266C /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582202943B2420037266C /* LoginNetwork.swift */; };
 		867582232943B2D40037266C /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582222943B2D40037266C /* LoginModels.swift */; };
+		CE2368822AF6A9F20031DD7C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2368812AF6A9F20031DD7C /* TabBarController.swift */; };
 		CE2857BC2A80FD88006C8009 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE2857BB2A80FD88006C8009 /* SnapKit */; };
 		CE2857BD2A80FDAC006C8009 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867582162943B11F0037266C /* Networking.framework */; };
 		CE2857BE2A80FDAC006C8009 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 867582162943B11F0037266C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -47,6 +48,7 @@
 		867582162943B11F0037266C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		867582202943B2420037266C /* LoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetwork.swift; sourceTree = "<group>"; };
 		867582222943B2D40037266C /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		CE2368812AF6A9F20031DD7C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE2857C02A80FDB7006C8009 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CEAA2AA717F200F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CEC92AA720F700F19EDC /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 				867582202943B2420037266C /* LoginNetwork.swift */,
 				867582222943B2D40037266C /* LoginModels.swift */,
 				867582082943AC8D0037266C /* LoginViewController.swift */,
+				CE2368812AF6A9F20031DD7C /* TabBarController.swift */,
 				867581F92943AC6F0037266C /* Login.docc */,
 			);
 			path = Login;
@@ -196,6 +199,7 @@
 				867582092943AC8D0037266C /* LoginViewController.swift in Sources */,
 				867582232943B2D40037266C /* LoginModels.swift in Sources */,
 				867582212943B2420037266C /* LoginNetwork.swift in Sources */,
+				CE2368822AF6A9F20031DD7C /* TabBarController.swift in Sources */,
 				867581FA2943AC6F0037266C /* Login.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

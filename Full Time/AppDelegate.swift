@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let viewController = ViewController()
         let mainViewController = LoginViewController(viewModel: .init())
-//        let mainViewController = UINavigationController(rootViewController: LoginViewController())
+//        let mainViewController = TabBarController()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = UINavigationController(rootViewController: viewController)

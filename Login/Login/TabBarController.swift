@@ -5,9 +5,9 @@ import Tasks
 import Color
 import Notify
 
-class TabBarController: UITabBarController, UITabBarControllerDelegate {
+open class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         generateTabBar()
         setTabBarAppearance()

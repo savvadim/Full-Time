@@ -135,7 +135,7 @@
 		CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Profile.xcodeproj; path = Profile/Profile.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE5B9C152A707F94009EAD12 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		CE8516F52A7BE0F100CA9300 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
-		CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = ../Login/Login/TabBarController.swift; sourceTree = "<group>"; };
 		CED220892AE002F400579D64 /* Notify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED220A02AE003DF00579D64 /* Notify.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Notify.xcodeproj; path = Notify/Notify.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Color.xcodeproj; path = Color/Color.xcodeproj; sourceTree = SOURCE_ROOT; };

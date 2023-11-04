@@ -246,16 +246,3 @@ extension LoginViewController: UITextFieldDelegate {
         }
     }
 }
-
-//private extension LoginViewController {
-//    func subscribe() {
-//        
-//        onLogin = { [weak self] in
-//            guard let email = self?.emailField.text, let password = self?.passwordField.text else {
-//                // Обработка случая, когда логин или пароль отсутствуют
-//                return
-//            }
-//            self?.viewModel.onLogin(login: email, password: password)
-//        }
-//    }
-//}

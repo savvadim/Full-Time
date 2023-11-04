@@ -1,5 +1,6 @@
 import Foundation
 import Domain
+import UIKit
 
 public class LoginModels {
     
@@ -13,7 +14,19 @@ public class LoginModels {
             case .success(let response):
                 if let token = response.token {
                     print("Успешный вход, токен: \(token)")
-                    // Здесь вы можете выполнить дополнительные действия с токеном
+                    
+                    let tabBarController = TabBarController()
+                    let window = UIApplication.shared.windows.first
+
+                    tabBarController.view.alpha = 0.0
+                    window?.rootViewController = tabBarController
+
+                    UIView.animate(withDuration: 0.3) {
+                        tabBarController.view.alpha = 1.0
+                    }
+
+                    window?.makeKeyAndVisible()
+                    
                 } else {
                     print("Ошибка: Токен отсутствует в ответе")
                 }
