@@ -15,6 +15,7 @@ open class BoardsViewController: UIViewController {
     
     private let taskButton = TasksButton()
     private let notiButton = NoticeButton()
+    private let boardButton = BoardButton(mainLabel: "JDcejsdl", dataLabel: "647239810")
     
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,13 @@ open class BoardsViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalTo(taskButton.snp.bottom).offset(20)
             make.size.equalTo(CGSize(width: 345, height: 75))
+        }
+        
+        safeView.addSubview(boardButton)
+        
+        boardButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(notiButton.snp.bottom).offset(40)
         }
         
 //        let boardsLabel = UILabel()

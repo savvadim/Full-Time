@@ -32,7 +32,7 @@ open class NotificationViewController: UIViewController {
         notifyButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(20)
-            make.size.equalTo(CGSize(width: 345, height: 120))
+//            make.size.equalTo(CGSize(width: 345, height: 120))
         }
     }
 }

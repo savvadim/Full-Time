@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4063CF2AFA7EF900F4F07A /* BoardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4063CE2AFA7EF900F4F07A /* BoardButton.swift */; };
 		CE5882BF2A94A95100D9A5DA /* CreateBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5882BE2A94A95100D9A5DA /* CreateBoardViewController.swift */; };
 		CE8516F42A7BDCD600CA9300 /* BoardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */; };
 		CE8B79092AA8AB9A009D43C5 /* TasksButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B79082AA8AB99009D43C5 /* TasksButton.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE4063CE2AFA7EF900F4F07A /* BoardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardButton.swift; sourceTree = "<group>"; };
 		CE5882BE2A94A95100D9A5DA /* CreateBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBoardViewController.swift; sourceTree = "<group>"; };
 		CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsTableViewCell.swift; sourceTree = "<group>"; };
 		CE8B79082AA8AB99009D43C5 /* TasksButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksButton.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				CEE45C022A7807CB003A253C /* BoardsViewController.swift */,
 				CE5882BE2A94A95100D9A5DA /* CreateBoardViewController.swift */,
 				CE8B79082AA8AB99009D43C5 /* TasksButton.swift */,
+				CE4063CE2AFA7EF900F4F07A /* BoardButton.swift */,
 				CE8B790A2AA8CF14009D43C5 /* NoticeButton.swift */,
 				CE8516F32A7BDCD600CA9300 /* BoardsTableViewCell.swift */,
 			);
@@ -189,6 +192,7 @@
 			files = (
 				CE8516F42A7BDCD600CA9300 /* BoardsTableViewCell.swift in Sources */,
 				CE8B790B2AA8CF14009D43C5 /* NoticeButton.swift in Sources */,
+				CE4063CF2AFA7EF900F4F07A /* BoardButton.swift in Sources */,
 				CE5882BF2A94A95100D9A5DA /* CreateBoardViewController.swift in Sources */,
 				CE8B79092AA8AB9A009D43C5 /* TasksButton.swift in Sources */,
 				CEE45C032A7807CB003A253C /* BoardsViewController.swift in Sources */,
