@@ -98,7 +98,7 @@ extension BoardsViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc func createButtonTapped (){
-        let secondViewController = CreateBoardViewController()
+        let secondViewController = OneBoardViewController()
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 }
