@@ -4,6 +4,7 @@ import SnapKit
 import Color
 import Font
 import Domain
+import Registration
 
 open class LoginViewController: UIViewController {
     
@@ -47,6 +48,8 @@ open class LoginViewController: UIViewController {
         // Создаем распознаватель жестов
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tapGesture)
+        
+
         
         view.backgroundColor = UIColor.backColor
         
@@ -216,7 +219,8 @@ open class LoginViewController: UIViewController {
     }
     
     @objc func regTapped() {
-        print("reg")
+            let secondViewController = RegisterViewController()
+            navigationController?.pushViewController(secondViewController, animated: true)
     }
     
     @objc func forgetTapped() {

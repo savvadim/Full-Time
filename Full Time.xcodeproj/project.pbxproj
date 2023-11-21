@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		867581852943A5820037266C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867581842943A5820037266C /* AppDelegate.swift */; };
 		867581892943A5820037266C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867581882943A5820037266C /* ViewController.swift */; };
-		8675818E2943A5830037266C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8675818D2943A5830037266C /* Assets.xcassets */; };
 		CE0959782A7021A000003F21 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0959772A7021A000003F21 /* Poppins-Bold.ttf */; };
 		CE09597A2A7021AA00003F21 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0959792A7021AA00003F21 /* Poppins-Regular.ttf */; };
 		CE0959A12A70585E00003F21 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867581E02943A8D00037266C /* Networking.framework */; };
@@ -23,13 +22,17 @@
 		CE8B78FA2AA877A7009D43C5 /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CE9F2AA7151800F19EDC /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE8B79042AA877E6009D43C5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE8B79032AA877E6009D43C5 /* SnapKit */; };
 		CE8B79072AA8781B009D43C5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE8B79062AA8781B009D43C5 /* Alamofire */; };
+		CE91F4C12B0BA83A00626F98 /* Notify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED220A52AE003DF00579D64 /* Notify.framework */; };
+		CE91F4C22B0BA83A00626F98 /* Notify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED220A52AE003DF00579D64 /* Notify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE91F4C32B0BA84000626F98 /* Registration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD1C852B0B916A00A20D64 /* Registration.framework */; };
+		CE91F4C42B0BA84000626F98 /* Registration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD1C852B0B916A00A20D64 /* Registration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE91F4C62B0C96EC00626F98 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE91F4C52B0C96EC00626F98 /* Launch Screen.storyboard */; };
+		CE91F4DC2B0CC3EF00626F98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE91F4DB2B0CC3EF00626F98 /* Assets.xcassets */; };
 		CE9FCDE32A83A0BE002F42D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */; };
 		CEAD3DF22A7016B100DFB8E3 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867582062943AC700037266C /* Login.framework */; };
 		CEAD3DF32A7016B100DFB8E3 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 867582062943AC700037266C /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEC00C3E2AAA1E8A0088867F /* Tasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1571782A8F9007008413A5 /* Tasks.framework */; };
 		CEC00C3F2AAA1E8A0088867F /* Tasks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE1571782A8F9007008413A5 /* Tasks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CED220A82AE003FE00579D64 /* Notify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED220A52AE003DF00579D64 /* Notify.framework */; };
-		CED220A92AE003FE00579D64 /* Notify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED220A52AE003DF00579D64 /* Notify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEE45C042A7906A9003A253C /* Boards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE45C012A78079E003A253C /* Boards.framework */; };
 		CEE45C052A7906A9003A253C /* Boards.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEE45C012A78079E003A253C /* Boards.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -91,6 +94,13 @@
 			remoteGlobalIDString = CED4CEB72AA7182200F19EDC;
 			remoteInfo = Font;
 		};
+		CEDD1C842B0B916A00A20D64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDD1C802B0B916A00A20D64 /* Registration.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CEDD1C762B0B916A00A20D64;
+			remoteInfo = Registration;
+		};
 		CEE45C002A78079E003A253C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEE45BFC2A78079E003A253C /* Boards.xcodeproj */;
@@ -109,9 +119,10 @@
 			files = (
 				CE0959A22A70585E00003F21 /* Networking.framework in Embed Frameworks */,
 				CEAD3DF32A7016B100DFB8E3 /* Login.framework in Embed Frameworks */,
-				CED220A92AE003FE00579D64 /* Notify.framework in Embed Frameworks */,
+				CE91F4C22B0BA83A00626F98 /* Notify.framework in Embed Frameworks */,
 				CE2857B92A80F9FD006C8009 /* Profile.framework in Embed Frameworks */,
 				CEE45C052A7906A9003A253C /* Boards.framework in Embed Frameworks */,
+				CE91F4C42B0BA84000626F98 /* Registration.framework in Embed Frameworks */,
 				CE8B78FA2AA877A7009D43C5 /* Color.framework in Embed Frameworks */,
 				CEC00C3F2AAA1E8A0088867F /* Tasks.framework in Embed Frameworks */,
 			);
@@ -124,7 +135,6 @@
 		867581812943A5820037266C /* Full Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Full Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		867581842943A5820037266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		867581882943A5820037266C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8675818D2943A5830037266C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		867581922943A5830037266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		867581DB2943A8D00037266C /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = Networking/Networking.xcodeproj; sourceTree = SOURCE_ROOT; };
 		867582012943AC6F0037266C /* Login.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Login.xcodeproj; path = Login/Login.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -135,11 +145,14 @@
 		CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Profile.xcodeproj; path = Profile/Profile.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE5B9C152A707F94009EAD12 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		CE8516F52A7BE0F100CA9300 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE91F4C52B0C96EC00626F98 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CE91F4DB2B0CC3EF00626F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = ../Login/Login/TabBarController.swift; sourceTree = "<group>"; };
 		CED220892AE002F400579D64 /* Notify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED220A02AE003DF00579D64 /* Notify.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Notify.xcodeproj; path = Notify/Notify.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Color.xcodeproj; path = Color/Color.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CED4CEC12AA7182200F19EDC /* Font.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Font.xcodeproj; path = Font/Font.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CEDD1C802B0B916A00A20D64 /* Registration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Registration.xcodeproj; path = Registration/Registration.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CEE45BFC2A78079E003A253C /* Boards.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Boards.xcodeproj; path = Boards/Boards.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -155,7 +168,8 @@
 				CE8B79042AA877E6009D43C5 /* SnapKit in Frameworks */,
 				CEC00C3E2AAA1E8A0088867F /* Tasks.framework in Frameworks */,
 				CE2857B82A80F9FD006C8009 /* Profile.framework in Frameworks */,
-				CED220A82AE003FE00579D64 /* Notify.framework in Frameworks */,
+				CE91F4C32B0BA84000626F98 /* Registration.framework in Frameworks */,
+				CE91F4C12B0BA83A00626F98 /* Notify.framework in Frameworks */,
 				CE8B78F92AA877A7009D43C5 /* Color.framework in Frameworks */,
 				CE89E87D2A7940FD00C610CD /* Boards.framework in Frameworks */,
 			);
@@ -192,6 +206,7 @@
 		867581832943A5820037266C /* Full Time */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD1C802B0B916A00A20D64 /* Registration.xcodeproj */,
 				CED220A02AE003DF00579D64 /* Notify.xcodeproj */,
 				CED4CEC12AA7182200F19EDC /* Font.xcodeproj */,
 				CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */,
@@ -202,9 +217,10 @@
 				8675823A2943B3480037266C /* Domain.xcodeproj */,
 				867581DB2943A8D00037266C /* Networking.xcodeproj */,
 				867581842943A5820037266C /* AppDelegate.swift */,
+				CE91F4C52B0C96EC00626F98 /* Launch Screen.storyboard */,
 				867581882943A5820037266C /* ViewController.swift */,
 				CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */,
-				8675818D2943A5830037266C /* Assets.xcassets */,
+				CE91F4DB2B0CC3EF00626F98 /* Assets.xcassets */,
 				867581922943A5830037266C /* Info.plist */,
 				CE0959732A70217D00003F21 /* Fonts */,
 			);
@@ -282,6 +298,14 @@
 			isa = PBXGroup;
 			children = (
 				CED4CEC62AA7182200F19EDC /* Font.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDD1C812B0B916A00A20D64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDD1C852B0B916A00A20D64 /* Registration.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,6 +407,10 @@
 					ProjectRef = CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */;
 				},
 				{
+					ProductGroup = CEDD1C812B0B916A00A20D64 /* Products */;
+					ProjectRef = CEDD1C802B0B916A00A20D64 /* Registration.xcodeproj */;
+				},
+				{
 					ProductGroup = CE15716F2A8F9007008413A5 /* Products */;
 					ProjectRef = CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */;
 				},
@@ -451,6 +479,13 @@
 			remoteRef = CED4CEC52AA7182200F19EDC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		CEDD1C852B0B916A00A20D64 /* Registration.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Registration.framework;
+			remoteRef = CEDD1C842B0B916A00A20D64 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		CEE45C012A78079E003A253C /* Boards.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -465,10 +500,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE91F4C62B0C96EC00626F98 /* Launch Screen.storyboard in Resources */,
 				CE0959782A7021A000003F21 /* Poppins-Bold.ttf in Resources */,
 				CE5B9C192A707F94009EAD12 /* Roboto-Regular.ttf in Resources */,
 				CE8516FA2A7BE0F200CA9300 /* Poppins-SemiBold.ttf in Resources */,
-				8675818E2943A5830037266C /* Assets.xcassets in Resources */,
+				CE91F4DC2B0CC3EF00626F98 /* Assets.xcassets in Resources */,
 				CE09597A2A7021AA00003F21 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,13 +644,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SD575YYYY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Full Time/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -640,13 +677,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SD575YYYY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Full Time/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
