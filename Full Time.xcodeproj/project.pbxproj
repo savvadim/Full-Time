@@ -133,7 +133,6 @@
 /* Begin PBXFileReference section */
 		867581812943A5820037266C /* Full Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Full Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		867581842943A5820037266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		867581882943A5820037266C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		867581922943A5830037266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		867581DB2943A8D00037266C /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = Networking/Networking.xcodeproj; sourceTree = SOURCE_ROOT; };
 		867582012943AC6F0037266C /* Login.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Login.xcodeproj; path = Login/Login.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -217,7 +216,6 @@
 				867581DB2943A8D00037266C /* Networking.xcodeproj */,
 				867581842943A5820037266C /* AppDelegate.swift */,
 				CE91F4C52B0C96EC00626F98 /* Launch Screen.storyboard */,
-				867581882943A5820037266C /* ViewController.swift */,
 				CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */,
 				CE91F4DB2B0CC3EF00626F98 /* Assets.xcassets */,
 				867581922943A5830037266C /* Info.plist */,
