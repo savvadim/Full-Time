@@ -17,6 +17,8 @@
 		CE2857BE2A80FDAC006C8009 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 867582162943B11F0037266C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE2857C12A80FDB7006C8009 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2857C02A80FDB7006C8009 /* Domain.framework */; };
 		CE2857C22A80FDB7006C8009 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE2857C02A80FDB7006C8009 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE91F4BF2B0BA60F00626F98 /* Registration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE91F4BE2B0BA60F00626F98 /* Registration.framework */; };
+		CE91F4C02B0BA60F00626F98 /* Registration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE91F4BE2B0BA60F00626F98 /* Registration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CED4CEAB2AA717F200F19EDC /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEAA2AA717F200F19EDC /* Color.framework */; };
 		CED4CEAC2AA717F200F19EDC /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEAA2AA717F200F19EDC /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CED4CECA2AA720F700F19EDC /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEC92AA720F700F19EDC /* Font.framework */; };
@@ -33,6 +35,7 @@
 				CE2857C22A80FDB7006C8009 /* Domain.framework in Embed Frameworks */,
 				CED4CECB2AA720F700F19EDC /* Font.framework in Embed Frameworks */,
 				CED4CEAC2AA717F200F19EDC /* Color.framework in Embed Frameworks */,
+				CE91F4C02B0BA60F00626F98 /* Registration.framework in Embed Frameworks */,
 				CE2857BE2A80FDAC006C8009 /* Networking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -50,6 +53,7 @@
 		867582222943B2D40037266C /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		CE2368812AF6A9F20031DD7C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CE2857C02A80FDB7006C8009 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE91F4BE2B0BA60F00626F98 /* Registration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Registration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CEAA2AA717F200F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CEC92AA720F700F19EDC /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,6 +66,7 @@
 				CE2857C12A80FDB7006C8009 /* Domain.framework in Frameworks */,
 				CE2857BD2A80FDAC006C8009 /* Networking.framework in Frameworks */,
 				CED4CEAB2AA717F200F19EDC /* Color.framework in Frameworks */,
+				CE91F4BF2B0BA60F00626F98 /* Registration.framework in Frameworks */,
 				CE2857BC2A80FD88006C8009 /* SnapKit in Frameworks */,
 				CED4CECA2AA720F700F19EDC /* Font.framework in Frameworks */,
 			);
@@ -102,6 +107,7 @@
 		867582152943B11F0037266C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE91F4BE2B0BA60F00626F98 /* Registration.framework */,
 				CED4CEC92AA720F700F19EDC /* Font.framework */,
 				CED4CEAA2AA717F200F19EDC /* Color.framework */,
 				CE2857C02A80FDB7006C8009 /* Domain.framework */,

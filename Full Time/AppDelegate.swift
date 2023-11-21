@@ -7,15 +7,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let viewController = ViewController()
-//        let mainViewController = LoginViewController(viewModel: .init())
-        let mainViewController = TabBarController()
+        let mainViewController = LoginViewController(viewModel: .init())
+//        let mainViewController = TabBarController()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = UINavigationController(rootViewController: viewController)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.window?.rootViewController = mainViewController
-        }
+        self.window?.rootViewController = UINavigationController(rootViewController: mainViewController)
+//        self.window?.rootViewController = mainViewController
         self.window?.makeKeyAndVisible()
         return true
     }
