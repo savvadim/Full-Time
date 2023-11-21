@@ -7,7 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let viewController = ViewController()
+
         let mainViewController = LoginViewController(viewModel: .init())
 //        let mainViewController = TabBarController()
         
