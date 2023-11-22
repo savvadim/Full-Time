@@ -28,7 +28,7 @@ open class CreateBoardViewController: UIViewController {
     
     private var stackView: UIStackView!
     
-    private var barButtonItem: UIBarButtonItem!
+    private var barButtonItem = UIBarButtonItem()
     
     private var isVisible = false
     
