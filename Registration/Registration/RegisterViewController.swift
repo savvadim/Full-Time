@@ -29,6 +29,7 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
     private let stripe4 = UIImageView()
     private let stripe5 = UIImageView()
 
+    private var fieldStates: [FieldState] = [.active, .inactive, .inactive, .inactive, .inactive]
     private var textFields: [UITextField] = []
     private var stripes: [UIImageView] = []
     
@@ -212,13 +213,18 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
 //    }
 
 
+
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let index = textFields.firstIndex(of: textField) {
             if index < textFields.count - 1 {
                 textFields[index + 1].becomeFirstResponder()
             } else {
                 textField.resignFirstResponder()
+            default:
+                break
             }
+
+            return true
         }
         return true
     }
@@ -265,6 +271,15 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
 //            textField.placeholder = "Неверные данные"
 //            stripe.tintColor = UIColor.red
 //        }
+
+        private func validateNumericInput(_ string: String) -> Bool {
+            let allowedCharacters = CharacterSet(charactersIn: "0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+
+        private func validateInput(_ textField: UITextField) -> Bool {
+            guard let text = textField.text else { return false }
 
 //        private func validateNumericInput(_ string: String) -> Bool {
 //            let allowedCharacters = CharacterSet(charactersIn: "0123456789")
@@ -314,11 +329,25 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
         print("Начало редактирования текстового поля")
     }
 
+
     public func textFieldDidEndEditing(_ textField: UITextField) {
         guard let index = textFields.firstIndex(of: textField) else { return }
 
         let stripe = stripes[index]
         stripe.image = UIImage(named: "strip")
+        
+        guard let text = textField.text else { return false }
+
+        switch textField {
+        case textField1:
+            return validateNumericInput(text)
+        case textField2:
+            // Другие проверки...
+            return true
+        // Добавьте проверки для остальных текстовых полей
+        default:
+            return true
+        }
         
         print("Окончание редактирования текстового поля")
     }
