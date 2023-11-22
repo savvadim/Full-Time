@@ -17,7 +17,7 @@ open class OneBoardViewController: UIViewController {
     
     private let backBlue = UIImageView()
     
-    private var barButtonItem: UIBarButtonItem!
+    private var barButtonItem = UIBarButtonItem()
     private let boardTaskButton = BoardTaskButton(mainLabel: "ofjlsvkn", commentLabel: "jikfsnv")
    
     
