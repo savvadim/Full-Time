@@ -178,146 +178,16 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
             make.right.equalTo(stripe5)
         }
     }
-//     func updateImage(for stripe: UIImageView, withState state: FieldState) {
-//        switch state {
-//        case .inactive:
-//            stripe.image = UIImage(named: "strip")
-//        case .active:
-//            stripe.image = UIImage(named: "glow")
-//        case .invalid:
-//            stripe.image = UIImage(named: "invalidImage")
-//        }
-//    }
-
     
-//    func updateFieldsState() {
-//        for (index, textField) in textFields.enumerated() {
-//            let state = fieldStates[index]
-//            let stripe = stripes[index]
-//
-//            switch state {
-//            case .inactive:
-//                configureInactiveState(for: textField, and: stripe)
-//            case .active:
-//                configureActiveState(for: textField, and: stripe)
-//            case .invalid:
-//                if validateInput(textField) {
-//                    configureValidState(for: textField, and: stripe)
-//                } else {
-//                    configureInvalidState(for: textField, and: stripe)
-//                }
-//            }
-//
-//            updateImage(for: stripe, withState: state)
-//        }
-//    }
-
-
-
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let index = textFields.firstIndex(of: textField) {
             if index < textFields.count - 1 {
                 textFields[index + 1].becomeFirstResponder()
             } else {
                 textField.resignFirstResponder()
-            default:
-                break
             }
-
-            return true
         }
         return true
-    }
-
-//    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-////            guard let text = textField.text else { return true }
-//
-//            switch textField {
-//            case textField1:
-//                return validateNumericInput(string)
-//            case textField2:
-//                // Другие проверки...
-//                return true
-//            // Добавьте проверки для остальных текстовых полей
-//            default:
-//                return true
-//            }
-//        }
-
-//        private func configureInactiveState(for textField: UITextField, and stripe: UIImageView) {
-//            textField.isEnabled = false
-//            textField.backgroundColor = UIColor.lightGray
-//            textField.placeholder = "Неактивное поле"
-//            stripe.tintColor = UIColor.lightGray
-//        }
-//
-//        private func configureActiveState(for textField: UITextField, and stripe: UIImageView) {
-////            textField.isEnabled = true
-//            textField.backgroundColor = UIColor.white
-//            textField.placeholder = "Активное поле"
-//            stripe.image = UIImage(named: "glow")
-//        }
-//
-//        private func configureValidState(for textField: UITextField, and stripe: UIImageView) {
-//            textField.isEnabled = true
-//            textField.backgroundColor = UIColor.white
-//            textField.placeholder = "Данные валидны"
-//            stripe.tintColor = UIColor.green
-//        }
-//
-//        private func configureInvalidState(for textField: UITextField, and stripe: UIImageView) {
-//            textField.isEnabled = true
-//            textField.backgroundColor = UIColor.red
-//            textField.placeholder = "Неверные данные"
-//            stripe.tintColor = UIColor.red
-//        }
-
-        private func validateNumericInput(_ string: String) -> Bool {
-            let allowedCharacters = CharacterSet(charactersIn: "0123456789")
-            let characterSet = CharacterSet(charactersIn: string)
-            return allowedCharacters.isSuperset(of: characterSet)
-        }
-
-        private func validateInput(_ textField: UITextField) -> Bool {
-            guard let text = textField.text else { return false }
-
-//        private func validateNumericInput(_ string: String) -> Bool {
-//            let allowedCharacters = CharacterSet(charactersIn: "0123456789")
-//            let characterSet = CharacterSet(charactersIn: string)
-//            return allowedCharacters.isSuperset(of: characterSet)
-//        }
-//
-//        private func validateInput(_ textField: UITextField) -> Bool {
-//            guard let text = textField.text else { return false }
-//
-//            switch textField {
-//            case textField1:
-//                return validateNumericInput(text)
-//            case textField2:
-//                // Другие проверки...
-//                return true
-//            // Добавьте проверки для остальных текстовых полей
-//            default:
-//                return true
-//            }
-//        }
-    
-    @objc func backButtonTapped(sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @objc func handleTap() {
-        view.endEditing(true)
-    }
-    
-    @objc func showHideButton1Tapped() {
-        showHideButton1.isSelected.toggle()
-        textField4.isSecureTextEntry.toggle()
-    }
-    
-    @objc func showHideButton2Tapped() {
-        showHideButton2.isSelected.toggle()
-        textField5.isSecureTextEntry.toggle()
     }
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -336,19 +206,6 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
         let stripe = stripes[index]
         stripe.image = UIImage(named: "strip")
         
-        guard let text = textField.text else { return false }
-
-        switch textField {
-        case textField1:
-            return validateNumericInput(text)
-        case textField2:
-            // Другие проверки...
-            return true
-        // Добавьте проверки для остальных текстовых полей
-        default:
-            return true
-        }
-        
         print("Окончание редактирования текстового поля")
     }
 
@@ -356,5 +213,23 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
         if let text = textField.text {
             print("Изменение значения текстового поля: \(text)")
         }
+    }
+
+    @objc func backButtonTapped(sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
+    @objc func showHideButton1Tapped() {
+        showHideButton1.isSelected.toggle()
+        textField4.isSecureTextEntry.toggle()
+    }
+    
+    @objc func showHideButton2Tapped() {
+        showHideButton2.isSelected.toggle()
+        textField5.isSecureTextEntry.toggle()
     }
 }
