@@ -200,9 +200,9 @@ open class ProfileViewController: UIViewController {
         scrollView.addSubview(passwordField)
         
         passwordField.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: 302, height: 24))
             make.top.equalTo(jobStrip).offset(25)
             make.left.equalToSuperview().offset(8)
+            make.width.equalTo(275)
         }
         
 //        let passwordStrip = UIImageView()

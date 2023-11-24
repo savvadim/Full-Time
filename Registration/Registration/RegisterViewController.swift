@@ -13,6 +13,7 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
     private let logoImage = UIImageView()
     
     private let backButton = UIButton()
+    private let regButton = UIButton()
     private let showHideButton1 = UIButton()
     private let showHideButton2 = UIButton()
     
@@ -100,6 +101,18 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
         showHideButton2.addTarget(self, action: #selector(showHideButton2Tapped), for: .touchUpInside)
         safeView.addSubview(showHideButton2)
         
+        regButton.backgroundColor = UIColor.customBlue
+        regButton.addTarget(self, action: #selector(regTapped), for: .touchUpInside)
+        regButton.setImage(UIImage(named: "reg"), for: .normal)
+        regButton.layer.cornerRadius = 8
+        safeView.addSubview(regButton)
+    
+        regButton.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 365, height: 60))
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(153)
+        }
+        
         //MARK: Fields
         
         textFields = [textField1, textField2, textField3, textField4, textField5]
@@ -158,12 +171,12 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         for i in 0..<textFields.count {
             textFields[i].snp.makeConstraints { make in
+                make.left.equalTo(stripe1).offset(8)
+                make.width.equalTo(275)
                 if i == 0 {
                     make.top.equalToSuperview().offset(60)
-                    make.left.equalTo(stripe1).offset(8)
                 } else {
                     make.top.equalTo(textFields[i - 1].snp.bottom).offset(33)
-                    make.left.equalTo(stripe1).offset(8)
                 }
             }
         }
@@ -231,5 +244,9 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
     @objc func showHideButton2Tapped() {
         showHideButton2.isSelected.toggle()
         textField5.isSecureTextEntry.toggle()
+    }
+    
+    @objc func regTapped() {
+        print("efdljnvjekfs")
     }
 }

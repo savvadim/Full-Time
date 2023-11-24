@@ -1,6 +1,7 @@
 import Foundation
 import Domain
 import UIKit
+import Token
 
 public class LoginModels {
     
@@ -16,17 +17,19 @@ public class LoginModels {
                 if let token = response.token {
                     print("Успешный вход, токен: \(token)")
                     
-//                    let tabBarController = TabBarController()
-//                    let window = UIApplication.shared.windows.first
-//
-//                    tabBarController.view.alpha = 0.0
-//                    window?.rootViewController = tabBarController
-//
-//                    UIView.animate(withDuration: 0.3) {
-//                        tabBarController.view.alpha = 1.0
-//                    }
-//
-//                    window?.makeKeyAndVisible()
+                    TokenManager.saveToken(token, forAccount: " \(email)")
+                    
+                    let tabBarController = TabBarController()
+                    let window = UIApplication.shared.windows.first
+
+                    tabBarController.view.alpha = 0.0
+                    window?.rootViewController = tabBarController
+
+                    UIView.animate(withDuration: 0.3) {
+                        tabBarController.view.alpha = 1.0
+                    }
+
+                    window?.makeKeyAndVisible()
                     
                 } else {
                     print("Ошибка: Токен отсутствует в ответе")

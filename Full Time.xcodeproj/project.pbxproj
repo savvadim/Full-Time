@@ -72,6 +72,13 @@
 			remoteGlobalIDString = CE2857A12A80F8A9006C8009;
 			remoteInfo = Profile;
 		};
+		CE84C85D2B10CBA100F29B14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE84C8592B10CBA100F29B14 /* Token.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE84C84F2B10CBA100F29B14;
+			remoteInfo = Token;
+		};
 		CED220A42AE003DF00579D64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CED220A02AE003DF00579D64 /* Notify.xcodeproj */;
@@ -142,6 +149,7 @@
 		CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Tasks.xcodeproj; path = Tasks/Tasks.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Profile.xcodeproj; path = Profile/Profile.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE5B9C152A707F94009EAD12 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		CE84C8592B10CBA100F29B14 /* Token.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Token.xcodeproj; path = Token/Token.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE8516F52A7BE0F100CA9300 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		CE91F4C52B0C96EC00626F98 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CE91F4DB2B0CC3EF00626F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 		867581832943A5820037266C /* Full Time */ = {
 			isa = PBXGroup;
 			children = (
+				CE84C8592B10CBA100F29B14 /* Token.xcodeproj */,
 				CEDD1C802B0B916A00A20D64 /* Registration.xcodeproj */,
 				CED220A02AE003DF00579D64 /* Notify.xcodeproj */,
 				CED4CEC12AA7182200F19EDC /* Font.xcodeproj */,
@@ -271,6 +280,14 @@
 			isa = PBXGroup;
 			children = (
 				CE2857B02A80F8A9006C8009 /* Profile.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE84C85A2B10CBA100F29B14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE84C85E2B10CBA100F29B14 /* Token.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -411,6 +428,10 @@
 					ProductGroup = CE15716F2A8F9007008413A5 /* Products */;
 					ProjectRef = CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */;
 				},
+				{
+					ProductGroup = CE84C85A2B10CBA100F29B14 /* Products */;
+					ProjectRef = CE84C8592B10CBA100F29B14 /* Token.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -453,6 +474,13 @@
 			fileType = wrapper.framework;
 			path = Profile.framework;
 			remoteRef = CE2857AF2A80F8A9006C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE84C85E2B10CBA100F29B14 /* Token.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Token.framework;
+			remoteRef = CE84C85D2B10CBA100F29B14 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		CED220A52AE003DF00579D64 /* Notify.framework */ = {
