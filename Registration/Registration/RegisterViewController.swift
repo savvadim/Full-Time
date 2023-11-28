@@ -4,7 +4,7 @@ import Color
 import Font
 
 open class RegisterViewController: UIViewController, UITextFieldDelegate {
-    
+
     private let safeView = UIView()
     
     private let regLabel = UILabel()
@@ -57,7 +57,7 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         
         regLabel.textColor = .white
-        regLabel.text = "Регистарция"
+        regLabel.text = "Регистрация"
         regLabel.font = CustomFont.SemiBold
         navigationItem.titleView = regLabel
 
@@ -78,7 +78,7 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         privacyLabel.textColor = UIColor.privacyGrey
         privacyLabel.font = CustomFont.Roboto
-        privacyLabel.text = "Нажимая, вы соглашаетесь с политикой\nконфидециальности"
+        privacyLabel.text = "Нажимая, вы соглашаетесь с политикой\nконфиденциальности"
         privacyLabel.textAlignment = .center
         privacyLabel.numberOfLines = 0
         
@@ -198,16 +198,18 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
                 textFields[index + 1].becomeFirstResponder()
             } else {
                 textField.resignFirstResponder()
+                regTapped()
             }
         }
         return true
     }
-    
+
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         guard let index = textFields.firstIndex(of: textField) else { return }
         
         let stripe = stripes[index]
         stripe.image = UIImage(named: "glow")
+        updateFieldState(index: index, state: .active)
 
         print("Начало редактирования текстового поля")
     }
@@ -218,6 +220,7 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
 
         let stripe = stripes[index]
         stripe.image = UIImage(named: "strip")
+        updateFieldState(index: index, state: .inactive)
         
         print("Окончание редактирования текстового поля")
     }
@@ -247,6 +250,172 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func regTapped() {
-        print("efdljnvjekfs")
+        if validateFields() {
+            // Perform registration logic here
+            print("efdljnvjekfs")
+        } else {
+            print("Registration tapped, fields are invalid.")
+        }
+    }
+
+//    private func validateFields() -> Bool {
+//        var isValid = true
+//
+//        for (index, textField) in textFields.enumerated() {
+//            let validation: (String?) -> Bool
+//
+//            switch index {
+//            case 0: validation = validateFirstName
+//            case 1: validation = validateLastName
+//            case 2: validation = validateEmail
+//            case 3: validation = validatePassword
+//            case 4: validation = validateConfirmPassword
+//            default: fatalError("Unexpected index")
+//            }
+//
+//            if !validation(textField.text) {
+//                isValid = false
+//                updateFieldState(index: index, state: .invalid)
+//            }
+//        }
+//
+//        return isValid
+//    }
+//
+//    private func validateFirstName(_ text: String?) -> Bool {
+//        guard let text = text, !text.isEmpty else {
+//            updateFieldState(index: 0, state: .invalid)
+//            return false
+//        }
+//        return true
+//    }
+//
+//    private func validateLastName(_ text: String?) -> Bool {
+//        guard let text = text, !text.isEmpty else {
+//            updateFieldState(index: 1, state: .invalid)
+//            return false
+//        }
+//        
+//        return true
+//    }
+//
+//    private func validateEmail(_ text: String?) -> Bool {
+//        guard let text = text, !text.isEmpty,
+//              NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: text)
+//        else {
+//            updateFieldState(index: 2, state: .invalid)
+//            return false
+//        }
+//
+//        return true
+//    }
+//
+//
+//
+//    private func validatePassword(_ text: String?) -> Bool {
+//        guard let text = text, !text.isEmpty, text.count >= 6 else {
+//            updateFieldState(index: 3, state: .invalid)
+//            return false
+//        }
+//        return true
+//    }
+//
+//
+//    private func validateConfirmPassword(_ text: String?) -> Bool {
+//        guard let text = text, !text.isEmpty else {
+//            updateFieldState(index: 4, state: .invalid)
+//            return false
+//        }
+//
+//        if text != textField4.text {
+//            // Invalid: Confirm Password does not match Password
+//            updateFieldState(index: 4, state: .invalid)
+//            return false
+//        }
+//
+//        updateFieldState(index: 4, state: .active)
+//        return true
+//    }
+    
+    private func validateTextField(_ text: String?, at index: Int) -> Bool {
+        guard let text = text, !text.isEmpty, !text.contains(" ") else {
+            updateFieldState(index: index, state: .invalid)
+            return false
+        }
+        return true
+    }
+    
+    private func validateFirstName(_ text: String?) -> Bool {
+        return validateTextField(text, at: 0)
+    }
+
+    private func validateLastName(_ text: String?) -> Bool {
+        return validateTextField(text, at: 1)
+    }
+
+    private func validateEmail(_ text: String?) -> Bool {
+        guard validateTextField(text, at: 2),
+              NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: text)
+        else {
+            return false
+        }
+        return true
+    }
+
+    private func validatePassword(_ text: String?) -> Bool {
+        guard let text = text, text.count >= 6 else {
+            updateFieldState(index: 3, state: .invalid)
+            return false
+        }
+        return true
+    }
+
+
+    private func validateConfirmPassword(_ text: String?) -> Bool {
+        guard validateTextField(text, at: 4), text == textField4.text else {
+            return false
+        }
+        updateFieldState(index: 4, state: .active)
+        return true
+    }
+
+    private func validateFields() -> Bool {
+        var isValid = true
+
+        for (index, textField) in textFields.enumerated() {
+            let validation: (String?) -> Bool
+
+            switch index {
+            case 0: validation = validateFirstName
+            case 1: validation = validateLastName
+            case 2: validation = validateEmail
+            case 3: validation = validatePassword
+            case 4: validation = validateConfirmPassword
+            default: fatalError("Unexpected index")
+            }
+
+            if !validation(textField.text) {
+                isValid = false
+                updateFieldState(index: index, state: .invalid)
+            }
+        }
+
+        return isValid
+    }
+
+
+    private func updateFieldState(index: Int, state: FieldState) {
+        fieldStates[index] = state
+
+        switch state {
+        case .inactive:
+            stripes[index].image = UIImage(named: "strip")
+        case .active:
+            stripes[index].image = UIImage(named: "glow")
+            textFields[index].textColor = .white
+        case .invalid:
+            stripes[index].image = UIImage(named: "red")
+            textFields[index].textColor = .red
+        }
     }
 }

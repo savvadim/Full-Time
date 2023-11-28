@@ -33,7 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				CE84C8612B10CC5000F29B14 /* TokenManager.swift */,
-				CE84C8512B10CBA100F29B14 /* Token */,
 				CE84C8502B10CBA100F29B14 /* Products */,
 				CE84C8632B10CC6E00F29B14 /* Frameworks */,
 			);
@@ -45,13 +44,6 @@
 				CE84C84F2B10CBA100F29B14 /* Token.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CE84C8512B10CBA100F29B14 /* Token */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Token;
 			sourceTree = "<group>";
 		};
 		CE84C8632B10CC6E00F29B14 /* Frameworks */ = {
