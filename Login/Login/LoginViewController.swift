@@ -71,7 +71,7 @@ open class LoginViewController: UIViewController {
         
         logoImage.snp.makeConstraints { make in
             make.width.equalToSuperview()
-            make.top.equalToSuperview().offset(236)
+            make.top.equalToSuperview().offset(190)
         }
         
 //        let authLabel = UILabel()
@@ -224,7 +224,8 @@ open class LoginViewController: UIViewController {
     }
     
     @objc func forgetTapped() {
-        print("forget")
+        let anotherViewController = ForgetViewController()
+        navigationController?.pushViewController(anotherViewController, animated: true)
     }
     
     @objc func handleTap() {

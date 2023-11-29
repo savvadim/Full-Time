@@ -53,7 +53,7 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         logoImage.snp.makeConstraints { make in
             make.width.equalToSuperview()
-            make.top.equalToSuperview().offset(236)
+            make.top.equalToSuperview().offset(190)
         }
         
         regLabel.textColor = .white
@@ -257,85 +257,6 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
             print("Registration tapped, fields are invalid.")
         }
     }
-
-//    private func validateFields() -> Bool {
-//        var isValid = true
-//
-//        for (index, textField) in textFields.enumerated() {
-//            let validation: (String?) -> Bool
-//
-//            switch index {
-//            case 0: validation = validateFirstName
-//            case 1: validation = validateLastName
-//            case 2: validation = validateEmail
-//            case 3: validation = validatePassword
-//            case 4: validation = validateConfirmPassword
-//            default: fatalError("Unexpected index")
-//            }
-//
-//            if !validation(textField.text) {
-//                isValid = false
-//                updateFieldState(index: index, state: .invalid)
-//            }
-//        }
-//
-//        return isValid
-//    }
-//
-//    private func validateFirstName(_ text: String?) -> Bool {
-//        guard let text = text, !text.isEmpty else {
-//            updateFieldState(index: 0, state: .invalid)
-//            return false
-//        }
-//        return true
-//    }
-//
-//    private func validateLastName(_ text: String?) -> Bool {
-//        guard let text = text, !text.isEmpty else {
-//            updateFieldState(index: 1, state: .invalid)
-//            return false
-//        }
-//        
-//        return true
-//    }
-//
-//    private func validateEmail(_ text: String?) -> Bool {
-//        guard let text = text, !text.isEmpty,
-//              NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: text)
-//        else {
-//            updateFieldState(index: 2, state: .invalid)
-//            return false
-//        }
-//
-//        return true
-//    }
-//
-//
-//
-//    private func validatePassword(_ text: String?) -> Bool {
-//        guard let text = text, !text.isEmpty, text.count >= 6 else {
-//            updateFieldState(index: 3, state: .invalid)
-//            return false
-//        }
-//        return true
-//    }
-//
-//
-//    private func validateConfirmPassword(_ text: String?) -> Bool {
-//        guard let text = text, !text.isEmpty else {
-//            updateFieldState(index: 4, state: .invalid)
-//            return false
-//        }
-//
-//        if text != textField4.text {
-//            // Invalid: Confirm Password does not match Password
-//            updateFieldState(index: 4, state: .invalid)
-//            return false
-//        }
-//
-//        updateFieldState(index: 4, state: .active)
-//        return true
-//    }
     
     private func validateTextField(_ text: String?, at index: Int) -> Bool {
         guard let text = text, !text.isEmpty, !text.contains(" ") else {
