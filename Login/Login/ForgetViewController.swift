@@ -2,7 +2,7 @@ import UIKit
 import Foundation
 import Font
 
-class ForgetViewController: UIViewController {
+open class ForgetViewController: UIViewController {
     
     private let safeView = UIView()
     
@@ -19,13 +19,10 @@ class ForgetViewController: UIViewController {
     
     private var barButtonItem = UIBarButtonItem()
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.backColor
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        view.addGestureRecognizer(tapGesture)
         
         forgetLabel.textColor = .white
         forgetLabel.text = "Восстановление пароля"
@@ -87,6 +84,7 @@ class ForgetViewController: UIViewController {
         }
         
         emailField.textColor = .white
+        emailField.delegate = self
         emailField.font = CustomFont.RegularMedium
         emailField.attributedPlaceholder = NSAttributedString(
             string: "Введите e-mail",
@@ -99,6 +97,9 @@ class ForgetViewController: UIViewController {
             make.top.equalToSuperview().offset(60)
             make.centerX.equalToSuperview()
         }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
     }
     
     @objc func backButtonTapped(sender: UIButton) {
@@ -110,6 +111,29 @@ class ForgetViewController: UIViewController {
     }
     
     @objc func enterTapped() {
-        print("jfnvsfndk")
+        
+//        guard NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: emailField.text)
+//        else {
+//            return print("wrong email")
+//        }
+        print("correct email")
+    }
+}
+
+extension ForgetViewController: UITextFieldDelegate {
+    
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        stripImage.image = UIImage(named: "glow")
+    }
+    
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        stripImage.image = UIImage(named: "strip")
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        enterTapped()
+        
+        return true
     }
 }
