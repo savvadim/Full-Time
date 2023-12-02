@@ -32,6 +32,7 @@
 		CEC00C3F2AAA1E8A0088867F /* Tasks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE1571782A8F9007008413A5 /* Tasks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEE45C042A7906A9003A253C /* Boards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE45C012A78079E003A253C /* Boards.framework */; };
 		CEE45C052A7906A9003A253C /* Boards.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEE45C012A78079E003A253C /* Boards.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEF605FF2B1B479E002BA61E /* Notify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED220A52AE003DF00579D64 /* Notify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,7 +137,6 @@
 		CE91F4C52B0C96EC00626F98 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CE91F4DB2B0CC3EF00626F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = ../Login/Login/TabBarController.swift; sourceTree = "<group>"; };
-		CED220892AE002F400579D64 /* Notify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED220A02AE003DF00579D64 /* Notify.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Notify.xcodeproj; path = Notify/Notify.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CEDD1C802B0B916A00A20D64 /* Registration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Registration.xcodeproj; path = Registration/Registration.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CEE45BFC2A78079E003A253C /* Boards.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Boards.xcodeproj; path = Boards/Boards.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -156,6 +156,7 @@
 				CEC00C3E2AAA1E8A0088867F /* Tasks.framework in Frameworks */,
 				CE2857B82A80F9FD006C8009 /* Profile.framework in Frameworks */,
 				CE91F4C32B0BA84000626F98 /* Registration.framework in Frameworks */,
+				CEF605FF2B1B479E002BA61E /* Notify.framework in Frameworks */,
 				CE91F4C12B0BA83A00626F98 /* Notify.framework in Frameworks */,
 				CE89E87D2A7940FD00C610CD /* Boards.framework in Frameworks */,
 			);
@@ -222,7 +223,6 @@
 		867581E32943A92D0037266C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CED220892AE002F400579D64 /* Notify.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
