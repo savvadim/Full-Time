@@ -18,8 +18,6 @@
 		CE2857BE2A80FDAC006C8009 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 867582162943B11F0037266C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE2857C12A80FDB7006C8009 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2857C02A80FDB7006C8009 /* Domain.framework */; };
 		CE2857C22A80FDB7006C8009 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE2857C02A80FDB7006C8009 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE84C87D2B10F87200F29B14 /* Token.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE84C87C2B10F87200F29B14 /* Token.framework */; };
-		CE84C87E2B10F87200F29B14 /* Token.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE84C87C2B10F87200F29B14 /* Token.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE91F4BF2B0BA60F00626F98 /* Registration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE91F4BE2B0BA60F00626F98 /* Registration.framework */; };
 		CE91F4C02B0BA60F00626F98 /* Registration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE91F4BE2B0BA60F00626F98 /* Registration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEF605C52B1B4158002BA61E /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605C42B1B4158002BA61E /* Design.framework */; };
@@ -33,7 +31,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE84C87E2B10F87200F29B14 /* Token.framework in Embed Frameworks */,
 				CEF605C62B1B4158002BA61E /* Design.framework in Embed Frameworks */,
 				CE2857C22A80FDB7006C8009 /* Domain.framework in Embed Frameworks */,
 				CE91F4C02B0BA60F00626F98 /* Registration.framework in Embed Frameworks */,
@@ -71,7 +68,6 @@
 				CE2857BD2A80FDAC006C8009 /* Networking.framework in Frameworks */,
 				CEF605C52B1B4158002BA61E /* Design.framework in Frameworks */,
 				CE91F4BF2B0BA60F00626F98 /* Registration.framework in Frameworks */,
-				CE84C87D2B10F87200F29B14 /* Token.framework in Frameworks */,
 				CE2857BC2A80FD88006C8009 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
