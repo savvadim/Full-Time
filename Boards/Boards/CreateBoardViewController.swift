@@ -1,9 +1,7 @@
 import UIKit
 import Foundation
 import SnapKit
-import Color
-import Font
-
+import Design
 open class CreateBoardViewController: UIViewController {
     
     private let safeView = UIView()

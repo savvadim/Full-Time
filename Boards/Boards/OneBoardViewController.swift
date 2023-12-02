@@ -1,6 +1,5 @@
 import Foundation
-import Color
-import Font
+import Design
 import UIKit
 
 open class OneBoardViewController: UIViewController {

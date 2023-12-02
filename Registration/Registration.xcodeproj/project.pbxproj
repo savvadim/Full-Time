@@ -8,22 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		CEDD1C872B0B91CC00A20D64 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD1C862B0B91CC00A20D64 /* RegisterViewController.swift */; };
-		CEDD1C8A2B0B934200A20D64 /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD1C892B0B934200A20D64 /* Color.framework */; };
-		CEDD1C8B2B0B934200A20D64 /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD1C892B0B934200A20D64 /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CEDD1C8E2B0B934700A20D64 /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD1C8D2B0B934700A20D64 /* Font.framework */; };
-		CEDD1C8F2B0B934700A20D64 /* Font.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD1C8D2B0B934700A20D64 /* Font.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEDD1C922B0B93CB00A20D64 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEDD1C912B0B93CB00A20D64 /* SnapKit */; };
+		CEF605B12B1B4078002BA61E /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605B02B1B4078002BA61E /* Design.framework */; };
+		CEF605B22B1B4078002BA61E /* Design.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605B02B1B4078002BA61E /* Design.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CEDD1C8C2B0B934200A20D64 /* Embed Frameworks */ = {
+		CEF605B32B1B4078002BA61E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CEDD1C8B2B0B934200A20D64 /* Color.framework in Embed Frameworks */,
-				CEDD1C8F2B0B934700A20D64 /* Font.framework in Embed Frameworks */,
+				CEF605B22B1B4078002BA61E /* Design.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +32,7 @@
 		CEDD1C862B0B91CC00A20D64 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CEDD1C892B0B934200A20D64 /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDD1C8D2B0B934700A20D64 /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF605B02B1B4078002BA61E /* Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,9 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF605B12B1B4078002BA61E /* Design.framework in Frameworks */,
 				CEDD1C922B0B93CB00A20D64 /* SnapKit in Frameworks */,
-				CEDD1C8A2B0B934200A20D64 /* Color.framework in Frameworks */,
-				CEDD1C8E2B0B934700A20D64 /* Font.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +76,7 @@
 		CEDD1C882B0B934100A20D64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEF605B02B1B4078002BA61E /* Design.framework */,
 				CEDD1C8D2B0B934700A20D64 /* Font.framework */,
 				CEDD1C892B0B934200A20D64 /* Color.framework */,
 			);
@@ -106,7 +104,7 @@
 				CEDD1C722B0B916A00A20D64 /* Sources */,
 				CEDD1C732B0B916A00A20D64 /* Frameworks */,
 				CEDD1C742B0B916A00A20D64 /* Resources */,
-				CEDD1C8C2B0B934200A20D64 /* Embed Frameworks */,
+				CEF605B32B1B4078002BA61E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

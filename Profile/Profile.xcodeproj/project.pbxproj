@@ -12,21 +12,18 @@
 		CE0A4BF72AA5D96600181E3D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A4BF62AA5D96600181E3D /* ProfileModel.swift */; };
 		CE2857B42A80F969006C8009 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2857B32A80F969006C8009 /* ProfileViewController.swift */; };
 		CE2857B72A80F9C9006C8009 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE2857B62A80F9C9006C8009 /* SnapKit */; };
-		CED4CEA72AA7157B00F19EDC /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEA62AA7157B00F19EDC /* Color.framework */; };
-		CED4CEA82AA7157B00F19EDC /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEA62AA7157B00F19EDC /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CED4CECD2AA7235900F19EDC /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CECC2AA7235900F19EDC /* Font.framework */; };
-		CED4CECE2AA7235900F19EDC /* Font.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CECC2AA7235900F19EDC /* Font.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEF605BD2B1B4109002BA61E /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605BC2B1B4109002BA61E /* Design.framework */; };
+		CEF605BE2B1B4109002BA61E /* Design.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605BC2B1B4109002BA61E /* Design.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CED4CEA92AA7157B00F19EDC /* Embed Frameworks */ = {
+		CEF605BF2B1B4109002BA61E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CED4CEA82AA7157B00F19EDC /* Color.framework in Embed Frameworks */,
-				CED4CECE2AA7235900F19EDC /* Font.framework in Embed Frameworks */,
+				CEF605BE2B1B4109002BA61E /* Design.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,6 +39,7 @@
 		CED4CE402AA713CE00F19EDC /* UIColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CEA62AA7157B00F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CECC2AA7235900F19EDC /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF605BC2B1B4109002BA61E /* Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,9 +48,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2857B72A80F9C9006C8009 /* SnapKit in Frameworks */,
-				CED4CECD2AA7235900F19EDC /* Font.framework in Frameworks */,
-				CED4CEA72AA7157B00F19EDC /* Color.framework in Frameworks */,
 				CE0A4BF52AA5D6A300181E3D /* Alamofire in Frameworks */,
+				CEF605BD2B1B4109002BA61E /* Design.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +86,7 @@
 		CED4CE1F2AA7133600F19EDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEF605BC2B1B4109002BA61E /* Design.framework */,
 				CED4CECC2AA7235900F19EDC /* Font.framework */,
 				CED4CEA62AA7157B00F19EDC /* Color.framework */,
 				CED4CE402AA713CE00F19EDC /* UIColor.framework */,
@@ -118,7 +116,7 @@
 				CE28579D2A80F8A9006C8009 /* Sources */,
 				CE28579E2A80F8A9006C8009 /* Frameworks */,
 				CE28579F2A80F8A9006C8009 /* Resources */,
-				CED4CEA92AA7157B00F19EDC /* Embed Frameworks */,
+				CEF605BF2B1B4109002BA61E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

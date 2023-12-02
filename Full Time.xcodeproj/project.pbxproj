@@ -17,8 +17,6 @@
 		CE5B9C192A707F94009EAD12 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE5B9C152A707F94009EAD12 /* Roboto-Regular.ttf */; };
 		CE8516FA2A7BE0F200CA9300 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE8516F52A7BE0F100CA9300 /* Poppins-SemiBold.ttf */; };
 		CE89E87D2A7940FD00C610CD /* Boards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE45C012A78079E003A253C /* Boards.framework */; };
-		CE8B78F92AA877A7009D43C5 /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CE9F2AA7151800F19EDC /* Color.framework */; };
-		CE8B78FA2AA877A7009D43C5 /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CE9F2AA7151800F19EDC /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE8B79042AA877E6009D43C5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE8B79032AA877E6009D43C5 /* SnapKit */; };
 		CE8B79072AA8781B009D43C5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE8B79062AA8781B009D43C5 /* Alamofire */; };
 		CE91F4C12B0BA83A00626F98 /* Notify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED220A52AE003DF00579D64 /* Notify.framework */; };
@@ -72,33 +70,12 @@
 			remoteGlobalIDString = CE2857A12A80F8A9006C8009;
 			remoteInfo = Profile;
 		};
-		CE84C85D2B10CBA100F29B14 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CE84C8592B10CBA100F29B14 /* Token.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CE84C84F2B10CBA100F29B14;
-			remoteInfo = Token;
-		};
 		CED220A42AE003DF00579D64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CED220A02AE003DF00579D64 /* Notify.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CED220962AE003DF00579D64;
 			remoteInfo = Notify;
-		};
-		CED4CE9E2AA7151800F19EDC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CED4CE902AA7151800F19EDC;
-			remoteInfo = Color;
-		};
-		CED4CEC52AA7182200F19EDC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CED4CEC12AA7182200F19EDC /* Font.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CED4CEB72AA7182200F19EDC;
-			remoteInfo = Font;
 		};
 		CEDD1C842B0B916A00A20D64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -113,6 +90,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = CEE45BF22A78079E003A253C;
 			remoteInfo = Boards;
+		};
+		CEF605AA2B1B3FF6002BA61E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF605A62B1B3FF5002BA61E /* Design.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CEF6059C2B1B3FF5002BA61E;
+			remoteInfo = Design;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -129,7 +113,6 @@
 				CE2857B92A80F9FD006C8009 /* Profile.framework in Embed Frameworks */,
 				CEE45C052A7906A9003A253C /* Boards.framework in Embed Frameworks */,
 				CE91F4C42B0BA84000626F98 /* Registration.framework in Embed Frameworks */,
-				CE8B78FA2AA877A7009D43C5 /* Color.framework in Embed Frameworks */,
 				CEC00C3F2AAA1E8A0088867F /* Tasks.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -149,17 +132,15 @@
 		CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Tasks.xcodeproj; path = Tasks/Tasks.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Profile.xcodeproj; path = Profile/Profile.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE5B9C152A707F94009EAD12 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		CE84C8592B10CBA100F29B14 /* Token.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Token.xcodeproj; path = Token/Token.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CE8516F52A7BE0F100CA9300 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		CE91F4C52B0C96EC00626F98 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CE91F4DB2B0CC3EF00626F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = ../Login/Login/TabBarController.swift; sourceTree = "<group>"; };
 		CED220892AE002F400579D64 /* Notify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED220A02AE003DF00579D64 /* Notify.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Notify.xcodeproj; path = Notify/Notify.xcodeproj; sourceTree = SOURCE_ROOT; };
-		CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Color.xcodeproj; path = Color/Color.xcodeproj; sourceTree = SOURCE_ROOT; };
-		CED4CEC12AA7182200F19EDC /* Font.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Font.xcodeproj; path = Font/Font.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CEDD1C802B0B916A00A20D64 /* Registration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Registration.xcodeproj; path = Registration/Registration.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CEE45BFC2A78079E003A253C /* Boards.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Boards.xcodeproj; path = Boards/Boards.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CEF605A62B1B3FF5002BA61E /* Design.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Design.xcodeproj; path = Design/Design.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +157,6 @@
 				CE2857B82A80F9FD006C8009 /* Profile.framework in Frameworks */,
 				CE91F4C32B0BA84000626F98 /* Registration.framework in Frameworks */,
 				CE91F4C12B0BA83A00626F98 /* Notify.framework in Frameworks */,
-				CE8B78F92AA877A7009D43C5 /* Color.framework in Frameworks */,
 				CE89E87D2A7940FD00C610CD /* Boards.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,11 +192,9 @@
 		867581832943A5820037266C /* Full Time */ = {
 			isa = PBXGroup;
 			children = (
-				CE84C8592B10CBA100F29B14 /* Token.xcodeproj */,
+				CEF605A62B1B3FF5002BA61E /* Design.xcodeproj */,
 				CEDD1C802B0B916A00A20D64 /* Registration.xcodeproj */,
 				CED220A02AE003DF00579D64 /* Notify.xcodeproj */,
-				CED4CEC12AA7182200F19EDC /* Font.xcodeproj */,
-				CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */,
 				CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */,
 				CE2857AB2A80F8A9006C8009 /* Profile.xcodeproj */,
 				CEE45BFC2A78079E003A253C /* Boards.xcodeproj */,
@@ -284,34 +262,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE84C85A2B10CBA100F29B14 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CE84C85E2B10CBA100F29B14 /* Token.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CED220A12AE003DF00579D64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				CED220A52AE003DF00579D64 /* Notify.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CED4CE9B2AA7151800F19EDC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CED4CE9F2AA7151800F19EDC /* Color.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CED4CEC22AA7182200F19EDC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CED4CEC62AA7182200F19EDC /* Font.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,6 +282,14 @@
 			isa = PBXGroup;
 			children = (
 				CEE45C012A78079E003A253C /* Boards.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEF605A72B1B3FF5002BA61E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEF605AB2B1B3FF6002BA61E /* Design.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,16 +355,12 @@
 					ProjectRef = CEE45BFC2A78079E003A253C /* Boards.xcodeproj */;
 				},
 				{
-					ProductGroup = CED4CE9B2AA7151800F19EDC /* Products */;
-					ProjectRef = CED4CE9A2AA7151800F19EDC /* Color.xcodeproj */;
+					ProductGroup = CEF605A72B1B3FF5002BA61E /* Products */;
+					ProjectRef = CEF605A62B1B3FF5002BA61E /* Design.xcodeproj */;
 				},
 				{
 					ProductGroup = 86416F032943BF4200958825 /* Products */;
 					ProjectRef = 8675823A2943B3480037266C /* Domain.xcodeproj */;
-				},
-				{
-					ProductGroup = CED4CEC22AA7182200F19EDC /* Products */;
-					ProjectRef = CED4CEC12AA7182200F19EDC /* Font.xcodeproj */;
 				},
 				{
 					ProductGroup = 867582022943AC6F0037266C /* Products */;
@@ -427,10 +385,6 @@
 				{
 					ProductGroup = CE15716F2A8F9007008413A5 /* Products */;
 					ProjectRef = CE15716E2A8F9007008413A5 /* Tasks.xcodeproj */;
-				},
-				{
-					ProductGroup = CE84C85A2B10CBA100F29B14 /* Products */;
-					ProjectRef = CE84C8592B10CBA100F29B14 /* Token.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -476,32 +430,11 @@
 			remoteRef = CE2857AF2A80F8A9006C8009 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		CE84C85E2B10CBA100F29B14 /* Token.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Token.framework;
-			remoteRef = CE84C85D2B10CBA100F29B14 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		CED220A52AE003DF00579D64 /* Notify.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Notify.framework;
 			remoteRef = CED220A42AE003DF00579D64 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CED4CE9F2AA7151800F19EDC /* Color.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Color.framework;
-			remoteRef = CED4CE9E2AA7151800F19EDC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CED4CEC62AA7182200F19EDC /* Font.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Font.framework;
-			remoteRef = CED4CEC52AA7182200F19EDC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		CEDD1C852B0B916A00A20D64 /* Registration.framework */ = {
@@ -516,6 +449,13 @@
 			fileType = wrapper.framework;
 			path = Boards.framework;
 			remoteRef = CEE45C002A78079E003A253C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEF605AB2B1B3FF6002BA61E /* Design.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Design.framework;
+			remoteRef = CEF605AA2B1B3FF6002BA61E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

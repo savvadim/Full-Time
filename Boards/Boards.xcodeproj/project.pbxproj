@@ -13,24 +13,21 @@
 		CE8B79092AA8AB9A009D43C5 /* TasksButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B79082AA8AB99009D43C5 /* TasksButton.swift */; };
 		CE8B790B2AA8CF14009D43C5 /* NoticeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B790A2AA8CF14009D43C5 /* NoticeButton.swift */; };
 		CEB0A4BE2B03BC87000182C8 /* OneBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0A4BD2B03BC87000182C8 /* OneBoardViewController.swift */; };
-		CED4CEA32AA7154700F19EDC /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEA22AA7154700F19EDC /* Color.framework */; };
-		CED4CEA42AA7154700F19EDC /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEA22AA7154700F19EDC /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CED4CED02AA723E500F19EDC /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CECF2AA723E500F19EDC /* Font.framework */; };
-		CED4CED12AA723E500F19EDC /* Font.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CECF2AA723E500F19EDC /* Font.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEE45C032A7807CB003A253C /* BoardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE45C022A7807CB003A253C /* BoardsViewController.swift */; };
 		CEE4D8A02A794034007D4BE4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEE4D89F2A794034007D4BE4 /* SnapKit */; };
 		CEF471212B037D4B00E21A53 /* BoardTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF471202B037D4B00E21A53 /* BoardTaskButton.swift */; };
+		CEF605C12B1B4123002BA61E /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605C02B1B4123002BA61E /* Design.framework */; };
+		CEF605C22B1B4123002BA61E /* Design.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605C02B1B4123002BA61E /* Design.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CED4CEA52AA7154700F19EDC /* Embed Frameworks */ = {
+		CEF605C32B1B4123002BA61E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CED4CEA42AA7154700F19EDC /* Color.framework in Embed Frameworks */,
-				CED4CED12AA723E500F19EDC /* Font.framework in Embed Frameworks */,
+				CEF605C22B1B4123002BA61E /* Design.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +48,7 @@
 		CEE45BF22A78079E003A253C /* Boards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Boards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE45C022A7807CB003A253C /* BoardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsViewController.swift; sourceTree = "<group>"; };
 		CEF471202B037D4B00E21A53 /* BoardTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTaskButton.swift; sourceTree = "<group>"; };
+		CEF605C02B1B4123002BA61E /* Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED4CEA32AA7154700F19EDC /* Color.framework in Frameworks */,
-				CED4CED02AA723E500F19EDC /* Font.framework in Frameworks */,
+				CEF605C12B1B4123002BA61E /* Design.framework in Frameworks */,
 				CEE4D8A02A794034007D4BE4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +99,7 @@
 		CEE45C092A793A08003A253C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEF605C02B1B4123002BA61E /* Design.framework */,
 				CED4CECF2AA723E500F19EDC /* Font.framework */,
 				CED4CEA22AA7154700F19EDC /* Color.framework */,
 				CED4CE822AA714DF00F19EDC /* MyColor.framework */,
@@ -131,7 +129,7 @@
 				CEE45BEE2A78079E003A253C /* Sources */,
 				CEE45BEF2A78079E003A253C /* Frameworks */,
 				CEE45BF02A78079E003A253C /* Resources */,
-				CED4CEA52AA7154700F19EDC /* Embed Frameworks */,
+				CEF605C32B1B4123002BA61E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

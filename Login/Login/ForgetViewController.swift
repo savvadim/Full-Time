@@ -1,6 +1,6 @@
 import UIKit
 import Foundation
-import Font
+import Design
 
 open class ForgetViewController: UIViewController {
     

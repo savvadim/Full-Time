@@ -16,6 +16,7 @@
 		867582122943B02F0037266C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582112943B02F0037266C /* AppError.swift */; };
 		867582142943B06C0037266C /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867582132943B06C0037266C /* APIResult.swift */; };
 		CE090CAF2AAC6D0A00DC0087 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090CAE2AAC6D0A00DC0087 /* Constants.swift */; };
+		CEF605C82B1B4252002BA61E /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF605C72B1B4252002BA61E /* TokenManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		867582112943B02F0037266C /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		867582132943B06C0037266C /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
 		CE090CAE2AAC6D0A00DC0087 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEF605C72B1B4252002BA61E /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				8675820F2943AF600037266C /* APIModel.swift */,
 				867582112943B02F0037266C /* AppError.swift */,
 				867582132943B06C0037266C /* APIResult.swift */,
+				CEF605C72B1B4252002BA61E /* TokenManager.swift */,
 				867581D22943A8D00037266C /* Networking.h */,
 				867581D32943A8D00037266C /* Networking.docc */,
 			);
@@ -115,7 +118,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					867581CE2943A8D00037266C = {
 						CreatedOnToolsVersion = 14.0;
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8675820E2943AF1B0037266C /* NetworkProvider.swift in Sources */,
+				CEF605C82B1B4252002BA61E /* TokenManager.swift in Sources */,
 				867582122943B02F0037266C /* AppError.swift in Sources */,
 				867581E22943A8F80037266C /* APIService.swift in Sources */,
 				867581D42943A8D00037266C /* Networking.docc in Sources */,

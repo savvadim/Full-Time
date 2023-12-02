@@ -1,7 +1,7 @@
 import Foundation
+import Networking
 import Domain
 import UIKit
-import Token
 
 public class LoginModels {
     

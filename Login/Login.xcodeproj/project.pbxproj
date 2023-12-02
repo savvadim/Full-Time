@@ -22,10 +22,8 @@
 		CE84C87E2B10F87200F29B14 /* Token.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE84C87C2B10F87200F29B14 /* Token.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE91F4BF2B0BA60F00626F98 /* Registration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE91F4BE2B0BA60F00626F98 /* Registration.framework */; };
 		CE91F4C02B0BA60F00626F98 /* Registration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE91F4BE2B0BA60F00626F98 /* Registration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CED4CEAB2AA717F200F19EDC /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEAA2AA717F200F19EDC /* Color.framework */; };
-		CED4CEAC2AA717F200F19EDC /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEAA2AA717F200F19EDC /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CED4CECA2AA720F700F19EDC /* Font.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEC92AA720F700F19EDC /* Font.framework */; };
-		CED4CECB2AA720F700F19EDC /* Font.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED4CEC92AA720F700F19EDC /* Font.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEF605C52B1B4158002BA61E /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605C42B1B4158002BA61E /* Design.framework */; };
+		CEF605C62B1B4158002BA61E /* Design.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605C42B1B4158002BA61E /* Design.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,9 +34,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CE84C87E2B10F87200F29B14 /* Token.framework in Embed Frameworks */,
+				CEF605C62B1B4158002BA61E /* Design.framework in Embed Frameworks */,
 				CE2857C22A80FDB7006C8009 /* Domain.framework in Embed Frameworks */,
-				CED4CECB2AA720F700F19EDC /* Font.framework in Embed Frameworks */,
-				CED4CEAC2AA717F200F19EDC /* Color.framework in Embed Frameworks */,
 				CE91F4C02B0BA60F00626F98 /* Registration.framework in Embed Frameworks */,
 				CE2857BE2A80FDAC006C8009 /* Networking.framework in Embed Frameworks */,
 			);
@@ -62,6 +59,7 @@
 		CE91F4BE2B0BA60F00626F98 /* Registration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Registration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CEAA2AA717F200F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CEC92AA720F700F19EDC /* Font.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Font.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF605C42B1B4158002BA61E /* Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,11 +69,10 @@
 			files = (
 				CE2857C12A80FDB7006C8009 /* Domain.framework in Frameworks */,
 				CE2857BD2A80FDAC006C8009 /* Networking.framework in Frameworks */,
-				CED4CEAB2AA717F200F19EDC /* Color.framework in Frameworks */,
+				CEF605C52B1B4158002BA61E /* Design.framework in Frameworks */,
 				CE91F4BF2B0BA60F00626F98 /* Registration.framework in Frameworks */,
 				CE84C87D2B10F87200F29B14 /* Token.framework in Frameworks */,
 				CE2857BC2A80FD88006C8009 /* SnapKit in Frameworks */,
-				CED4CECA2AA720F700F19EDC /* Font.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +112,7 @@
 		867582152943B11F0037266C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEF605C42B1B4158002BA61E /* Design.framework */,
 				CE84C87C2B10F87200F29B14 /* Token.framework */,
 				CE91F4BE2B0BA60F00626F98 /* Registration.framework */,
 				CED4CEC92AA720F700F19EDC /* Font.framework */,

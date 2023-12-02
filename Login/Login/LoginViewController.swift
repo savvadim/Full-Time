@@ -1,8 +1,7 @@
 import Foundation
 import UIKit
 import SnapKit
-import Color
-import Font
+import Design
 import Domain
 import Registration
 

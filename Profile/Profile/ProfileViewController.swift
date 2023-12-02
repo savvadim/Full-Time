@@ -2,8 +2,7 @@ import Foundation
 import UIKit
 import SnapKit
 import Alamofire
-import Color
-import Font
+import Design
 
 open class ProfileViewController: UIViewController {
     

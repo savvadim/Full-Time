@@ -2,8 +2,8 @@ import UIKit
 import Profile
 import Boards
 import Tasks
-import Color
 import Notify
+import Design
 
 open class TabBarController: UITabBarController, UITabBarControllerDelegate {
     

@@ -1,7 +1,6 @@
 import UIKit
 import SnapKit
-import Color
-import Font
+import Design
 
 open class RegisterViewController: UIViewController, UITextFieldDelegate {
 

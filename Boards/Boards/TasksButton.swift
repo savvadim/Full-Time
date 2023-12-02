@@ -1,6 +1,5 @@
 import UIKit
-import Color
-import Font
+import Design
 
 class TasksButton: UIView {
     
