@@ -53,6 +53,7 @@ extension APIService: TargetType {
     public var headers: [String: String]? {
         [
             "Content-Type": "application/json",
+            "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzAyMzg0NzY2LCJleHAiOjE3MDI0NzExNjZ9.ACr4tTXjkGR8I9hLx3IE6lWQYCcwT-w90CXuf0vbHpQ"
         ]
     }
     

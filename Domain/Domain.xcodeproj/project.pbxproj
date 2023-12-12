@@ -13,6 +13,7 @@
 		867582342943B3480037266C /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 867582312943B3480037266C /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		867582422943B3540037266C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867582412943B3540037266C /* Networking.framework */; };
 		867582432943B3540037266C /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 867582412943B3540037266C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEB5E3D62B2891CC00E0C046 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5E3D52B2891CC00E0C046 /* ProfileResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,7 @@
 		867582312943B3480037266C /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		867582322943B3480037266C /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		867582412943B3540037266C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB5E3D52B2891CC00E0C046 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				86416EFB2943B4F700958825 /* LoginResponse.swift */,
+				CEB5E3D52B2891CC00E0C046 /* ProfileResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -142,7 +145,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					8675822D2943B3480037266C = {
 						CreatedOnToolsVersion = 14.0;
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB5E3D62B2891CC00E0C046 /* ProfileResponse.swift in Sources */,
 				867582332943B3480037266C /* Domain.docc in Sources */,
 				86416EF92943B3D900958825 /* LoginRequestModel.swift in Sources */,
 				86416EFC2943B4F700958825 /* LoginResponse.swift in Sources */,

@@ -1,17 +1,19 @@
-import Foundation
+import Moya
+import Domain
 
-struct Post: Codable {
-    let name: String
-    let surname: String
-    let position: String
-    let avatar: String
-    let email: String
-    
-    enum CodingKeys: String, CodingKey {
-        case name
-        case surname
-        case position
-        case avatar
-        case email
+let provider = MoyaProvider<YourAPI>()
+
+provider.request(.profile) { result in
+    switch result {
+    case .success(let response):
+        do {
+            // Обработка успешного ответа
+            let userProfile = try response.map(ProfileResponse.self)
+            print("User profile: \(userProfile)")
+        } catch {
+            print("Ошибка при парсинге данных: \(error)")
+        }
+    case .failure(let error):
+        print("Ошибка запроса: \(error.localizedDescription)")
     }
 }
