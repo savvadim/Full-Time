@@ -12,6 +12,8 @@
 		CE09597A2A7021AA00003F21 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0959792A7021AA00003F21 /* Poppins-Regular.ttf */; };
 		CE0959A12A70585E00003F21 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867581E02943A8D00037266C /* Networking.framework */; };
 		CE0959A22A70585E00003F21 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 867581E02943A8D00037266C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE0CAC512B1B591A00B6F81B /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605AB2B1B3FF6002BA61E /* Design.framework */; };
+		CE0CAC522B1B591A00B6F81B /* Design.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605AB2B1B3FF6002BA61E /* Design.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE2857B82A80F9FD006C8009 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2857B02A80F8A9006C8009 /* Profile.framework */; };
 		CE2857B92A80F9FD006C8009 /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE2857B02A80F8A9006C8009 /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE5B9C192A707F94009EAD12 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE5B9C152A707F94009EAD12 /* Roboto-Regular.ttf */; };
@@ -114,6 +116,7 @@
 				CE2857B92A80F9FD006C8009 /* Profile.framework in Embed Frameworks */,
 				CEE45C052A7906A9003A253C /* Boards.framework in Embed Frameworks */,
 				CE91F4C42B0BA84000626F98 /* Registration.framework in Embed Frameworks */,
+				CE0CAC522B1B591A00B6F81B /* Design.framework in Embed Frameworks */,
 				CEC00C3F2AAA1E8A0088867F /* Tasks.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -150,6 +153,7 @@
 			files = (
 				CE0959A12A70585E00003F21 /* Networking.framework in Frameworks */,
 				CE8B79072AA8781B009D43C5 /* Alamofire in Frameworks */,
+				CE0CAC512B1B591A00B6F81B /* Design.framework in Frameworks */,
 				CEAD3DF22A7016B100DFB8E3 /* Login.framework in Frameworks */,
 				CEE45C042A7906A9003A253C /* Boards.framework in Frameworks */,
 				CE8B79042AA877E6009D43C5 /* SnapKit in Frameworks */,

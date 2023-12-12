@@ -5,7 +5,7 @@ public enum Constants {
 
             var baseURL: String {
                 switch self {
-                case .prod: return "http://localhost:8080/api/v1"
+                case .prod: return "http://localhost:6543/api/v1"
                 }
             }
         }
