@@ -2,19 +2,15 @@ import Foundation
 import Networking
 import Domain
 
-protocol PRofileServiceProtocol: ServiceProtocol {
-    func login(with request: LoginRequestModel, completion: @escaping ((APIResult<LoginResponse>) -> Void))
+protocol ProfileServiceProtocol: ServiceProtocol {
+    func profile(completion: @escaping ((APIResult<ProfileResponse>) -> Void))
 }
 
-final class LoginService: NetworkProvider, LoginServiceProtocol { }
-
-// MARK: - Login
-extension LoginService {
-    public func login(with request: LoginRequestModel, completion: @escaping ((APIResult<LoginResponse>) -> Void)) {
-        guard let parameters = try? request.dictionary() else { return }
+final class ProfileService: NetworkProvider, ProfileServiceProtocol {
+    func profile(completion: @escaping ((APIResult<ProfileResponse>) -> Void)) {
         
-        apiProvider.request(.login(parameters)) { [weak self] result in
-            self?.handle(target: .login(parameters), result: result, completion: completion)
+        apiProvider.request(.profile) { [weak self] result in
+            self?.handle(target: .profile, result: result, completion: completion)
         }
     }
 }

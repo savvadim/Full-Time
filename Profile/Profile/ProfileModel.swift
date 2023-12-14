@@ -1,19 +1,23 @@
-import Moya
+import Foundation
+import Networking
 import Domain
+import UIKit
 
-let provider = MoyaProvider<YourAPI>()
-
-provider.request(.profile) { result in
-    switch result {
-    case .success(let response):
-        do {
-            // Обработка успешного ответа
-            let userProfile = try response.map(ProfileResponse.self)
-            print("User profile: \(userProfile)")
-        } catch {
-            print("Ошибка при парсинге данных: \(error)")
+public class ProfileModel {
+    
+    private var network: ProfileServiceProtocol = ProfileService()
+    
+    public init() {}
+    
+    open func getProfile() {
+        network.profile { result in
+            switch result {
+            case .success(let response):
+                print("Успешно: \(response)")
+                
+            case .error(let error):
+                print("Ошибка: \(error.localizedDescription)")
+            }
         }
-    case .failure(let error):
-        print("Ошибка запроса: \(error.localizedDescription)")
     }
 }

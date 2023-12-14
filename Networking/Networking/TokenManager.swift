@@ -3,26 +3,61 @@ import Foundation
 
 open class TokenManager {
     
-    private static let queue = DispatchQueue(label: "com.yourapp.tokenQueue", attributes: .concurrent)
+    private static let queue = DispatchQueue(label: "fulltime.tokenQueue", attributes: .concurrent)
+    
+    private static var authToken: String?
+
+    // Возвращает текущий токен
+    static public func currentToken() -> String? {
+        return authToken
+    }
 
     // Сохранение токена в Keychain
     static public func saveToken(_ token: String, forAccount account: String) {
         queue.async(flags: .barrier) {
             let tokenData = token.data(using: .utf8)!
-            
+            authToken = token
+
+            // Query to check if the item already exists
             let query: [String: Any] = [
                 kSecClass as String: kSecClassGenericPassword,
-                kSecAttrAccount as String: account,
+                kSecAttrAccount as String: account
+            ]
+
+            // Update attributes for an existing item
+            let updateAttributes: [String: Any] = [
                 kSecValueData as String: tokenData,
                 kSecAttrAccessible as String: kSecAttrAccessibleWhenUnlocked
             ]
-            
-            let status = SecItemAdd(query as CFDictionary, nil)
-            if status != errSecSuccess {
-                print("Failed to save token to Keychain with status: \(status)")
+
+            // Attempt to update the existing item
+            let statusUpdate = SecItemUpdate(query as CFDictionary, updateAttributes as CFDictionary)
+
+            if statusUpdate == errSecItemNotFound {
+                // If the item doesn't exist, add it
+                let addQuery: [String: Any] = [
+                    kSecClass as String: kSecClassGenericPassword,
+                    kSecAttrAccount as String: account,
+                    kSecValueData as String: tokenData,
+                    kSecAttrAccessible as String: kSecAttrAccessibleWhenUnlocked
+                ]
+
+                let statusAdd = SecItemAdd(addQuery as CFDictionary, nil)
+                if statusAdd != errSecSuccess {
+                    print("Failed to add token to Keychain with status: \(statusAdd)")
+                    if let errorString = SecCopyErrorMessageString(statusAdd, nil) {
+                        print("Error description: \(errorString)")
+                    }
+                }
+            } else if statusUpdate != errSecSuccess {
+                print("Failed to update token in Keychain with status: \(statusUpdate)")
+                if let errorString = SecCopyErrorMessageString(statusUpdate, nil) {
+                    print("Error description: \(errorString)")
+                }
             }
         }
     }
+
 
     // Загрузка токена из Keychain
     static public func loadToken(forAccount account: String, completion: @escaping (String?) -> Void) {
@@ -39,6 +74,7 @@ open class TokenManager {
 
             if status == errSecSuccess, let data = tokenData as? Data {
                 let token = String(data: data, encoding: .utf8)
+                authToken = token
                 DispatchQueue.main.async {
                     completion(token)
                 }
@@ -59,6 +95,7 @@ open class TokenManager {
                 kSecAttrAccount as String: account
             ]
 
+            authToken = nil
             let status = SecItemDelete(query as CFDictionary)
             if status != errSecSuccess && status != errSecItemNotFound {
                 print("Failed to delete token from Keychain with status: \(status)")

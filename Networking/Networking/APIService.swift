@@ -51,10 +51,22 @@ extension APIService: TargetType {
     }
 
     public var headers: [String: String]? {
-        [
-            "Content-Type": "application/json",
-            "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNzAyMzg0NzY2LCJleHAiOjE3MDI0NzExNjZ9.ACr4tTXjkGR8I9hLx3IE6lWQYCcwT-w90CXuf0vbHpQ"
-        ]
+    
+        guard let token = TokenManager.currentToken() else {
+                return nil
+            }
+        
+        switch self {
+        case .login:
+            return ["Content-Type": "application/json"]
+            
+        case .profile:
+            
+            return [
+                "Content-Type": "application/json",
+                "Authorization": "Bearer \(token)"
+            ]
+        }
     }
     
     public var fullURL: String {

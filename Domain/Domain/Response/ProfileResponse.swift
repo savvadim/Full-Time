@@ -1,6 +1,7 @@
 import Foundation
+import Networking
 
-struct ProfileResponse: Codable {
+public struct ProfileResponse: APIModelCodable {
     let name: String
     let surname: String
     let position: String
