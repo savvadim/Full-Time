@@ -1,7 +1,8 @@
 import Foundation
+import Networking
 import UIKit
 import SnapKit
-import Alamofire
+import Domain
 import Design
 
 open class ProfileViewController: UIViewController {
@@ -31,6 +32,8 @@ open class ProfileViewController: UIViewController {
     
     private let logoImage = UIImageView()
     private let imageView = UIImageView()
+    
+    private let profileModel = ProfileModel()
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -291,6 +294,7 @@ open class ProfileViewController: UIViewController {
     
     @objc func exitButtonTapped() {
         print("exit")
+        profileModel.getProfile()
     }
     
     @objc func saveButtonTapped() {

@@ -8,6 +8,7 @@ public let apiProvider = MoyaProvider<APIService>(
 
 public enum APIService {
     case login(Parameters)
+    case profile
 }
 
 extension APIService: TargetType {
@@ -20,6 +21,9 @@ extension APIService: TargetType {
             switch self {
             case .login:
                 return "/auth/login"
+                
+            case .profile:
+                return "/user"
             }
         }()
     }
@@ -28,6 +32,9 @@ extension APIService: TargetType {
         switch self {
         case .login:
             return .post
+            
+        case .profile:
+            return .get
         }
     }
 
@@ -37,13 +44,29 @@ extension APIService: TargetType {
         switch self {
         case let .login(parameters):
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+            
+        case .profile:
+            return .requestPlain
         }
     }
 
     public var headers: [String: String]? {
-        [
-            "Content-Type": "application/json",
-        ]
+    
+        guard let token = TokenManager.currentToken() else {
+                return nil
+            }
+        
+        switch self {
+        case .login:
+            return ["Content-Type": "application/json"]
+            
+        case .profile:
+            
+            return [
+                "Content-Type": "application/json",
+                "Authorization": "Bearer \(token)"
+            ]
+        }
     }
     
     public var fullURL: String {

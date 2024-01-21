@@ -12,6 +12,8 @@
 		CE09597A2A7021AA00003F21 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0959792A7021AA00003F21 /* Poppins-Regular.ttf */; };
 		CE0959A12A70585E00003F21 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867581E02943A8D00037266C /* Networking.framework */; };
 		CE0959A22A70585E00003F21 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 867581E02943A8D00037266C /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE0CAC512B1B591A00B6F81B /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605AB2B1B3FF6002BA61E /* Design.framework */; };
+		CE0CAC522B1B591A00B6F81B /* Design.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605AB2B1B3FF6002BA61E /* Design.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE2857B82A80F9FD006C8009 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2857B02A80F8A9006C8009 /* Profile.framework */; };
 		CE2857B92A80F9FD006C8009 /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE2857B02A80F8A9006C8009 /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE5B9C192A707F94009EAD12 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE5B9C152A707F94009EAD12 /* Roboto-Regular.ttf */; };
@@ -114,6 +116,7 @@
 				CE2857B92A80F9FD006C8009 /* Profile.framework in Embed Frameworks */,
 				CEE45C052A7906A9003A253C /* Boards.framework in Embed Frameworks */,
 				CE91F4C42B0BA84000626F98 /* Registration.framework in Embed Frameworks */,
+				CE0CAC522B1B591A00B6F81B /* Design.framework in Embed Frameworks */,
 				CEC00C3F2AAA1E8A0088867F /* Tasks.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -140,6 +143,7 @@
 		CED220A02AE003DF00579D64 /* Notify.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Notify.xcodeproj; path = Notify/Notify.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CEDD1C802B0B916A00A20D64 /* Registration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Registration.xcodeproj; path = Registration/Registration.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CEE45BFC2A78079E003A253C /* Boards.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Boards.xcodeproj; path = Boards/Boards.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CEF39FAC2B2B195B00B48656 /* Full Time.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Full Time.entitlements"; sourceTree = "<group>"; };
 		CEF605A62B1B3FF5002BA61E /* Design.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Design.xcodeproj; path = Design/Design.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -150,6 +154,7 @@
 			files = (
 				CE0959A12A70585E00003F21 /* Networking.framework in Frameworks */,
 				CE8B79072AA8781B009D43C5 /* Alamofire in Frameworks */,
+				CE0CAC512B1B591A00B6F81B /* Design.framework in Frameworks */,
 				CEAD3DF22A7016B100DFB8E3 /* Login.framework in Frameworks */,
 				CEE45C042A7906A9003A253C /* Boards.framework in Frameworks */,
 				CE8B79042AA877E6009D43C5 /* SnapKit in Frameworks */,
@@ -205,6 +210,7 @@
 				867581842943A5820037266C /* AppDelegate.swift */,
 				CE91F4C52B0C96EC00626F98 /* Launch Screen.storyboard */,
 				CE9FCDE22A83A0BE002F42D8 /* TabBarController.swift */,
+				CEF39FAC2B2B195B00B48656 /* Full Time.entitlements */,
 				CE91F4DB2B0CC3EF00626F98 /* Assets.xcassets */,
 				867581922943A5830037266C /* Info.plist */,
 				CE0959732A70217D00003F21 /* Fonts */,
@@ -327,7 +333,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					867581802943A5820037266C = {
 						CreatedOnToolsVersion = 14.0;
@@ -609,6 +615,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Full Time/Full Time.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SD575YYYY;
@@ -642,6 +649,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Full Time/Full Time.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SD575YYYY;

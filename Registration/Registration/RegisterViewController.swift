@@ -130,7 +130,6 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
             
             textField.addTarget(self, action: #selector(textFieldDidBeginEditing(_:)), for: .editingDidBegin)
             textField.addTarget(self, action: #selector(textFieldDidEndEditing(_:)), for: .editingDidEnd)
-            textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         }
         
         textField1.attributedPlaceholder = NSAttributedString(
@@ -222,12 +221,6 @@ open class RegisterViewController: UIViewController, UITextFieldDelegate {
         updateFieldState(index: index, state: .inactive)
         
         print("Окончание редактирования текстового поля")
-    }
-
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        if let text = textField.text {
-            print("Изменение значения текстового поля: \(text)")
-        }
     }
 
     @objc func backButtonTapped(sender: UIButton) {

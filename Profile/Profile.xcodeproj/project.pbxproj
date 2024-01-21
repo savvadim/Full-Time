@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CE0A4BF22AA5D51E00181E3D /* ProfileNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A4BF12AA5D51E00181E3D /* ProfileNetwork.swift */; };
-		CE0A4BF52AA5D6A300181E3D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE0A4BF42AA5D6A300181E3D /* Alamofire */; };
 		CE0A4BF72AA5D96600181E3D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A4BF62AA5D96600181E3D /* ProfileModel.swift */; };
 		CE2857B42A80F969006C8009 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2857B32A80F969006C8009 /* ProfileViewController.swift */; };
 		CE2857B72A80F9C9006C8009 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE2857B62A80F9C9006C8009 /* SnapKit */; };
+		CEB5E3D82B28934600E0C046 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB5E3D72B28934600E0C046 /* Domain.framework */; };
+		CEB5E3D92B28934600E0C046 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEB5E3D72B28934600E0C046 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEB5E3DB2B28935200E0C046 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB5E3DA2B28935200E0C046 /* Networking.framework */; };
+		CEB5E3DC2B28935200E0C046 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEB5E3DA2B28935200E0C046 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEF605BD2B1B4109002BA61E /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605BC2B1B4109002BA61E /* Design.framework */; };
 		CEF605BE2B1B4109002BA61E /* Design.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF605BC2B1B4109002BA61E /* Design.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -23,7 +26,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CEB5E3D92B28934600E0C046 /* Domain.framework in Embed Frameworks */,
 				CEF605BE2B1B4109002BA61E /* Design.framework in Embed Frameworks */,
+				CEB5E3DC2B28935200E0C046 /* Networking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +40,8 @@
 		CE0A4BF62AA5D96600181E3D /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CE2857A12A80F8A9006C8009 /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2857B32A80F969006C8009 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CEB5E3D72B28934600E0C046 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB5E3DA2B28935200E0C046 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CE202AA7133600F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CE402AA713CE00F19EDC /* UIColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4CEA62AA7157B00F19EDC /* Color.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Color.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,8 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB5E3D82B28934600E0C046 /* Domain.framework in Frameworks */,
 				CE2857B72A80F9C9006C8009 /* SnapKit in Frameworks */,
-				CE0A4BF52AA5D6A300181E3D /* Alamofire in Frameworks */,
+				CEB5E3DB2B28935200E0C046 /* Networking.framework in Frameworks */,
 				CEF605BD2B1B4109002BA61E /* Design.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +94,8 @@
 		CED4CE1F2AA7133600F19EDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEB5E3DA2B28935200E0C046 /* Networking.framework */,
+				CEB5E3D72B28934600E0C046 /* Domain.framework */,
 				CEF605BC2B1B4109002BA61E /* Design.framework */,
 				CED4CECC2AA7235900F19EDC /* Font.framework */,
 				CED4CEA62AA7157B00F19EDC /* Color.framework */,
@@ -125,7 +135,6 @@
 			name = Profile;
 			packageProductDependencies = (
 				CE2857B62A80F9C9006C8009 /* SnapKit */,
-				CE0A4BF42AA5D6A300181E3D /* Alamofire */,
 			);
 			productName = Profile;
 			productReference = CE2857A12A80F8A9006C8009 /* Profile.framework */;
@@ -138,7 +147,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					CE2857A02A80F8A9006C8009 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -422,11 +431,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CE0A4BF42AA5D6A300181E3D /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE0A4BF32AA5D6A300181E3D /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		CE2857B62A80F9C9006C8009 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE2857B52A80F9C9006C8009 /* XCRemoteSwiftPackageReference "SnapKit" */;

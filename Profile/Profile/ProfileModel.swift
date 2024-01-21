@@ -1,17 +1,23 @@
 import Foundation
+import Networking
+import Domain
+import UIKit
 
-struct Post: Codable {
-    let name: String
-    let surname: String
-    let position: String
-    let avatar: String
-    let email: String
+public class ProfileModel {
     
-    enum CodingKeys: String, CodingKey {
-        case name
-        case surname
-        case position
-        case avatar
-        case email
+    private var network: ProfileServiceProtocol = ProfileService()
+    
+    public init() {}
+    
+    open func getProfile() {
+        network.profile { result in
+            switch result {
+            case .success(let response):
+                print("Успешно: \(response)")
+                
+            case .error(let error):
+                print("Ошибка: \(error.localizedDescription)")
+            }
+        }
     }
 }
